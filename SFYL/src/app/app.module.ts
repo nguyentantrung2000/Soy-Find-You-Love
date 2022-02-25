@@ -12,6 +12,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon'
 
+
 @NgModule({
   declarations: [
     AppComponent
