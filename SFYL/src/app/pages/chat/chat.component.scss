@@ -44,6 +44,7 @@
 .left {
   // float: left;
   border-style:solid ;
+  border-radius: 8px;
   width: 30%;
   height: 100%;
   .top {
@@ -141,6 +142,7 @@
     height: auto;
     background-color: white;
     border-style: solid;
+    border-radius: 8px;
 }
 .chatbox {
     border: 2px solid #dedede;
@@ -216,21 +218,24 @@
   }
   .chatbar{
     width: 100%;
-    height: 20%;
+    height: 18%;
     border-style: solid ;
+    border-radius: 8px;
   }
   
   button{
-    margin-top: 4%;
-    margin-left: 40%;
-    width: 50px;
+    width: 60px;
     height: 50px;
     margin: 0;
+    margin-left: 10px;
+    margin-top: 4%;
   }
   .search{
-    width: 5%;
+    width: 75%;
     height: 50px;
+    border-radius: 8px;
     margin-top: 10px;
     margin-left: 15px;
+    margin-right: 15px;
   }
   
