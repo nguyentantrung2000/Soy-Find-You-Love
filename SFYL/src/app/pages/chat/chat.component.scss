@@ -1,3 +1,7 @@
+.container{
+  margin: 10px 30px;
+}
+
 .body{
     width: 100%;
     height: 100vh;
@@ -10,16 +14,42 @@
 //     background-color: red ;
     
 // }
+.status{
+  // line-height: 40px;
+  // margin-left: -5px;
+}
+.avatar{
+  list-style-type: none;
+  background-color: rebeccapurple;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar li {
+  width: 5em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar li img {
+  margin: 0;
+}
+
+.showchat{
+  height: 80%;
+
+}
 .left {
-  float: left;
+  // float: left;
+  border-style:solid ;
   width: 30%;
   height: 100%;
-  border: 1px solid var(--light);
-  background-color: var(--white);
   .top {
       position: relative;
       width: 50%;
-      height: 96px;
+      height: 10%;
       padding: 29px;
   }
   input {
@@ -31,20 +61,18 @@
       background-color: #eceff1;
       border-radius: 21px;
       &:focus {
-          outline: none;
+      outline: none;
       }
   }
   .people {
       margin-left: -1px;
-      border-right: 1px solid var(--light);
-      border-left: 1px solid var(--light);
-      width: calc(100% + 2px);
+      width: 70%;
+      border-style: double 5px;
       .person {
           position: relative;
           width: 80%;
           padding: 12px 10% 16px;
           cursor: pointer;
-          background-color: var(--white);
           &:after {
               position: absolute;
               bottom: 0;
@@ -53,7 +81,6 @@
               width: 80%;
               height: 1px;
               content: '';
-              background-color: var(--light);
               transform: translate(-50%, 0);
           }
           img {
@@ -76,8 +103,7 @@
               top: 16px;
               right: 10%;
               padding: 0 0 5px 5px;
-              color: var(--grey);
-              background-color: var(--white);
+      
           }
           .preview {
               font-size: 14px;
@@ -86,19 +112,19 @@
               width: 70%;
               white-space: nowrap;
               text-overflow: ellipsis;
-              color: var(--grey);
+              
           }
           &.active,&:hover {
               margin-top: -1px;
               margin-left: -1px;
               padding-top: 13px;
               border: 0;
-              background-color: var(--blue);
+              background-color: pink;
               width: calc(100% + 2px);
               padding-left: calc(10% + 1px);
               span {
-                  color: var(--white);
-                  background: transparent;
+                  // color: black;
+                  // background-color: #aaa;
               }
               &:after {
                   display: none;
@@ -107,23 +133,27 @@
       }
   }
 }
+
+// ======================= CSS RIGHT CONTENT ===================================
 .right{
+  margin-left: 10px;
     width: 70%;
     height: auto;
     background-color: white;
+    border-style: solid;
 }
 .chatbox {
     border: 2px solid #dedede;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+    // background-color: #f1f1f1;
+    border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
   }
   
   .darker {
     border: 2px solid #dedede;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+    // background-color: #f1f1f1;
+    border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
   }
@@ -141,8 +171,8 @@
   
   .chatbox img {
     float: left;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
     border-radius: 50%;
   }
@@ -152,8 +182,8 @@
     margin-right:0;
   }
   .img{
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
     border-radius: 50%;
   }
@@ -167,3 +197,40 @@
     float: left;
     color: #999;
   }
+  .messgae-left{
+    margin-right:70%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+  }
+  .messgae-right{
+    margin-right: 50px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 70%
+  }
+  .frames{
+    width: 100%;
+    height: 80%;;
+  }
+  .chatbar{
+    width: 100%;
+    height: 20%;
+    border-style: solid ;
+  }
+  
+  button{
+    margin-top: 4%;
+    margin-left: 40%;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+  .search{
+    width: 5%;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  
