@@ -28,6 +28,6 @@ import { ShareModule } from './share/share/share.module';
    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

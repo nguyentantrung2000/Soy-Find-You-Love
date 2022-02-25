@@ -1,0 +1,169 @@
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+}
+// .left{
+//     width: 30%;
+//     height: auto;
+//     background-color: red ;
+    
+// }
+.left {
+  float: left;
+  width: 30%;
+  height: 100%;
+  border: 1px solid var(--light);
+  background-color: var(--white);
+  .top {
+      position: relative;
+      width: 50%;
+      height: 96px;
+      padding: 29px;
+  }
+  input {
+      float: left;
+      width: 250px;
+      height: 42px;
+      padding: 0 15px;
+      border: 1px solid var(--light);
+      background-color: #eceff1;
+      border-radius: 21px;
+      &:focus {
+          outline: none;
+      }
+  }
+  .people {
+      margin-left: -1px;
+      border-right: 1px solid var(--light);
+      border-left: 1px solid var(--light);
+      width: calc(100% + 2px);
+      .person {
+          position: relative;
+          width: 80%;
+          padding: 12px 10% 16px;
+          cursor: pointer;
+          background-color: var(--white);
+          &:after {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              display: block;
+              width: 80%;
+              height: 1px;
+              content: '';
+              background-color: var(--light);
+              transform: translate(-50%, 0);
+          }
+          img {
+              float: left;
+              width: 40px;
+              height: 40px;
+              margin-right: 12px;
+              border-radius: 50%;
+                                  object-fit: cover;
+          }
+          .name {
+              font-size: 14px;
+              line-height: 22px;
+              color: var(--dark);
+           
+          }
+          .time {
+              font-size: 14px;
+              position: absolute;
+              top: 16px;
+              right: 10%;
+              padding: 0 0 5px 5px;
+              color: var(--grey);
+              background-color: var(--white);
+          }
+          .preview {
+              font-size: 14px;
+              display: inline-block;
+              overflow: hidden !important;
+              width: 70%;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              color: var(--grey);
+          }
+          &.active,&:hover {
+              margin-top: -1px;
+              margin-left: -1px;
+              padding-top: 13px;
+              border: 0;
+              background-color: var(--blue);
+              width: calc(100% + 2px);
+              padding-left: calc(10% + 1px);
+              span {
+                  color: var(--white);
+                  background: transparent;
+              }
+              &:after {
+                  display: none;
+              }
+          }
+      }
+  }
+}
+.right{
+    width: 70%;
+    height: auto;
+    background-color: white;
+}
+.chatbox {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .darker {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .darker::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .chatbox::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .chatbox img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  #imgright{
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+  .img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+  
+  .time-left {
+    float: left;
+    color: #999;
+  }
