@@ -1,21 +1,23 @@
+<app-side-bar></app-side-bar>
+<app-nav-bar></app-nav-bar>
 <div class="container">
   <h2>Chat</h2>
   <div class="body">
     <div class="left">
       <div class="top">
-        <input type="text" placeholder="Search" />
+        <input type="text" style="border-radius: 8px;border-style:solid ;" placeholder="Search" />
 
       </div>
       <div class="status">
         <ul class="avatar">
           <li>
             <img class="img" src="../../../assets/img/3.jpg" alt="" />
-            <!-- <span class="name">Thomas Bangalter</span> -->
+       
             <span class="name">Thomas</span>
           </li>
           <li>
             <img class="img" src="../../../assets/img/4.jpg" alt="" />
-            <!-- <span class="name">Dog Woofson</span> -->
+         
             <span class="name">Dog</span>
           </li>
           <li>
@@ -24,7 +26,7 @@
           </li>
           <li>
             <img class="img" src="../../../assets/img/6.jpg" alt="" />
-            <!-- <span class="name">Bo Jackson</span> -->
+        
             <span class="name">Boo</span>
 
           </li>
@@ -65,6 +67,23 @@
 
     </div>
     <div class="right">
+      <div class="call">
+        <a>
+        <img class="imga" src="../../../assets/img/1.jpg" alt="" />
+        <span class="name">Bo Jackson</span>
+</a>
+<b>
+  <button mat-icon-button class="icon-button-large" aria-label="large button" style="color: black;" >
+    <mat-icon>call</mat-icon>
+  </button>
+  <button mat-icon-button class="icon-button-large" aria-label="large button" style="color: black;" >
+    <mat-icon>videocam</mat-icon>
+  </button>
+  <button mat-icon-button class="icon-button-large" aria-label="large button" style="color: black;" >
+    <mat-icon>error</mat-icon>
+  </button>
+</b>
+      </div>
       <div class="frames">
       <div class="chatbox">
         <img class="img" src="../../../assets/img/2.jpg" alt="Avatar">
@@ -89,22 +108,33 @@
         <div class="messgae-right">Nah, I dunno. Play soccer.. or learn more coding perhaps?</div> 
         <span class="time-left">11:05</span>
       </div>
+      <div class="chatbox">
+        <img class="img" src="../../../assets/img/2.jpg" alt="Avatar">
+        <div class="messgae-left">Play soccer</div> 
+        <span class="time-right">11:30</span>
+      </div>
     </div>
       <div class="chatbar">
-        <button>
+        <div class="icon">
+        <button mat-icon-button class="icon-button-large" aria-label="large button" style="color: black;" >
           <mat-icon>add_circle</mat-icon>
         </button>
    
 
-          <input class="search" type="text" placeholder="Search" />
-          <button>
-           <mat-icon>sentiment_very_satisfied</mat-icon>
+          <input class="search" type="text" placeholder="Chat" />
+
+
+          <button mat-icon-button class="icon-button-large" aria-label="large button" style="color: black;" >
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+          <!-- <button>
+           <mat-icon>sentiment_very_satisfied</mat-icon> -->
         </button>
-        <button>
+        <button mat-icon-button class="icon-button-large" aria-label="large button" style="color: black;" >
+        <!-- <button> -->
           <mat-icon>send</mat-icon>
         
       </button>
-       
+        </div>
        
        
        
