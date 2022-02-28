@@ -9,6 +9,16 @@ const routes: Routes = [
         (m) => m.HomePageModule
       ),
   },
+  {
+    path: 'match',
+    loadChildren: () =>
+      import('./pages/match/match.module').then((m) => m.MatchModule),
+  },
+  {
+    path: 'chat',
+    loadChildren: () =>
+      import('./pages/chat/chat.module').then((m) => m.ChatModule),
+  },
 ];
 
 @NgModule({
