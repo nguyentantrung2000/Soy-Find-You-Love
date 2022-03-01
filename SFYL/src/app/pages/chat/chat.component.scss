@@ -19,9 +19,9 @@
     width: 100%;
     height: 90%;
     background-color: white;
-    // display: flex;
-    display: grid;
-    grid-template-columns: minmax(400px, 30%) 70%;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: minmax(400px, 30%) 70%;
     background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
   
 }
@@ -59,7 +59,7 @@ border-style: solid;
   // border-style:solid ;
   // border-radius: 8px;
   background-color: plum;
-  width: 100%;
+  width: 30%;
   height: 100%;
   
   .top {
@@ -155,7 +155,7 @@ border-style: solid;
 // ======================= CSS RIGHT CONTENT ===================================
 .right{
   // margin-left: 10px;
-    width: 100%;
+    width: 70%;
     height: auto;
     background-color: pink;
     margin-right: 20px;
@@ -256,14 +256,6 @@ border-style: solid;
     border-color: rgb(14, 10, 10) ;
     border-radius: 8px;
   }
-  
-  // button{
-  //   width: 60px;
-  //   height: 50px;
-  //   margin: 0;
-  //   margin-left: 10px;
-  //   margin-top: 4%;
-  // }
   .search{
     width: 60%;
     height: 50px;
@@ -316,11 +308,12 @@ border-style: solid;
     }
   }
 .icon{
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 90px;
 }
 .call b{
   float: right;
+  margin-top: -10px;
 }
 
   
