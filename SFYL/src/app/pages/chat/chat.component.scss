@@ -2,8 +2,6 @@
     margin: 10px 30px;
     width: 80%;
     height: 80%;
-    // margin-left: 175px;
-    //   margin-top: 110px;
     background-image: linear-gradient( to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
     position: fixed;
     left: 165px;
@@ -22,8 +20,6 @@
     height: 90%;
     background-color: white;
     display: flex;
-    // display: grid;
-    // grid-template-columns: minmax(400px, 30%) 70%;
     background-image: linear-gradient( to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
 }
 
@@ -51,15 +47,41 @@
     margin: 0;
 }
 
-.showchat {
+.showchat{
+  margin-top: 10px;
+  height: 80%;
+
+}
+.left {
+  background-color: plum;
+  width: 30%;
+  height: 100%;
+  
+  .top {
+      position: relative;
+      width: 50%;
+      height: 10%;
+      padding: 10px;
+  }
+  input {
+      float: left;
+      width: 250px;
+      height: 42px;
+      padding: 0 15px;
+      border: 1px solid var(--light);
+      background-color: #eceff1;
+      border-radius: 21px;
+      &:focus {
+      outline: none;
+      }
+  }
+  .people {
     margin-top: 10px;
     height: 80%;
 }
 
 .left {
-    // float: left;
-    // border-style:solid ;
-    // border-radius: 8px;
+
     background-color: plum;
     width: 30%;
     height: 100%;
@@ -156,9 +178,7 @@
     width: 70%;
     height: auto;
     background-color: pink;
-    margin-right: 20px;
-    // border-style: solid;
-    // border-radius: 8px;
+  
 }
 
 .call {
@@ -169,16 +189,12 @@
 }
 
 .chatbox {
-    // border: 2px solid #dedede;
-    // background-color: #f1f1f1;
     border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
-}
-
-.darker {
-    // border: 2px solid #dedede;
-    // background-color: #f1f1f1;
+  }
+  
+  .darker {
     border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
@@ -235,10 +251,9 @@
 .time-left {
     float: left;
     color: black;
-}
-
-.messgae-left {
-    margin-right: 70%;
+  }
+  .messgae-left{
+    margin-right:60%;
     padding: 10px;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
@@ -249,10 +264,9 @@
     padding: 10px;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    margin-left: 500px;
-}
-
-.frames {
+    margin-left: 50%;
+  }
+  .frames{
     width: 100%;
     height: 70%;
 }
@@ -323,4 +337,4 @@ button[mat-icon-button] {
 .call b {
     float: right;
     margin-top: -10px;
-}
+}}
