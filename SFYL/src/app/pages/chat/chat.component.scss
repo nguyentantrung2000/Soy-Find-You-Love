@@ -55,9 +55,6 @@ border-style: solid;
 
 }
 .left {
-  // float: left;
-  // border-style:solid ;
-  // border-radius: 8px;
   background-color: plum;
   width: 30%;
   height: 100%;
@@ -158,9 +155,6 @@ border-style: solid;
     width: 70%;
     height: auto;
     background-color: pink;
-    margin-right: 20px;
-    // border-style: solid;
-    // border-radius: 8px;
   
 }
 .call{
@@ -170,16 +164,12 @@ border-style: solid;
     border-radius: 8px;
 }
 .chatbox {
-    // border: 2px solid #dedede;
-    // background-color: #f1f1f1;
     border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
   }
   
   .darker {
-    // border: 2px solid #dedede;
-    // background-color: #f1f1f1;
     border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
@@ -233,7 +223,7 @@ border-style: solid;
     color: black;
   }
   .messgae-left{
-    margin-right:70%;
+    margin-right:60%;
     padding: 10px;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
@@ -243,7 +233,7 @@ border-style: solid;
     padding: 10px;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    margin-left: 500px;
+    margin-left: 50%;
   }
   .frames{
     width: 100%;
