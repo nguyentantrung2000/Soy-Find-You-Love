@@ -1,0 +1,83 @@
+<app-side-bar></app-side-bar>
+<app-nav-bar></app-nav-bar>
+<div class="container" > 
+
+     <div class="top">
+         <h2>Cài đặt</h2>
+     </div>
+    <div class="body"> 
+        <div class="left">
+            <h2> Cài đặt tìm kiếm</h2>
+            <h2> Địa điểm: Truy cập vị trí thiết bị đang sử dụng trang web</h2>
+            <h2>Đối tượng tìm kiếm :  </h2>
+            <h2>Phạm vi tìm kiếm : <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1000"
+                step="1000"
+                min="0"
+                max="100000"
+                aria-label="units"></mat-slider> </h2>
+      
+            <h2>Độ tuổi ưu tiên :
+                <mat-slider
+                thumbLabel
+                [displayWith]="formatAge"
+                tickInterval="1000"
+                step="1"
+                min="18"
+                max="60"
+                aria-label="units"></mat-slider>
+            </h2>
+            
+            <h2>
+               THIẾT LẬP HIỂN THỊ
+            </h2> 
+            <div class="display">
+                <a><h2>Hiển thị tôi trên Tinder</h2> </a>
+           <b><mat-slide-toggle></mat-slide-toggle></b>
+            </div>
+           
+            <h2>Khi đã tắt, bạn sẽ không được hiển thị trong stack thẻ. Bạn có thể vẫn xem và trò chuyện với người tương hợp</h2>
+        </div>
+        <div class="right">
+            <div class="set">
+            <h2> Thiết lập tài khoản</h2>
+            <h2> Email : Huy.BuiThanh@gmail.com </h2>
+            <div class="display1">
+           <a> <h2>Trạng thái hoat động </h2></a>
+            <b><mat-slide-toggle></mat-slide-toggle></b>
+            </div>
+            <div class="display1">
+            <a> <h2>Thông báo đã xem </h2></a>
+             <b> <mat-slide-toggle></mat-slide-toggle></b>
+             </div>
+        </div>
+        
+            <h2>Thông báo </h2>
+            <div class="display2">
+                 <a><h2> Email  <button mat-icon-button> <mat-icon matTooltip="Kiểm soát emai bạn muốn nhận được - tất cả, chỉ những thứ quan trọng.">info</mat-icon></button>
+                   </h2></a>
+                 <b>
+                    <button  mat-icon-button ><mat-icon >arrow_circle_down</mat-icon> 
+                    </button>
+                 </b>
+            </div>
+            <div class="display3">
+                <a><h2>Thông báo cập nhật <button mat-icon-button> <mat-icon matTooltip="Nếu bạn tắt tính năng này bạn sẽ không xem được các hoạt động gần đây của bạn">info</mat-icon></button></h2></a>
+                <b>
+                    <button mat-icon-button><mat-icon>arrow_circle_up</mat-icon></button>
+                </b>
+           </div>
+           
+            <div class="noti">  
+                <button mat-button class="Login">
+                    Đăng xuất
+                </button >
+                <button mat-button class="delete">Xóa tài khoản</button>
+               
+            </div>
+           
+        </div>
+    </div>
+</div>
