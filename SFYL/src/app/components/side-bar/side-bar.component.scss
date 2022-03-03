@@ -11,7 +11,7 @@ ul {
     display: inline-block;
     position: fixed;/* cố định thanh điều hướng cả khi cuộn để đọc website */
     top: 0; 
-    overflow: auto; /* nếu nội dung quá dài sẽ có thêm thanh cuộn để xem phần còn lại */
+    overflow: hidden; /* nếu nội dung quá dài sẽ có thêm thanh cuộn để xem phần còn lại */
   }
   
   // li a.active {
