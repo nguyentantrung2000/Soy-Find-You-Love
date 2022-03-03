@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog-login.component.scss']
 })
 export class DialogLoginComponent implements OnInit {
-
+  value1 = '';
+  value2 = '';
   constructor() { }
 
   ngOnInit(): void {
