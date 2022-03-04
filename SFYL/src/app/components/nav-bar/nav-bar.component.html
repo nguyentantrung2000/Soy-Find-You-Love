@@ -1,11 +1,20 @@
 <ul>
     <li>
-        <img src ="../../../assets/images/logo.png" style = "height: 80%;width: 75%;padding-left: 25%; ">
+        <img src="../../../assets/images/logo.png" style="height: 80%;width: 75%;margin-top: 2px; ">
     </li>
 
+    <li style="display: flex;">
+        <div id = "account" style="display:flex;width: 220px;">
+            <button mat-icon-button class="icon-button-small" aria-label="small button" 
+            style="color: orange;margin-top: 1px;margin-right: 4px;">
+                <mat-icon>notifications</mat-icon>
+            </button> 
+            <p style ="height: 50px;font-size: large;font-weight: bold;margin:7px 10px 10px 0;">{{this.logingg.user?.displayName}}</p>
+            <img style=" border-radius:50%;height: 40px;width: 40px;position: relative; top: -1px;right:5px;"  src="{{this.logingg.user?.photoURL}}">
+        </div>
+    </li>
     <li>
-        <button mat-icon-button class="icon-button-small" aria-label="small button" style="color: orange;margin-top: 10px;" >          
-            <mat-icon>notifications</mat-icon>
-        </button>
-    </li>    
-  </ul>
+    </li>
+</ul>
+
+<!-- position: absolute; top: 15px; right: 250px   -->
