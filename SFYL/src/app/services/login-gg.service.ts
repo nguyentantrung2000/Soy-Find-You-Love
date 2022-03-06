@@ -23,7 +23,7 @@ export class LoginGGService {
   public async loginGG() {
     try {
       await signInWithPopup(this.auth, new GoogleAuthProvider());
-      this.router.navigate(['/match']);
+      this.router.navigate(['/layout/match']);
     } catch (err) {
       alert('login fail!');
     }

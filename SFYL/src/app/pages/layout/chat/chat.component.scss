@@ -1,0 +1,36 @@
+.container {
+    margin-top: 5rem;
+    margin-left: 6.5rem;
+    background-color: aquamarine;
+    height: 70rem;
+    width: 73rem;
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+}
+
+.left-item {
+    height: 70rem;
+    width: 30%;
+    background-color: burlywood;
+    border-right: solid;
+}
+
+.user-online {
+    height: 10%;
+    width: 100%;
+    background-color: cadetblue;
+    border-bottom: solid;
+}
+
+.old-converstation {
+    height: 90%;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.right-item {
+    height: 70rem;
+    width: 70%;
+    background-color: royalblue;
+}
