@@ -9,14 +9,15 @@ import { DialogLoginComponent } from 'src/app/components/dialog-login/dialog-log
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
+import { DialogRegisterComponent } from '../../components/dialog-register/dialog-register.component';
 
 @NgModule({
-  declarations: [NavBarComponent, SideBarComponent,DialogLoginComponent],
-  imports: [CommonModule, ReactiveFormsModule, MatIconModule, MatButtonModule,MatDialogModule,MatInputModule,FormsModule, ],
+  declarations: [NavBarComponent, SideBarComponent,DialogLoginComponent,DialogRegisterComponent],
+  imports: [CommonModule, ReactiveFormsModule, MatIconModule, MatButtonModule,MatDialogModule,MatInputModule,FormsModule ],
   exports: [
     ReactiveFormsModule,
     NavBarComponent,
+    DialogRegisterComponent,
     SideBarComponent,
     MatIconModule,
     MatButtonModule,
