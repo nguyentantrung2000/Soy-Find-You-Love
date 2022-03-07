@@ -1,0 +1,107 @@
+// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+.example-form-field {
+    justify-content: center;
+    width: 100%;
+    border-radius: 50px;
+    // text-align: center;
+  }
+
+  #login-box{
+    height: 600px;
+    width: 300px;
+    min-width: 200px;
+    // justify-content: center;
+    box-shadow: 10px 10px white;
+  }
+
+  #login-box #cancel:hover:not(.active) {
+    opacity: 100% !important;
+  }
+
+  #login-box button:hover:not(.active){
+    background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+    font-weight: bold;
+    color: white !important;
+  }
+
+  #login-box img{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: 70px;
+    height: 70px;
+    // margin-bottom: 50px;
+    // filter: drop-shadow(0 0 5px orange);
+  }
+
+  #login-box button{
+      width: 100%;
+      margin-top: 5px;
+  }
+
+  // button[mat-icon-button]{
+  //   $large-size-button: 80px;
+  //   $large-size-icon: 48px;
+    
+  //       &.icon-button-large {
+  //         width: $large-size-button;
+  //         height: $large-size-button;
+  //         line-height: $large-size-button;
+
+  //       .mat-icon {
+  //         font-size: $large-size-icon;
+  //         width: $large-size-icon;
+  //         height: $large-size-icon;
+  //         line-height: $large-size-icon;
+  //       }
+  //       .mat-button-ripple {
+  //         font-size: inherit;
+  //         width: inherit;
+  //         height: inherit;
+  //         line-height: inherit;
+  //       }
+  //   }
+
+  //   $small-size-button: 24px;
+  //   $small-size-icon: 18px;
+  //     &.icon-button-small {
+  //       width: $small-size-button;
+  //       height: $small-size-button;
+  //       line-height: $small-size-button;
+  //     .mat-icon {
+  //       font-size: $small-size-icon;
+  //       width: $small-size-icon;
+  //       height: $small-size-icon;
+  //       line-height: $small-size-icon;
+  //     }
+  //     .mat-button-ripple {
+  //       font-size: inherit;
+  //       width: inherit;
+  //       height: inherit;
+  //       line-height: inherit;
+  //     }
+  //   }
+  // }
+
+  .display{
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    top: 7px;
+    left: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .spec-text{
+    // background-color: #FFFFFF;
+    height: 15px;
+    border-bottom: 1px solid black;
+    padding-top: 0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  #error-sit:hover{
+    font-weight: bolder;
+  }
