@@ -1,0 +1,158 @@
+form {
+  max-width: 564px;
+  margin: auto;
+  margin-top: 100px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+mat-form-field {
+  width: 462px;
+  padding-left: 49px;
+}
+
+.btn {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 136px;
+  background-image: linear-gradient(
+    to left bottom,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
+  margin-right: 500px;
+  border-radius: 10px;
+  color: rgb(224, 214, 214);
+  width: 300px;
+  font-size: 20px;
+}
+
+h3 {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+img {
+  width: 80px;
+  height: 40%;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  margin-left: 44%;
+  margin-bottom: 2%;
+}
+
+input {
+  //   border: 1px solid;
+  width: 350px;
+}
+
+.close {
+  // margin-left: 87%;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  // font-size: 40px;
+}
+
+.close:hover {
+  opacity: 100%;
+}
+
+mat-icon {
+  margin-left: 91%;
+  font-size: 37px;
+  padding-top: 4px;
+}
+
+@media (min-width: 444px) and(max-width: 682px) {
+  .btn {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    margin-left: 17%;
+    background-image: linear-gradient(
+      to left bottom,
+      #e64966,
+      #e85365,
+      #ea5c65,
+      #eb6564,
+      #ec6d65,
+      #ed7564,
+      #ee7c64,
+      #ef8464,
+      #f08d63,
+      #f09664,
+      #f09f65,
+      #f0a867
+    );
+    margin-right: 500px;
+    border-radius: 10px;
+    color: rgb(224, 214, 214);
+    width: 300px;
+    font-size: 20px;
+  }
+
+  mat-form-field {
+    width: 404px;
+    padding-left: 18px;
+  }
+
+  // mat-icon {
+  //   margin-left: 89%;
+  //   font-size: 40px;
+  // }
+}
+
+@media (min-width: 453px) and(max-width: 680px) {
+  .btn {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    margin-left: 85px;
+    background-image: linear-gradient(
+      to left bottom,
+      #e64966,
+      #e85365,
+      #ea5c65,
+      #eb6564,
+      #ec6d65,
+      #ed7564,
+      #ee7c64,
+      #ef8464,
+      #f08d63,
+      #f09664,
+      #f09f65,
+      #f0a867
+    );
+    // margin-right: 500px;
+    border-radius: 10px;
+    color: rgb(224, 214, 214);
+    width: 300px;
+    font-size: 20px;
+  }
+
+  // mat-icon {
+  //   margin-left: 91%;
+  //   font-size: 40px;
+  // }
+
+  mat-form-field {
+    width: 417px;
+    padding-left: 33px;
+  }
+}
