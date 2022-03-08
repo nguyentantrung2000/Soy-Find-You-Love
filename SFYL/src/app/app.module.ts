@@ -13,7 +13,7 @@ import { CheckEmailComponent } from './components/check-email/check-email.compon
 import { SigninSuccessComponent } from './components/signin-success/signin-success.component';
 
 @NgModule({
-  declarations: [AppComponent, CheckEmailComponent, SigninSuccessComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

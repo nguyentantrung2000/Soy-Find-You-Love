@@ -1,6 +1,8 @@
     ul {
     width: 100vw;
-    // height: 14vh;
+    height: 70px;
+    // max-height: 10vh;
+    min-height: 10vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -10,14 +12,15 @@
     top: 0;
     // border: 1px solid black;
     display: grid;
-    grid-template-columns: minmax(130px, 95%) 1fr;
+    grid-template-columns: minmax(130px, 90%) 1fr;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   li {
-    float: left;
+    // float: left;
     text-align: center;
     padding-top: 6.5%;
+    display: inline-block;
   }
 
   button[mat-icon-button]{
@@ -43,8 +46,8 @@
         }
     }
 
-    $small-size-button: 24px;
-    $small-size-icon: 18px;
+    $small-size-button: 34px;
+    $small-size-icon: 28px;
       &.icon-button-small {
         width: $small-size-button;
         height: $small-size-button;
