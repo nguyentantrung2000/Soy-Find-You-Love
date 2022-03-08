@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+    <!-- <button class="close" mat-raised-button>X</button> -->
+    <div class="close" mat-raised-button>
+        <mat-icon>highlight_off</mat-icon>
+    </div>
+    <!-- <mat-icon>highlight_off</mat-icon> -->
+    <div class="image">
+        <img src="../../../assets/images/icon.png" />
+    </div>
+
+    <h3>Khôi phục tài khoản</h3>
+    <p>Chúng tôi sẽ gửi liên kết qua email để bạn có thể đăng nhập ngay</p>
+    <mat-form-field appearance="legacy">
+        <mat-label>Địa chỉ Email</mat-label>
+        <input formControlName="email" matInput placeholder="abc.@gmail.com">
+        <!-- <mat-icon>check</mat-icon> -->
+        <!-- <mat-hint>Email</mat-hint> -->
+    </mat-form-field>
+    <button class="btn" mat-raised-button>GỬI EMAIL</button>
+</form>
