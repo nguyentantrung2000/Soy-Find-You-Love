@@ -2,39 +2,43 @@
 <app-nav-bar></app-nav-bar>
 <div class="container" > 
 
-     <div class="top">
-         <h2>Cài đặt</h2>
-     </div>
+     <!-- <div class="top">
+         <h2 style="font-size: 30px">CÀI ĐẶT</h2>
+     </div> -->
     <div class="body"> 
         <div class="left">
-            <h2> Cài đặt tìm kiếm</h2>
-            <h2> Địa điểm: Truy cập vị trí thiết bị đang sử dụng trang web</h2>
-            <h2>Đối tượng tìm kiếm :  </h2>
-            <h2>Phạm vi tìm kiếm : <mat-slider
+            <h2 style="font-size: 30px"> CÀI ĐẶT TÌM KIẾM</h2>
+            <h2> Địa điểm: </h2>
+            <h2>Đối tượng tìm kiếm : Nữ </h2>
+            <div class="display1">
+           <a> <h2>Phạm vi tìm kiếm : </h2></a>
+               <b> <mat-slider
                 thumbLabel
                 [displayWith]="formatLabel"
                 tickInterval="1000"
                 step="1000"
                 min="0"
                 max="100000"
-                aria-label="units"></mat-slider> </h2>
-      
-            <h2>Độ tuổi ưu tiên :
-                <mat-slider
+                aria-label="units"></mat-slider></b>
+             </div>
+             <div class="display1">
+                <a> <h2>Độ tuổi ưu tiên :</h2></a>
+                <b>   <mat-slider
                 thumbLabel
                 [displayWith]="formatAge"
                 tickInterval="1000"
                 step="1"
                 min="18"
                 max="60"
-                aria-label="units"></mat-slider>
-            </h2>
+                aria-label="units"></mat-slider></b>
             
-            <h2>
+             </div>
+            
+            <h2 style="font-size: 30px">
                THIẾT LẬP HIỂN THỊ
             </h2> 
             <div class="display">
-                <a><h2>Hiển thị tôi trên Tinder</h2> </a>
+                <a><h2>Hiển thị tôi trên SFYL</h2> </a>
            <b><mat-slide-toggle></mat-slide-toggle></b>
             </div>
            
@@ -42,20 +46,24 @@
         </div>
         <div class="right">
             <div class="set">
-            <h2> Thiết lập tài khoản</h2>
-            <h2> Email : Huy.BuiThanh@gmail.com </h2>
-            <div class="display1">
-           <a> <h2>Trạng thái hoat động </h2></a>
+            <h1 style="font-size: 30px" >THIẾT LẬP TÀI KHOẢN</h1>
+            <h2> Email : </h2>
+            <div class="display3">
+
+           <a><h2>Trạng thái hoạt động </h2></a>
             <b><mat-slide-toggle></mat-slide-toggle></b>
+
             </div>
-            <div class="display1">
+            <div class="display3">
+
             <a> <h2>Thông báo đã xem </h2></a>
              <b> <mat-slide-toggle></mat-slide-toggle></b>
              </div>
+             
         </div>
         
-            <h2>Thông báo </h2>
-            <div class="display2">
+            <h1 style="font-size: 30px">THÔNG BÁO</h1>
+            <div class="display3">
                  <a><h2> Email  <button mat-icon-button> <mat-icon matTooltip="Kiểm soát emai bạn muốn nhận được - tất cả, chỉ những thứ quan trọng.">info</mat-icon></button>
                    </h2></a>
                  <b>
@@ -71,10 +79,10 @@
            </div>
            
             <div class="noti">  
-                <button mat-button class="Login">
+                <button mat-button class="Logout" (click)="openDialog()">
                     Đăng xuất
                 </button >
-                <button mat-button class="delete">Xóa tài khoản</button>
+                <button mat-button class="delete" (click)="openDialogDelete()">Xóa tài khoản</button>
                
             </div>
            

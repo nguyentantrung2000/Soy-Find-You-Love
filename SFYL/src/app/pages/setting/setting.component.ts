@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 import {ProgressBarMode} from '@angular/material/progress-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogLogoutComponent } from 'src/app/components/dialog-logout/dialog-logout.component';
+import { DialogDeleteAccComponent } from 'src/app/components/dialog-delete-acc/dialog-delete-acc.component';
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
@@ -21,9 +24,16 @@ export class SettingComponent implements OnInit {
 
     return value;
   }
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
+  openDialog() {
+    this.dialog.open(DialogLogoutComponent);
+  }
+  openDialogDelete() {
+    this.dialog.open(DialogDeleteAccComponent);
+  }
   ngOnInit(): void {
   }
+
 
 }

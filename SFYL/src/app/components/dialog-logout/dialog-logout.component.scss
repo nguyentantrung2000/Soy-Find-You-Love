@@ -1,41 +1,17 @@
-// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-.example-form-field {
+
+// .container{
+//     width: 50%;
+//     height: 50%;
+//     justify-content: center;
+
+// }
+
+.mat-dialog-container{
+  width: 50%;
+    height: 50%;
     justify-content: center;
-    width: 100%;
-    border-radius: 50px;
-    // text-align: center;
-  }
-
-  #login-box{
-    height: 600px;
-    width: 300px;
-    min-width: 200px;
-    // justify-content: center;
-    box-shadow: 10px 10px white;
-  }
-
-  #login-box button:hover:not(.active){
-    background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
-    font-weight: bold;
-    color: white !important;
-  }
-
-  
-  #login-box img{
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto;
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(0 0 5px orange);
-  }
-
-  #login-box button{
-      width: 100%;
-      margin-top: 5px;
-  }
-
-  button[mat-icon-button]{
+}
+button[mat-icon-button]{
     $large-size-button: 80px;
     $large-size-icon: 48px;
     
@@ -77,4 +53,13 @@
         line-height: inherit;
       }
     }
+  }
+  h2{
+    justify-content: center;
+  }
+
+  button:hover:not(.active) {
+    background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+    font-weight: bold;
+    color: white !important;
   }
