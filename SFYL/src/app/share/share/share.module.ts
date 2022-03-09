@@ -5,28 +5,35 @@ import { MatIconModule } from '@angular/material/icon';
 import { NavBarComponent } from 'src/app/components/nav-bar/nav-bar.component';
 import { SideBarComponent } from 'src/app/components/side-bar/side-bar.component';
 import { MatButtonModule } from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { DialogLoginComponent } from 'src/app/components/dialog-login/dialog-login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { DialogRegisterComponent } from '../../components/dialog-register/dialog-register.component';
+import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
+import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {DialogLoginComponent } from 'src/app/components/dialog-login/dialog-login.component';
-import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import {DialogDeleteAccComponent} from '../../components/dialog-delete-acc/dialog-delete-acc.component'
 import {DialogLogoutComponent} from '../../components/dialog-logout/dialog-logout.component'
-import {DialogDeleteAccComponent} from 'src/app/components/dialog-delete-acc/dialog-delete-acc.component'; 
+
 @NgModule({
-  declarations: [NavBarComponent, SideBarComponent,DialogLoginComponent,DialogLogoutComponent,DialogDeleteAccComponent],
-  imports: [CommonModule, ReactiveFormsModule, MatIconModule, MatButtonModule,MatDialogModule,MatProgressBarModule,
-    MatSliderModule,MatSlideToggleModule,MatSelectModule,MatTooltipModule ],
-  exports: [
-    ReactiveFormsModule,
+  declarations: [
     NavBarComponent,
     SideBarComponent,
     DialogLoginComponent,
-    DialogLogoutComponent,
+    DialogRegisterComponent,
+    CheckEmailComponent,
+    SigninSuccessComponent,
     DialogDeleteAccComponent,
+    DialogLogoutComponent
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
@@ -36,8 +43,25 @@ import {DialogDeleteAccComponent} from 'src/app/components/dialog-delete-acc/dia
     MatSelectModule,
     MatTooltipModule,
     MatInputModule,
-    FormsModule
-  
+    FormsModule,
+  ],
+  exports: [
+    ReactiveFormsModule,
+    NavBarComponent,
+    DialogRegisterComponent,
+    SideBarComponent,
+    CheckEmailComponent,
+    SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
   ],
 })
 export class ShareModule {}

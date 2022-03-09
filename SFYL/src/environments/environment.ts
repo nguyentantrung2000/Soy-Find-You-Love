@@ -11,7 +11,8 @@ export const environment = {
     authDomain: 'sfyl-d556e.firebaseapp.com',
     messagingSenderId: '1044351428939',
   },
-  production: false
+  production: false,
+  endpoint: 'http://192.168.1.27',
 };
 
 /*
