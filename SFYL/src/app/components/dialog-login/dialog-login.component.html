@@ -1,25 +1,25 @@
 <div id="login-box">
     <div id="cancel" style="height: 40px;margin:0; width: 100%;color: gray;margin:0.5;opacity: 0.5;">
-      <mat-icon style="position: relative;left:95%;top: 5%;">cancel</mat-icon>
+        <mat-icon style="position: relative;left:95%;top: 5%;">cancel</mat-icon>
     </div>
     <img src="../../../assets/images/logo.png">
     <p style="text-align:center;font-weight: bolder;font-style: italic;font-size: xx-large;">ĐĂNG NHẬP</p>
     <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>TÀI KHOẢN</mat-label>
-        <input matInput type="text" [( ngModel)]="value1" placeholder="Nhập vào tên tài khoản">
+        <input matInput type="text" placeholder="Nhập vào tên tài khoản">
         <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
           <mat-icon>close</mat-icon>
         </button>
     </mat-form-field>
     <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>MẬT KHẨU</mat-label>
-        <input matInput type="text" [( ngModel)]="value2" placeholder="Nhập vào mật khẩu">
+        <input matInput type="text" placeholder="Nhập vào mật khẩu">
         <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
           <mat-icon>close</mat-icon>
         </button>
-      </mat-form-field>
-      <p id="error-sit" style="text-align:center;text-decoration-line:underline;cursor: pointer;">Sự cố khi đăng nhập</p>
-      <div class = "spec-text">
+    </mat-form-field>
+    <p id="error-sit" style="text-align:center;text-decoration-line:underline;cursor: pointer;">Sự cố khi đăng nhập</p>
+    <div class="spec-text">
         <p class="display" style="text-align:center;">Hoặc</p>
     </div>
     <button mat-raised-button (click)="Login() " style="font-weight:bold;height:40px;margin:5px;text-align: center;">
@@ -30,7 +30,7 @@
         <img  style = "position:relative;top: 1px ;right:120px; height: 30px;width: 30px;" src="../../../assets/images/fb_color.png">
         <p style="position: absolute;top:0px;left:65px; height: 20px;padding:0;">Đăng nhập bằng Facebook</p>
       </button>
-      <button (click)="openDialog()" mat-raised-button style="font-weight:bold;height:40px;margin:5px;text-align: center;">
+    <button (click)="openDialog()" mat-raised-button style="font-weight:bold;height:40px;margin:5px;text-align: center;">
         <img  style = "position:relative;top: 1px ;right:120px; height: 35px;width: 35px;" src="../../../assets/images/gmail_color.png">
         <p style="position: absolute;top:0px;left:80px; height: 20px;padding:0;">Đăng ký bằng Email</p>
       </button>

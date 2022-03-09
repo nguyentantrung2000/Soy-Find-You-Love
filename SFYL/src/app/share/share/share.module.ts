@@ -13,12 +13,14 @@ import { DialogRegisterComponent } from '../../components/dialog-register/dialog
 import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
 import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatSelectModule} from '@angular/material/select';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {DialogDeleteAccComponent} from '../../components/dialog-delete-acc/dialog-delete-acc.component'
-import {DialogLogoutComponent} from '../../components/dialog-logout/dialog-logout.component'
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { DialogDeleteAccComponent } from '../../components/dialog-delete-acc/dialog-delete-acc.component';
+import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-logout.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,12 @@ import {DialogLogoutComponent} from '../../components/dialog-logout/dialog-logou
     CheckEmailComponent,
     SigninSuccessComponent,
     DialogDeleteAccComponent,
-    DialogLogoutComponent
+    DialogLogoutComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
@@ -62,6 +65,7 @@ import {DialogLogoutComponent} from '../../components/dialog-logout/dialog-logou
     MatSliderModule,
     MatSlideToggleModule,
     MatSelectModule,
+    MatFormFieldModule,
   ],
 })
 export class ShareModule {}
