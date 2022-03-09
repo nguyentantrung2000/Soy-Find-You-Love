@@ -12,6 +12,14 @@ import { FormsModule } from '@angular/forms';
 import { DialogRegisterComponent } from '../../components/dialog-register/dialog-register.component';
 import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
 import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {DialogDeleteAccComponent} from '../../components/dialog-delete-acc/dialog-delete-acc.component'
+import {DialogLogoutComponent} from '../../components/dialog-logout/dialog-logout.component'
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -20,6 +28,8 @@ import { SigninSuccessComponent } from 'src/app/components/signin-success/signin
     DialogRegisterComponent,
     CheckEmailComponent,
     SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +37,11 @@ import { SigninSuccessComponent } from 'src/app/components/signin-success/signin
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatProgressBarModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatTooltipModule,
     MatInputModule,
     FormsModule,
   ],
@@ -37,11 +52,16 @@ import { SigninSuccessComponent } from 'src/app/components/signin-success/signin
     SideBarComponent,
     CheckEmailComponent,
     SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
     FormsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
   ],
 })
 export class ShareModule {}

@@ -6,14 +6,14 @@
     <p style="text-align:center;font-weight: bolder;font-style: italic;font-size: xx-large;">ĐĂNG NHẬP</p>
     <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>TÀI KHOẢN</mat-label>
-        <input matInput type="text" [(ngModel)]="value1" placeholder="Nhập vào tên tài khoản">
+        <input matInput type="text" [( ngModel)]="value1" placeholder="Nhập vào tên tài khoản">
         <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
           <mat-icon>close</mat-icon>
         </button>
     </mat-form-field>
     <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>MẬT KHẨU</mat-label>
-        <input matInput type="text" [(ngModel)]="value2" placeholder="Nhập vào mật khẩu">
+        <input matInput type="text" [( ngModel)]="value2" placeholder="Nhập vào mật khẩu">
         <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
           <mat-icon>close</mat-icon>
         </button>

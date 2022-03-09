@@ -14,6 +14,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/layout/layout.module').then((m) => m.LayoutModule),
   },
+  { path: 'setting', loadChildren: () => import('./pages/setting/setting.module').then(m => m.SettingModule) },
 ];
 
 @NgModule({
