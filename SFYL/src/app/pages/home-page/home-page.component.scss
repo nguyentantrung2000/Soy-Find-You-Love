@@ -51,6 +51,13 @@
   padding: 0px 50px;
 }
 
+// #nav-bar .login button:hover:not(.active){
+//   background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+//   font-weight: bolder;
+//   color: white !important;
+//   opacity: 100% !important;
+// }
+
 #body {
   // position: relative;
   margin-top: 0px;
@@ -81,28 +88,37 @@
 }
 
 .btn {
-  background-image: linear-gradient(
-    to left bottom,
-    #e64966,
-    #e85365,
-    #ea5c65,
-    #eb6564,
-    #ec6d65,
-    #ed7564,
-    #ee7c64,
-    #ef8464,
-    #f08d63,
-    #f09664,
-    #f09f65,
-    #f0a867
-  );
+  // background-image: linear-gradient(
+  //   to left bottom,
+  //   #e64966,
+  //   #e85365,
+  //   #ea5c65,
+  //   #eb6564,
+  //   #ec6d65,
+  //   #ed7564,
+  //   #ee7c64,
+  //   #ef8464,
+  //   #f08d63,
+  //   #f09664,
+  //   #f09f65,
+  //   #f0a867
+  // );
   // position: absolute;
   // top: 100px;
   // left: 100px;
   width: 300px;
-  font-size: 27px;
+  font-size: x-large;
   border-radius: 20px;
 }
+
+button:hover:not(.active){
+  background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+  font-weight: bolder;
+  color: white !important;
+  opacity: 100% !important;
+}
+
+
 
 #content {
   margin-top: 30px;
