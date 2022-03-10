@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DialogLoginComponent } from '../dialog-login/dialog-login.component';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-signin-success',
   templateUrl: './signin-success.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninSuccessComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+  public openDialog(){
+    this.dialog.open(DialogLoginComponent);
   }
 
 }
