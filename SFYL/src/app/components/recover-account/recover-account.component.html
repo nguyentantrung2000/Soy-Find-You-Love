@@ -1,7 +1,7 @@
 <form [formGroup]="form">
     <!-- <button class="close" mat-raised-button>X</button> -->
     <div class="close" mat-raised-button>
-        <mat-icon>highlight_off</mat-icon>
+        <mat-icon [mat-dialog-close]>highlight_off</mat-icon>
     </div>
     <!-- <mat-icon>highlight_off</mat-icon> -->
     <div class="image">
@@ -16,5 +16,5 @@
         <!-- <mat-icon>check</mat-icon> -->
         <!-- <mat-hint>Email</mat-hint> -->
     </mat-form-field>
-    <button class="btn" mat-raised-button>GỬI EMAIL</button>
+    <button class="btn" mat-raised-button (click)="openDialog()">GỬI EMAIL</button>
 </form>
