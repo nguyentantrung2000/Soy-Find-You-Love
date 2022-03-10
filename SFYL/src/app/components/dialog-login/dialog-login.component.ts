@@ -21,7 +21,9 @@ export class DialogLoginComponent implements OnInit {
 
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+  }
   public Login() {
     this.login.loginGG();
   }

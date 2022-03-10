@@ -12,8 +12,16 @@ import { FormsModule } from '@angular/forms';
 import { DialogRegisterComponent } from '../../components/dialog-register/dialog-register.component';
 import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
 import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
-import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { DialogDeleteAccComponent } from '../../components/dialog-delete-acc/dialog-delete-acc.component';
+import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-logout.component';
+import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -22,14 +30,22 @@ import { RecoverAccountComponent } from 'src/app/components/recover-account/reco
     DialogRegisterComponent,
     CheckEmailComponent,
     SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent,
     RecoverAccountComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatProgressBarModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatTooltipModule,
     MatInputModule,
     FormsModule,
   ],
@@ -40,11 +56,18 @@ import { RecoverAccountComponent } from 'src/app/components/recover-account/reco
     SideBarComponent,
     CheckEmailComponent,
     SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent,
+    RecoverAccountComponent,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
     FormsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatFormFieldModule,
   ],
 })
 export class ShareModule {}
