@@ -1,16 +1,20 @@
 .container {
-    margin-top: 5rem;
-    margin-left: 6.5rem;
+    position: relative;
+    top: 85px;
+    left: 10rem;
+    // margin-top: 50px;
+    // margin-left: 10rem;
     background-color: aquamarine;
-    height: 70rem;
-    width: 73rem;
+    height: 39rem;
+    width: 85%;
     display: flex;
     flex-direction: row;
     border-style: solid;
+    
 }
 
 .left-item {
-    height: 70rem;
+    height: 100%;
     width: 30%;
     background-color: burlywood;
     border-right: solid;
@@ -27,10 +31,32 @@
     height: 90%;
     width: 100%;
     background-color: aliceblue;
+    border-bottom: solid;
 }
 
 .right-item {
-    height: 70rem;
+    height: 100%;
     width: 70%;
     background-color: royalblue;
+}
+
+.side-name{
+    height: 10%;
+    width: 100%;
+    background-color: red;
+    border-bottom: solid;
+}
+
+.current-conversation{
+    height: 80%;
+    width: 100%;
+    background-color: green;
+    border-bottom: solid;
+}
+
+.text-area{
+    height: 10%;
+    width: 100%;
+    background-color: blue;
+    border-bottom: solid;
 }

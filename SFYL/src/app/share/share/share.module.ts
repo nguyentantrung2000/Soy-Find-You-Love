@@ -21,6 +21,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DialogDeleteAccComponent } from '../../components/dialog-delete-acc/dialog-delete-acc.component';
 import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-logout.component';
+import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-log
     SigninSuccessComponent,
     DialogDeleteAccComponent,
     DialogLogoutComponent,
+    RecoverAccountComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +51,8 @@ import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-log
     MatTooltipModule,
     MatInputModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     ReactiveFormsModule,
@@ -57,6 +63,7 @@ import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-log
     SigninSuccessComponent,
     DialogDeleteAccComponent,
     DialogLogoutComponent,
+    RecoverAccountComponent,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
@@ -66,6 +73,8 @@ import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-log
     MatSlideToggleModule,
     MatSelectModule,
     MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class ShareModule {}
