@@ -2,8 +2,19 @@
 .example-form-field {
     justify-content: center;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 8px;
+    height: 30px;
+    margin-bottom: 30px;
     // text-align: center;
+  }
+
+  #confirm{
+    height: 30px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: white;
   }
 
   #login-box{

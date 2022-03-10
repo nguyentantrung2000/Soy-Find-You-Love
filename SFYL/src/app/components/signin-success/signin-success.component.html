@@ -1,12 +1,11 @@
 <form>
     <div class="close" mat-raised-button>
-        <mat-icon>highlight_off</mat-icon>
+        <mat-icon [mat-dialog-close]>highlight_off</mat-icon>
     </div>
     <div class="image">
         <img src="../../../assets/images/icon.png" />
     </div>
     <h3>Đăng kí thành công</h3>
-    <p>Tài khoản của bạn đã được đăng kí thành công! <br> Vui lòng nhấn vào nút <strong>Đăng Nhập</strong> để truy cập
-        vào trang web</p>
-    <button class="btn" mat-raised-button>ĐĂNG NHẬP</button>
+    <p>Tài khoản của bạn đã được đăng kí thành công! Vui lòng nhấn vào nút <strong>Đăng Nhập</strong> để truy cập vào trang web</p>
+    <button class="btn" mat-raised-button (click)="openDialog()">ĐĂNG NHẬP</button>
 </form>

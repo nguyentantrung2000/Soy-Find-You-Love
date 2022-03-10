@@ -1,6 +1,6 @@
 <div id="login-box">
-    <div id="cancel" style="height: 40px;margin:0; width: 100%;color: gray;margin:0.5;opacity: 0.5;">
-      <mat-icon style="position: relative;left:95%;top: 5%;">cancel</mat-icon>
+    <div id="cancel" style="height: 40px;width: 40px;color: gray;margin-left: 94%;;opacity: 0.5;">
+      <mat-icon [mat-dialog-close] style="font-size: 22px;cursor:pointer;">highlight_off</mat-icon>
     </div>
     <img src="../../../assets/images/logo.png">
     <p style="text-align:center;font-weight: bolder;font-style: italic;font-size: xx-large;">ĐĂNG NHẬP</p>
@@ -18,7 +18,7 @@
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-      <p id="error-sit" style="text-align:center;text-decoration-line:underline;cursor: pointer;">Sự cố khi đăng nhập</p>
+      <p id="error-sit" (click)="openDialog2()" style="text-align:center;text-decoration-line:underline;cursor: pointer;">Sự cố khi đăng nhập</p>
       <div class = "spec-text">
         <p class="display" style="text-align:center;">Hoặc</p>
     </div>
@@ -30,7 +30,7 @@
         <img  style = "position:relative;top: 1px ;right:120px; height: 30px;width: 30px;" src="../../../assets/images/fb_color.png">
         <p style="position: absolute;top:0px;left:65px; height: 20px;padding:0;">Đăng nhập bằng Facebook</p>
       </button>
-      <button (click)="openDialog()" mat-raised-button style="font-weight:bold;height:40px;margin:5px;text-align: center;">
+      <button (click)="openDialog1()" mat-raised-button style="font-weight:bold;height:40px;margin:5px;text-align: center;">
         <img  style = "position:relative;top: 1px ;right:120px; height: 35px;width: 35px;" src="../../../assets/images/gmail_color.png">
         <p style="position: absolute;top:0px;left:80px; height: 20px;padding:0;">Đăng ký bằng Email</p>
       </button>
