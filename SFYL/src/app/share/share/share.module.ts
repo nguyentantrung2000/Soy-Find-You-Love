@@ -22,6 +22,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { DialogDeleteAccComponent } from '../../components/dialog-delete-acc/dialog-delete-acc.component';
 import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-logout.component';
 import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -32,7 +35,7 @@ import { RecoverAccountComponent } from 'src/app/components/recover-account/reco
     SigninSuccessComponent,
     DialogDeleteAccComponent,
     DialogLogoutComponent,
-    RecoverAccountComponent
+    RecoverAccountComponent,
   ],
   imports: [
     CommonModule,
@@ -48,6 +51,8 @@ import { RecoverAccountComponent } from 'src/app/components/recover-account/reco
     MatTooltipModule,
     MatInputModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     ReactiveFormsModule,
@@ -68,6 +73,8 @@ import { RecoverAccountComponent } from 'src/app/components/recover-account/reco
     MatSlideToggleModule,
     MatSelectModule,
     MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class ShareModule {}
