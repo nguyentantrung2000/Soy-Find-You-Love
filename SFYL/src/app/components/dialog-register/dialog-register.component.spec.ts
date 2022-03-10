@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DialogRegisterComponent } from './dialog-register.component';
 
 describe('DialogRegisterComponent', () => {

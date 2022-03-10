@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CheckEmailComponent } from '../check-email/check-email.component';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-recover-account',
   templateUrl: './recover-account.component.html',
@@ -9,12 +11,14 @@ import { Router } from '@angular/router';
 export class RecoverAccountComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(public FormBuilder: FormBuilder, public Router: Router) {
+  constructor(public FormBuilder: FormBuilder, public Router: Router,public dialog: MatDialog) {
     this.form = this.FormBuilder.group({
       email: ['', Validators.email],
     });
   }
-
+  openDialog() {
+    this.dialog.open(CheckEmailComponent);
+  }
   ngOnInit(): void {}
 
   // public test() {
