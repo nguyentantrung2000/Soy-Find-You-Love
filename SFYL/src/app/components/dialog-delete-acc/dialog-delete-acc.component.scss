@@ -1,0 +1,59 @@
+
+.mat-dialog-container{
+  width: 50%;
+    height: 50%;
+    justify-content: center;
+}
+
+button[mat-icon-button]{
+    $large-size-button: 80px;
+    $large-size-icon: 48px;
+    
+        &.icon-button-large {
+          width: $large-size-button;
+          height: $large-size-button;
+          line-height: $large-size-button;
+
+        .mat-icon {
+          font-size: $large-size-icon;
+          width: $large-size-icon;
+          height: $large-size-icon;
+          line-height: $large-size-icon;
+        }
+        .mat-button-ripple {
+          font-size: inherit;
+          width: inherit;
+          height: inherit;
+          line-height: inherit;
+        }
+    }
+
+    $small-size-button: 24px;
+    $small-size-icon: 18px;
+      &.icon-button-small {
+        width: $small-size-button;
+        height: $small-size-button;
+        line-height: $small-size-button;
+      .mat-icon {
+        font-size: $small-size-icon;
+        width: $small-size-icon;
+        height: $small-size-icon;
+        line-height: $small-size-icon;
+      }
+      .mat-button-ripple {
+        font-size: inherit;
+        width: inherit;
+        height: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+  h2{
+    justify-content: center;
+  }
+
+  button:hover:not(.active) {
+    background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+    font-weight: bold;
+    color: white !important;
+  }
