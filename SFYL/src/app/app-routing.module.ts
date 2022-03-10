@@ -14,7 +14,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/layout/layout.module').then((m) => m.LayoutModule),
   },
- 
 ];
 
 @NgModule({

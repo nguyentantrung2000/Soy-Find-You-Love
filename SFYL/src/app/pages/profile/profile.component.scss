@@ -1,0 +1,68 @@
+.main {
+  position: fixed;
+  top: 50px;
+  left: 5%;
+  width: 95vw;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  width: 95vw;
+  // display: flex;
+  padding: 1px 0;
+  // align-items: center;
+  flex-direction: column;
+  display: grid;
+  place-items: center;
+  // margin-top: 2rem;
+  margin-left: 5%;
+  margin-top: 1.5%;
+}
+
+.content .top {
+  height: 15%;
+  width: 100%;
+  // background-color: black;
+}
+
+.content .body {
+  width: 95vw;
+  height: 37vw;
+  background-color: black;
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  place-items: center;
+}
+
+.content .body .left {
+  height: 37vw;
+  width: 55vw;
+  background-color: gray;
+}
+
+.content .body .left .left-top {
+  width: 55vw;
+  height: 18.5vw;
+  background-color: aquamarine;
+}
+
+.content .body .left .left-botton {
+  width: 55vw;
+  height: 18.5vw;
+  background-color: blue;
+}
+
+.content .body .right {
+  height: 37vw;
+  width: 40vw;
+  background-color: brown;
+}
+
+.content .body .right .right-body {
+  height: 25vw;
+  width: 40vw;
+  background-color: gray;
+}

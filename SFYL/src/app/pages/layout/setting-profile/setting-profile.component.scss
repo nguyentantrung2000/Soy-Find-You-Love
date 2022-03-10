@@ -1,0 +1,219 @@
+.main {
+  position: fixed;
+  top: 50px;
+  left: 5%;
+  width: 95vw;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 96%;
+  height: 94%;
+  margin: 8px 0 0 30px;
+  border-radius: 8px;
+}
+
+.huhu .huhu1 {
+  display: flex;
+}
+.huhu .huhu1 mat-form-field {
+  margin-left: 49px;
+  margin-top: -13px;
+  // box-shadow: 3px 2px 0 0 gray;
+}
+
+.huhu .huhu2 {
+  display: flex;
+}
+.huhu .huhu2 mat-form-field {
+  margin-left: 82px;
+  margin-top: -13px;
+  // box-shadow: 3px 2px 0 0 gray;
+}
+
+.huhu .huhu3 {
+  display: flex;
+}
+.huhu .huhu3 mat-form-field {
+  margin-left: 31px;
+  margin-top: -15px;
+  width: 201px;
+  // box-shadow: 3px 2px 0 0 gray;
+}
+
+.btn button {
+  margin-left: 0px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.sub-hehe h3 {
+  margin-left: 33px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.hehe {
+  margin-left: 20px;
+}
+
+.hehe p {
+  font-size: x-large;
+}
+
+.hehe .hehe1 {
+  display: flex;
+}
+
+.hehe .hehe1 mat-form-field {
+  margin-left: 205px;
+  margin-top: -15px;
+}
+
+.hehe1 p {
+  margin-left: 73px;
+}
+
+.hehe2 p {
+  margin-left: 73px;
+}
+
+.hehe3 p {
+  margin-left: 73px;
+}
+
+.hehe .hehe2 {
+  display: flex;
+}
+
+.hehe .hehe2 mat-form-field {
+  margin-left: 236px;
+  margin-top: -15px;
+}
+
+.hehe .hehe3 {
+  display: flex;
+}
+
+.hehe .hehe3 mat-form-field {
+  margin-left: 244px;
+  margin-top: -15px;
+}
+
+.hihi {
+  margin-top: -20px;
+}
+
+.sub-hihi {
+  margin-left: 30px;
+  display: flex;
+}
+
+.sub-hihi p {
+  font-size: x-large;
+}
+
+.hihi1 {
+  display: flex;
+}
+
+.hihi2 {
+  display: flex;
+}
+
+mat-slide-toggle {
+  margin-left: 6px;
+}
+
+.hihi h3 {
+  margin-left: 33px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.sub-hihi .hihi2 {
+  margin-left: 116px;
+}
+
+.sub-hihi .hihi1 {
+  margin-left: 60px;
+}
+
+.content {
+  width: 95vw;
+  // display: flex;
+  padding: 1px 0;
+  // align-items: center;
+  flex-direction: column;
+  display: grid;
+  place-items: center;
+  // margin-top: 2rem;
+  margin-left: 5%;
+  margin-top: 1.5%;
+}
+
+.content .top {
+  height: 15%;
+  width: 100%;
+  // background-color: black;
+}
+
+.content .body {
+  width: 95vw;
+  height: 37vw;
+  background-color: black;
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  place-items: center;
+}
+
+.content .body .left {
+  height: 100%;
+  width: 55vw;
+  background-color: gray;
+}
+
+.left-top {
+  display: flex;
+}
+
+.profile {
+  margin-left: 78px;
+  margin-top: 10px;
+}
+
+.profile p {
+  font-size: x-large;
+}
+
+.profile h3 {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.content .body .left .left-top {
+  width: 46vw;
+  height: 50%;
+  background-color: rgb(207, 183, 183);
+}
+
+.content .body .left .left-botton {
+  width: 46vw;
+  height: 50%;
+  background-color: rgb(204, 154, 78);
+}
+
+.content .body .right {
+  height: 37vw;
+  width: 59vw;
+  background-color: brown;
+}
+
+.content .body .right .right-body {
+  height: 25vw;
+  width: 47vw;
+  background-color: gray;
+}
