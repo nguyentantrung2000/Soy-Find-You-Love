@@ -7,23 +7,65 @@ import { SideBarComponent } from 'src/app/components/side-bar/side-bar.component
 import { MatButtonModule } from '@angular/material/button';
 import { DialogLoginComponent } from 'src/app/components/dialog-login/dialog-login.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { DialogRegisterComponent } from '../../components/dialog-register/dialog-register.component';
+import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
+import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { DialogDeleteAccComponent } from '../../components/dialog-delete-acc/dialog-delete-acc.component';
+import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-logout.component';
 
 @NgModule({
-  declarations: [NavBarComponent, SideBarComponent,DialogLoginComponent],
-  imports: [CommonModule, ReactiveFormsModule, MatIconModule, MatButtonModule,MatDialogModule,MatInputModule,FormsModule, ],
+  declarations: [
+    NavBarComponent,
+    SideBarComponent,
+    DialogLoginComponent,
+    DialogRegisterComponent,
+    CheckEmailComponent,
+    SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent,
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatProgressBarModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatTooltipModule,
+    MatInputModule,
+    FormsModule,
+  ],
   exports: [
     ReactiveFormsModule,
     NavBarComponent,
+    DialogRegisterComponent,
     SideBarComponent,
+    CheckEmailComponent,
+    SigninSuccessComponent,
+    DialogDeleteAccComponent,
+    DialogLogoutComponent,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
-    FormsModule
-  
+    FormsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatFormFieldModule,
   ],
 })
 export class ShareModule {}

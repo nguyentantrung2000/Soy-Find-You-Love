@@ -10,14 +10,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'match',
+    path: 'layout',
     loadChildren: () =>
-      import('./pages/match/match.module').then((m) => m.MatchModule),
-  },
-  {
-    path: 'chat',
-    loadChildren: () =>
-      import('./pages/chat/chat.module').then((m) => m.ChatModule),
+      import('./pages/layout/layout.module').then((m) => m.LayoutModule),
   },
   { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) },
 ];
