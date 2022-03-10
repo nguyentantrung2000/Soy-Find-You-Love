@@ -76,11 +76,15 @@
   .display {
     display: flex;
     a{
-
+      width: 30%;
+      float: left;
     }
     b{
-      margin-top: 20px;
-      margin-left: 50%;
+      width: 70%;
+      float: right;
+      margin-top: 8px;
+      // margin-top: 20px;
+      // margin-left: 50%;
     }
   }
   .display1 {
@@ -179,7 +183,7 @@ button:hover:not(.active) {
 
 }
 .noti{
-  margin-top: 25px;
+  margin-top: 2%;
 }
 .noti button{
   border-style:solid ;
