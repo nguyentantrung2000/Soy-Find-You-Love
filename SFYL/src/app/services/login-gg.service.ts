@@ -29,6 +29,7 @@ export class LoginGGService {
     }
   }
   public async logOut() {
-    return await signOut(this.auth);
+    await signOut(this.auth);
+    this.router.navigate(['']);
   }
 }
