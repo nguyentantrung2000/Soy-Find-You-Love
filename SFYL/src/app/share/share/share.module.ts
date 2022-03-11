@@ -65,6 +65,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DialogLogoutComponent,
     RecoverAccountComponent,
     MatIconModule,
+    MatTooltipModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
