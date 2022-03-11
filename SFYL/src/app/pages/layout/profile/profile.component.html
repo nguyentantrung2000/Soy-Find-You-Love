@@ -1,0 +1,62 @@
+<div id="side">
+    <app-side-bar></app-side-bar>
+</div>
+<div id="nav">
+    <app-nav-bar></app-nav-bar>
+</div>
+<div class="main">
+    <div class="content">
+        <div class="top">
+            <p style="font-size: xx-large; margin-left: 10%;">Thông tin cá nhân</p>
+        </div>
+        <div class="body">
+            <div class="left">
+                <div class="left-top">
+                    <div class="card">
+                        <img class="user" src="../../../assets/images/791698c99d6b7cfd993f61100a7cde73.jpg">
+                    </div>
+
+                    <div class="profile">
+                        <div class="name">Bùi Thanh Huy</div>
+                        <div class="job">Sinh Viên <span>20 Tuổi</span></div>
+                        <div class="date">
+                            <mat-icon>date_range</mat-icon>
+                            <span>11/01/2001</span>
+                        </div>
+                        <div class="gender">
+                            <mat-icon>transgender</mat-icon>
+                            <span>Nam</span></div>
+                        <div class="school">
+                            <mat-icon>school</mat-icon><span>Đại học Hoa Sen</span></div>
+                        <div class="local">
+                            <mat-icon> location_on</mat-icon><span>Hồ Chí Minh City</span></div>
+                    </div>
+                </div>
+
+                <div class="left-botton">
+                    <br>
+                    <span>Giới Thiệu</span>
+                    <br>
+                    <div class="decription">26 Sơn La chào aee nhó !!!</div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="right-body">
+                    <div class="right-body-top">
+                        <span>Sở thích</span>
+                    </div>
+                    <div class="right-body-botton">
+                        <span>Phong cách sống</span>
+                    </div>
+                </div>
+
+
+                <div class="button">
+                    <button class="setting" (click)="navigate('/layout/setting-profile')">Chỉnh sửa hồ sơ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

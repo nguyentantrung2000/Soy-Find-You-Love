@@ -5,95 +5,121 @@
      </div> -->
     <div class="body">
         <div class="left">
-            <h2 style="font-size: 30px"> CÀI ĐẶT TÌM KIẾM</h2>
-            <h2> Địa điểm: </h2>
-            <h2>Đối tượng tìm kiếm : Nữ </h2>
-            <div class="display1">
-                <a>
-                    <h2>Phạm vi tìm kiếm : </h2>
-                </a>
-                <b> <mat-slider
-                thumbLabel
-                [displayWith]="formatLabel"
-                tickInterval="1000"
-                step="1000"
-                min="0"
-                max="100000"
-                aria-label="units"></mat-slider></b>
-            </div>
-            <div class="display1">
-                <a>
-                    <h2>Độ tuổi ưu tiên :</h2>
-                </a>
-                <b>   <mat-slider
-                thumbLabel
-                [displayWith]="formatAge"
-                tickInterval="1000"
-                step="1"
-                min="18"
-                max="60"
-                aria-label="units"></mat-slider></b>
-
-            </div>
-
-            <h2 style="font-size: 30px">
-                THIẾT LẬP HIỂN THỊ
-            </h2>
-            <div class="display">
-                <a>
-                    <h2>Hiển thị tôi trên SFYL</h2>
-                </a>
-                <b><mat-slide-toggle></mat-slide-toggle></b>
+            <div class="setting">
+                <!-- <div class="display1"> -->
+                <h2 class="header"> CÀI ĐẶT TÌM KIẾM</h2>
+                <!-- </div> -->
+                <div class="top-left-content">
+                    <div class="display1">
+                        <h2 class="content withMatSlider"> Địa điểm: </h2>
+                        <button mat-icon-button>
+                            <mat-icon> location_on</mat-icon>
+                        </button>
+                    </div>
+                    <div class="display1">
+                        <h2 class="content">Đối tượng tìm kiếm: Nữ </h2>
+                    </div>
+                    <div class="contentWithSlider">
+                        <!-- <a> -->
+                        <h2 class="content withMatSlider">Phạm vi tìm kiếm: </h2>
+                        <!-- </a> -->
+                        <!-- <b> -->
+                        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1000" min="0"
+                            max="100000" aria-label="units"></mat-slider>
+                        <!-- </b> -->
+                    </div>
+                    <div class="contentWithSlider">
+                        <!-- <a> -->
+                        <h2 class="content withMatSlider">Độ tuổi ưu tiên:</h2>
+                        <!-- </a> -->
+                        <!-- <b> -->
+                        <mat-slider thumbLabel [displayWith]="formatAge" tickInterval="1000" step="1" min="18" max="60"
+                            aria-label="units"></mat-slider>
+                        <!-- </b> -->
+                    </div>
+                </div>
             </div>
 
-            <h2>Khi đã tắt, bạn sẽ không được hiển thị trong stack thẻ. Bạn có thể vẫn xem và trò chuyện với người tương hợp</h2>
+            <div class="tin">
+                <h2 class="header">
+                    THIẾT LẬP HIỂN THỊ
+                </h2>
+                <div class="top-left-content">
+                    <div class="display">
+                        <!-- <a> -->
+                        <h2 class="content">Hiển thị tôi trên SFYL</h2>
+                        <!-- </a> -->
+                        <!-- <b> -->
+                        <mat-slide-toggle></mat-slide-toggle>
+                        <!-- </b> -->
+                    </div>
+
+                    <h2 class="sub-content">*Khi đã tắt, bạn sẽ không được hiển thị trong stack thẻ. Bạn có thể vẫn xem
+                        và
+                        trò chuyện với người tương hợp</h2>
+                </div>
+            </div>
         </div>
         <div class="right">
             <div class="set">
-                <h1 style="font-size: 30px">THIẾT LẬP TÀI KHOẢN</h1>
-                <h2> Email : </h2>
+                <h2 class="header">THIẾT LẬP TÀI KHOẢN</h2>
+                <div class="top-left-content">
+                <h2 class="content"> Email : </h2>
                 <div class="display3">
 
-                    <a>
-                        <h2>Trạng thái hoạt động </h2>
-                    </a>
-                    <b><mat-slide-toggle></mat-slide-toggle></b>
+                    <!-- <a> -->
+                        <h2 class="content">Trạng thái hoạt động </h2>
+                    <!-- </a> -->
+                    <!-- <b> -->
+                        <mat-slide-toggle></mat-slide-toggle>
+                    <!-- </b> -->
 
                 </div>
                 <div class="display3">
 
-                    <a>
-                        <h2>Thông báo đã xem </h2>
-                    </a>
-                    <b> <mat-slide-toggle></mat-slide-toggle></b>
+                    <!-- <a> -->
+                        <h2 class="content">Thông báo đã xem </h2>
+                    <!-- </a> -->
+                    <!-- <b> -->
+                        <mat-slide-toggle></mat-slide-toggle>
+                    <!-- </b> -->
                 </div>
-
+                </div>
             </div>
-
-            <h1 style="font-size: 30px">THÔNG BÁO</h1>
-            <div class="display3">
-                <a>
-                    <h2> Email <button mat-icon-button> <mat-icon matTooltip="Kiểm soát emai bạn muốn nhận được - tất cả, chỉ những thứ quan trọng.">info</mat-icon></button>
-                    </h2>
-                </a>
-                <b>
-                    <button  mat-icon-button ><mat-icon >arrow_circle_down</mat-icon>
-                    </button>
-                 </b>
+            <div class="tind">
+                <h2 class="header">THÔNG BÁO</h2>
+                <div class="display3">
+                        <h2 class="content"> Email </h2>
+                            <button mat-icon-button
+                            matTooltip="Kiểm soát emai bạn muốn nhận được - tất cả, chỉ những thứ quan trọng."
+                            >
+                                <mat-icon>
+                                    info</mat-icon>
+                            </button>
+                        
+                        <button mat-icon-button>
+                            <mat-icon>arrow_circle_down</mat-icon>
+                        </button>
+                </div>
+                <div class="display3">
+                    <!-- <a> -->
+                        <h2 class="content">Thông báo cập nhật</h2> <button mat-icon-button>
+                                <mat-icon
+                                    matTooltip="Nếu bạn tắt tính năng này bạn sẽ không xem được các hoạt động gần đây của bạn">
+                                    info</mat-icon>
+                            </button>
+                    <!-- </a> -->
+                    <!-- <b> -->
+                        <button mat-icon-button>
+                            <mat-icon>arrow_circle_up</mat-icon>
+                        </button>
+                    <!-- </b> -->
+                </div>
             </div>
-            <div class="display3">
-                <a>
-                    <h2>Thông báo cập nhật <button mat-icon-button> <mat-icon matTooltip="Nếu bạn tắt tính năng này bạn sẽ không xem được các hoạt động gần đây của bạn">info</mat-icon></button></h2>
-                </a>
-                <b>
-                    <button mat-icon-button><mat-icon>arrow_circle_up</mat-icon></button>
-                </b>
-            </div>
-
             <div class="noti">
                 <button mat-button class="Logout" (click)="openDialog()">
                     Đăng xuất
-                </button >
+                </button>
                 <button mat-button class="delete" (click)="openDialogDelete()">Xóa tài khoản</button>
 
             </div>
