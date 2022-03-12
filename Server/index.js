@@ -5,6 +5,7 @@ const server = express();
 const path = require("path");
 // var key = require("./firebase-admin.json");
 const firebase = require("./database");
+const { get } = require("http");
 const firestore = firebase.firestore();
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: false }));
@@ -70,10 +71,60 @@ server.put("/user/update", async(request, response) => {
     }
 });
 
+///LikeList
+server.post("/user/likelist",async(request, response)=>{
+  
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let docIDs =  request.body.docIDs;
+   await firebase.firestore().collection(collectionName).doc(docId).update({
+      Like : firebase.firestore.FieldValue.arrayUnion(docIDs)
+  });
+
+  response.send({
+     message : "Like"
+  })
+
+})
+////////UnLikeList
+server.post("/user/unlikelist",async(request, response)=>{
+  
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let docIDs =  request.body.docIDs;
+   await firebase.firestore().collection(collectionName).doc(docId).update({
+      Like : firebase.firestore.FieldValue.arrayUnion(docIDs)
+  });
+
+  response.send({
+     message : "UnLike"
+  })
+
+})
+
+/////////get LikeList
+server.get("/user/likelist",async(request, response)=>{
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let Idlike =request.body.Idlike;
+
+  for( Id of Idlike){
+    if(I){
+
+    }
+  }
+})
 
 
 
-
+server.post("/user/unlike", async(request, response)=>{
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let docIDs =  request.body.docIDs;
+   await firebase.firestore().collection(collectionName).doc(docId).update({
+      UnLike : firebase.firestore.FieldValue.arrayUnion(docIDs)
+  });
+})
 
 
 
