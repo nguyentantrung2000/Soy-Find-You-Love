@@ -102,40 +102,42 @@ server.post("/user/unlikelist",async(request, response)=>{
 
 })
 
-/////////get LikeList
-server.get("/user/likelist",async(request, response)=>{
+///////get LikeList
+server.get("/user/listLike",async(request, response)=>{
   let collectionName = request.body.collectionName;
   let docId = request.body.docId;
-  let Idlike =request.body.Idlike;
-
-  for( Id of Idlike){
-    if(I){
-
-    }
-  }
+  console.log(collectionName,docId); 
+    let result= await firebase.firestore().collection(collectionName).doc(docId).get().then((value)=>{
+        let temp = value.data().Like;
+        console.log(temp)
+     });
+     response.send(result)
 })
 
+/////get Unlistlike
+
+server.get("/user/listLike",async(request, response)=>{
+    let collectionName = request.body.collectionName;
+    let docId = request.body.docId;
+    console.log(collectionName,docId); 
+      let result= await firebase.firestore().collection(collectionName).doc(docId).get().then((value)=>{
+          let temp = value.data().UnLike;
+          console.log(temp)
+       });
+       response.send(result)
+  })
 
 
-server.post("/user/unlike", async(request, response)=>{
-  let collectionName = request.body.collectionName;
-  let docId = request.body.docId;
-  let docIDs =  request.body.docIDs;
-   await firebase.firestore().collection(collectionName).doc(docId).update({
-      UnLike : firebase.firestore.FieldValue.arrayUnion(docIDs)
-  });
-})
 
 
-
-// server.get("/api/:name", async function (request, response) {
-//     let params = request.params.name;
-//     console.log("API 1 " + params);
-//     let querySnapshot = await firestore.collection(params).get();
-
-//     let datas = await querySnapshot.docs.map((value) => {
-//       let temp = value.data();
-//       return temp;
-//     });
-//     response.send(datas);
+// server.post("/user/unlike", async(request, response)=>{
+//   let collectionName = request.body.collectionName;
+//   let docId = request.body.docId;
+//   let docIDs =  request.body.docIDs;
+//    await firebase.firestore().collection(collectionName).doc(docId).update({
+//       UnLike : firebase.firestore.FieldValue.arrayUnion(docIDs)
 //   });
+// })
+
+
+
