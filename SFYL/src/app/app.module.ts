@@ -9,9 +9,10 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './share/share/share.module';
+import { UserChatComponent } from './components/user-chat/user-chat.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UserChatComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

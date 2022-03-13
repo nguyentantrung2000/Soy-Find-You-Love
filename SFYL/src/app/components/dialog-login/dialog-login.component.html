@@ -7,15 +7,15 @@
     <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>TÀI KHOẢN</mat-label>
         <input matInput type="text" [(ngModel)]="value1" placeholder="Nhập vào tên tài khoản">
-        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
-          <mat-icon>close</mat-icon>
+        <button *ngIf="value1" matSuffix mat-icon-button class="icon-button-small" aria-label="small button" (click)="value1=''">
+          <mat-icon style="opacity:0.75;">close</mat-icon>
         </button>
     </mat-form-field>
     <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>MẬT KHẨU</mat-label>
         <input matInput type="text" [(ngModel)]="value2" placeholder="Nhập vào mật khẩu">
-        <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
-          <mat-icon>close</mat-icon>
+        <button *ngIf="value2" matSuffix mat-icon-button class="icon-button-small" aria-label="small button" (click)="value2=''">
+          <mat-icon style="opacity:0.75;">close</mat-icon>
         </button>
       </mat-form-field>
       <p id="error-sit" (click)="openDialog2()" style="text-align:center;text-decoration-line:underline;cursor: pointer;">Sự cố khi đăng nhập</p>

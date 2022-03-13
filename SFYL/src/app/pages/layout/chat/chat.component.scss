@@ -1,11 +1,12 @@
 .container {
-    position: relative;
-    top: 85px;
-    left: 10rem;
-    // margin-top: 50px;
-    // margin-left: 10rem;
+    // position: relative;
+    // top: 85px;
+    // left: 10rem;
+    margin-top: 85px;
+    margin-left: 10rem;
     background-color: aquamarine;
     height: 39rem;
+    // height: auto;
     max-width: 85%;
     display: flex;
     flex-direction: row;
@@ -15,18 +16,48 @@
 }
 
 .left-item {
+    // margin-right: 100px;
     height: 100%;
     width: 30%;
     background-color: burlywood;
     border-right: solid;
 }
 
-.user-online {
+.header-search {
+
     height: 10%;
     width: 100%;
     background-color: cadetblue;
     border-bottom: solid;
 }
+// .header-search{
+//     // display:inline-flex;
+//     margin: 0px 0px 0px 13px;
+//     height: 100%;
+// }
+.header-search h2{
+    margin: 0;
+}
+.search-box{
+    margin-bottom:0px;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 40%;
+    width: 70%;
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    width: 90%;
+    height: fit-content;
+}
+
+// .onl-list-img img{
+//     margin: 0px 5px 0 5px;
+// }
 
 .old-converstation {
     height: 90%;
@@ -34,6 +65,9 @@
     background-color: aliceblue;
     border-bottom: solid;
 }
+
+
+
 
 .right-item {
     height: 100%;
@@ -44,58 +78,334 @@
 img{
     max-width: 50px;
     max-height: 50px;
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
 .msg-header{
     height: 10%;
     width: 100%;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     background-color: red;
     border-bottom: none;
-    display: inline-block;
+    // display: inline-block;
 }
 
 .msg-header-img{
     // border-radius: 50%;
-    height: 75px;
+    height: 50px;
     width: 50px;
-    margin-left: 5%;
-    // margin-top: 5px;
+    margin-left: 1%;
+    margin-top: 5px;
     float: left;
+    cursor: pointer;
 }
 
 .active{
-    width: 120px;
+    width: 80px;
     float: left;
-    // margin-top: 10px;
+    margin-top: 20px;
 }
+
 .active h4{
+    cursor: pointer;
     font-size: 20px;
     margin-left: 10px;
     color: #fff;
+    line-height: 1px;
 }
+
 .active h6{
     font-size: 10px;
     margin-left: 10px;
-    // line-height:  0px;
+    line-height:  5px;
     color: #fff;
 }
 
+.header-icons{
+    width: 120px;
+    float:right;
+    // position: fixed;
+    right:4%;
+    margin-top: 12px;
+    font-size: large; 
+}
+.header-icons .fa-solid{
+    color:#000;
+    cursor: pointer;
+    margin: 10px
+}
 
-
-.current-conversation{
+.chat-page{
+    padding: 0 0 0 0;
     height: 80%;
     width: 100%;
-    background-color: green;
+    background-color: white;
     border-bottom: solid;
+    border-top: solid;
+}
+.msg-inbox{
+    border: 1px solid blue;
+    overflow: hidden;
+    padding-bottom:0px;
+}
+.chats{
+    padding: 15px 5px 10px 15px;
+}
+.msg-page{
+    height: 480px;
+    overflow-y: auto;
+}
+.received-chats-img{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+.received-msg{
+    display: inline-block;
+    padding: 0 0 0 10px;
+    vertical-align: top;
+    width: 92%;
+}
+.received-msg-inbox{
+    width: 45%;
+}
+.received-msg-inbox p{
+    background: #efefef none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #646464;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px 5px 12px;
+    width: 100%;
+}
+.time{
+    color: #777;
+    display: block;
+    font-size: 12px;
+    margin: 8px 0 0;
 }
 
-.text-area{
+.outgoing-chats{
+    overflow: hidden;
+    margin: 5px 10px;
+    display: block;
+}
+.outgoing-chats-msg p{
+    background: red none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+    padding: 5px 5px 5px 12px;
+    width: 100%;
+}
+.outgoing-chats-msg{
+    float:left;
+    width: 45%;
+    margin-left: 50%;
+}
+.outgoing-chats-img{
+    // display: inline-block;
+    margin-left: 15px;
+    // margin-top: -15px;
+    width: 20px;
+    height: 20px;
+    float:right;
+}
+
+.msg-bottom{
+    position: relative;
     height: 10%;
     width: 100%;
-    background-color: blue;
+    background-color: red;
     border-bottom: solid;
+    display: flex;
 }
+
+.input-group{
+    height: 50%;
+    float:right;
+    margin-top: 14px;
+    margin-right: 10px;
+    outline: none !important;
+    border-radius: 20px;
+    width: 95% !important;
+    background-color: #fff;
+    display: flex;
+}
+.form-control{
+    border: none !important;
+    border-radius: 20px !important;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.input-group-text{
+    background: transparent !important;
+    border: none !important;
+}
+.input-group .fa-solid{
+    color: red;
+    float: right;
+    font-size: large;
+    margin: 8px 7px 0 0;
+    cursor: pointer;
+}
+.input-group input{
+    outline: none;
+}
+.bottom-icons{
+    justify-content: center;
+    float:left;
+    padding-left: 10px;
+    margin-top: 14px;
+    // margin-left: 15px;
+    width: 5% !important;
+    font-size: x-large;
+}
+.bottom-icons i{
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#form-control:focus{
+    border-color: none !important;
+    box-shadow: none !important;
+    border-radius: 20px;
+}
+
+@media screen and(min-width:0px) and (max-width:545px) {
+    .msg-header{
+        height: 10%;
+        width: 100%;
+        // border: 1px solid #ccc;
+        background-color: yellow;
+        border-bottom: none;
+        // display: inline-block;
+    }  
+    // .msg-header-img{
+    //     // border-radius: 50%;
+    //     height: 50px;
+    //     width: 50px;
+    //     margin-left: 1%;
+    //     margin-top: 5px;
+    //     float: left;
+    // }   
+    .active{
+        width: 80px;
+        float: left;
+        margin-top: 20px;
+    }
+    
+    .active h4{
+        font-size: 20px;
+        margin-left: 10px;
+        color: #000;
+        line-height: 1px;
+    }
+    
+    .active h6{
+        font-size: 10px;
+        margin-left: 10px;
+        line-height:  5px;
+        color: #000;
+    }
+    
+    .header-icons{
+        width: 80px;
+        float:right;
+        // position: fixed;
+        right:4%;
+        margin-top: 7px;
+        font-size: medium; 
+    }
+    .header-icons .fa-solid{
+        color:#000;
+        cursor: pointer;
+        margin: 5px
+    }
+    
+}
+
+//1334-1140
+@media screen and(min-width:0px) and (max-width:1334px) {
+    .msg-bottom{
+        background-color: yellow;
+    }
+    .bottom-icons{
+        justify-content: center;
+        width: 50px;
+        float:left;
+        margin: 15px 0 0 2px;
+        width: 15% !important;
+        font-size: x-large;
+    }
+    .bottom-icons i{
+        color: #000;
+        padding: 3px;
+    }
+}
+
+
+
+// @media screen and(min-width:687px) and (max-width:1141px) {
+//     .msg-bottom{
+//         background-color: green;
+//     }
+//     .bottom-icons{
+//         justify-content: center;
+//         // width: 75px;
+//         // height: 50px;
+//         float:left;
+//         margin: 8px 0px 0px 10px;
+//         width: 14% !important;
+//         font-size: large;
+//     }
+//     .bottom-icons i{
+//         color: #fff;
+//         padding: 3px;
+//     }
+// }
+
+// @media screen and(min-width:635px) and (max-width:687.5px) {
+//     .msg-bottom{
+//         background-color: blue;
+//     }
+//     .bottom-icons{
+//         justify-content: center;
+//         // width: 75px;
+//         // height: 50px;
+//         float:left;
+//         margin: 8px 0px 0px 10px;
+//         width: 14% !important;
+//         font-size: medium;
+//     }
+//     .bottom-icons i{
+//         color: #000;
+//         padding: 2px;
+//     }
+// }
+
+// @media screen and(min-width:0px) and (max-width:634.75px) {
+//     .msg-bottom{
+//         background-color: pink;
+//     }
+//     .bottom-icons{
+//         justify-content: center;
+//         // width: 75px;
+//         // height: 50px;
+//         float:left;
+//         margin: 10px 0px 0px 8px;
+//         width: 14% !important;
+//         font-size: x-small;
+//     }
+//     .bottom-icons i{
+//         color: #000;
+//         padding: 2px;
+//     }
+// }
