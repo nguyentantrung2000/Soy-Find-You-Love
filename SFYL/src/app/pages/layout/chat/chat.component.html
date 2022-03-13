@@ -4,20 +4,20 @@
     <div class="left-item">
 
         <div class="header-search">
-            <h2 style="color: white; font-weight: bold;margin:0 0 0 5px">Chat</h2>
-            <div class="input-group" style="margin:0px 0px 0px 5px;float:left;">
-                <div class="input-group-append">
+            <h2 style="font-weight: bold;margin:0 0 0 5px">Chat</h2>
+            <div class="input-group" style="margin:0px 0px 0px 5px;float:left;height: 45%;">
                 <span class="input-group-text" >
-                <i class="fa-solid fa-magnifying-glass" style="margin-right: 0px;margin-left: 5px;color: gray;"></i>
+                <i class="fa-solid fa-magnifying-glass" style="margin: 6px 0px 0px 5px;color: gray;"></i>
                 </span>
-                </div>
-            <input type ="text" class ="form-control" placeholder="Aa">
+                <input type ="text" class ="form-control" placeholder="Aa">
             </div>
         </div>
 
         <div class="old-converstation">
             <div list-users>
-
+                <div *ngFor ='let userChat of userChatService.data'>
+                    <app-user-chat [userChat] = 'userChat'></app-user-chat>
+                  </div>
             </div>
         </div>
 
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                        <p>Chào mấy con ghệ của chế nhá <3</p>
+                                        <p>Tam giác là tát giam <3</p>
                                         <span class="time">11:05 AM | November 3</span>
                                     </div>
                                 </div>   
@@ -62,8 +62,8 @@
                                 </div> 
 
                                 <div class="outgoing-chats-msg">             
-                                        <p>Chào chồng yêu xinh đẹp  <3</p>
-                                        <span class="time">11:05 AM | November 3</span>
+                                        <p>Tát là đánh, giam là nhốt</p>
+                                        <span class="time">11:06 AM | November 3</span>
                                 </div>
 
                             </div>
@@ -74,8 +74,8 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                        <p>Chào mấy con ghệ của chế nhá <3</p>
-                                        <span class="time">11:05 AM | November 3</span>
+                                        <p>Đánh nhốt là đốt nhánh</p>
+                                        <span class="time">11:07 AM | November 3</span>
                                     </div>
                                 </div>   
                             </div>
@@ -86,10 +86,34 @@
                                 </div> 
 
                                 <div class="outgoing-chats-msg">             
-                                        <p>Chào chồng yêu xinh đẹp <3</p>
-                                        <span class="time">11:05 AM | November 3</span>
+                                        <p>Đốt là thiêu, nhánh là cành</p>
+                                        <span class="time">11:08 AM | November 3</span>
                                 </div>            
-                            </div>     
+                            </div>
+                            
+                            <div class="received-chats">
+                                <div class="received-chats-img">
+                                    <img src="../../../../assets/images/jisoo1.jpg">
+                                </div>
+                                <div class="received-msg">
+                                    <div class="received-msg-inbox">
+                                        <p>Thiêu cành là thanh you</p>
+                                        <span class="time">11:07 AM | November 3</span>
+                                    </div>
+                                </div>   
+                            </div>
+
+                            <div class="outgoing-chats">
+                                <div class="outgoing-chats-img">
+                                    <img src="../../../../assets/images/lisa.jpg">
+                                </div> 
+
+                                <div class="outgoing-chats-msg">             
+                                        <p>Welcome everybody welcome to the party</p>
+                                        <span class="time">11:08 AM | November 3</span>
+                                </div>            
+                            </div> 
+
                         </div>
                     </div>
             </div>

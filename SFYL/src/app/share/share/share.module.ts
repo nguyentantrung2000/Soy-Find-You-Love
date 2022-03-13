@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { DialogRegisterComponent } from '../../components/dialog-register/dialog-register.component';
 import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
+import { UserChatComponent } from 'src/app/components/user-chat/user-chat.component';
 import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSliderModule } from '@angular/material/slider';
@@ -36,6 +37,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DialogDeleteAccComponent,
     DialogLogoutComponent,
     RecoverAccountComponent,
+    UserChatComponent
   ],
   imports: [
     CommonModule,
@@ -55,6 +57,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatNativeDateModule,
   ],
   exports: [
+    UserChatComponent,
     ReactiveFormsModule,
     NavBarComponent,
     DialogRegisterComponent,
@@ -65,6 +68,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DialogLogoutComponent,
     RecoverAccountComponent,
     MatIconModule,
+    MatTooltipModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,

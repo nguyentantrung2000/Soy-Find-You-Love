@@ -1,21 +1,141 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const server = express();
-
-var admin = require("firebase-admin");
-
-var serviceAccount = require("./firebase-admin.json");
-
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
-
+const path = require("path");
+// var key = require("./firebase-admin.json");
+const firebase = require("./database");
+const { get } = require("http");
+const firestore = firebase.firestore();
 server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: false }));
+server.use(cors());
 
-server.listen(3000, () => {
-    console.log(`Server running`);
+const PORT = 3000;
+server.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
-// Get
-server.get('/', (req, res) => {
-    res.send('Hello!!!')
+
+server.get("/user", async function(request, response) {
+    let body = request.body;
+    let querySnapshot = (await firestore.collection(body.collectionName).get()).docs.map(value => {
+        let temp = value.data();
+        return temp;
+    });
+    response.send(querySnapshot);
 });
+
+server.get("/user/:id", async function(request, response) {
+    let params = request.params.id;
+    console.log(params);
+    let querySnapshot = await firestore.collection("User").doc(params);
+    let datas = await querySnapshot.get().then((value) => {
+        let temp = value.data()
+        console.log(temp)
+        return temp;
+    });
+    response.send(datas);
+});
+
+
+server.post("/user", async(request, response) => {
+    let body = request.body;
+    console.log(body);
+    try {
+        let result = await firestore.collection(body.collectionName).add(body.data);
+        response.send({
+            message: "Successful!!!",
+        });
+    } catch (error) {
+        console.log(error);
+    }
+
+});
+server.put("/user/update", async(request, response) => {
+    let collectionName = request.body.collectionName;
+    let docId = request.body.docId;
+    console.log(collectionName, docId);
+    try {
+        let result = await firestore.collection(collectionName)
+            .doc(docId)
+            .update(request.body.data);
+        console.log(result);
+        response.send({
+            message: "Update successful!!",
+            updateTime: result.writeTime,
+        })
+    } catch (error) {
+        response.send({
+            error: error.toString(),
+        });
+    }
+});
+
+///LikeList
+server.post("/user/likelist",async(request, response)=>{
+  
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let docIDs =  request.body.docIDs;
+   await firebase.firestore().collection(collectionName).doc(docId).update({
+      Like : firebase.firestore.FieldValue.arrayUnion(docIDs)
+  });
+
+  response.send({
+     message : "Like"
+  })
+
+})
+////////UnLikeList
+server.post("/user/unlikelist",async(request, response)=>{
+  
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let docIDs =  request.body.docIDs;
+   await firebase.firestore().collection(collectionName).doc(docId).update({
+      Like : firebase.firestore.FieldValue.arrayUnion(docIDs)
+  });
+
+  response.send({
+     message : "UnLike"
+  })
+
+})
+
+/////////get LikeList
+server.get("/user/likelist",async(request, response)=>{
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let Idlike =request.body.Idlike;
+
+  for( Id of Idlike){
+    if(I){
+
+    }
+  }
+})
+
+
+
+server.post("/user/unlike", async(request, response)=>{
+  let collectionName = request.body.collectionName;
+  let docId = request.body.docId;
+  let docIDs =  request.body.docIDs;
+   await firebase.firestore().collection(collectionName).doc(docId).update({
+      UnLike : firebase.firestore.FieldValue.arrayUnion(docIDs)
+  });
+})
+
+
+
+// server.get("/api/:name", async function (request, response) {
+//     let params = request.params.name;
+//     console.log("API 1 " + params);
+//     let querySnapshot = await firestore.collection(params).get();
+
+//     let datas = await querySnapshot.docs.map((value) => {
+//       let temp = value.data();
+//       return temp;
+//     });
+//     response.send(datas);
+//   });

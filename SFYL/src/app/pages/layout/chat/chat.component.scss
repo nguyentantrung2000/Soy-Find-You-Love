@@ -2,77 +2,51 @@
     // position: relative;
     // top: 85px;
     // left: 10rem;
-    margin-top: 85px;
+    margin-top: 90px;
     margin-left: 10rem;
     background-color: aquamarine;
     height: 39rem;
-    // height: auto;
     max-width: 85%;
     display: flex;
     flex-direction: row;
-    border-style: solid;
+    border: solid;
     letter-spacing: 0.5px;
+    box-shadow: 5px 5px 5px grey;
     
 }
 
 .left-item {
-    // margin-right: 100px;
     height: 100%;
     width: 30%;
     background-color: burlywood;
-    border-right: solid;
+    border-right: solid; 
 }
 
 .header-search {
-
     height: 10%;
     width: 100%;
     background-color: cadetblue;
-    border-bottom: solid;
+    color: white;
+    // border-bottom: solid;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
 }
-// .header-search{
-//     // display:inline-flex;
-//     margin: 0px 0px 0px 13px;
-//     height: 100%;
-// }
 .header-search h2{
     margin: 0;
 }
-.search-box{
-    margin-bottom:0px;
-    background-color: #fff;
-    border-radius: 20px;
-    height: 40%;
-    width: 70%;
-    padding-left: 5px;
-    padding-top: 1px;
-}
-
-.search-box input{
-    border: none;
-    outline: none;
-    width: 90%;
-    height: fit-content;
-}
-
-// .onl-list-img img{
-//     margin: 0px 5px 0 5px;
-// }
 
 .old-converstation {
     height: 90%;
     width: 100%;
-    background-color: aliceblue;
-    border-bottom: solid;
+    background-color: cadetblue;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+    // background-color: aliceblue;
 }
-
-
-
 
 .right-item {
     height: 100%;
     width: 70%;
     background-color: royalblue;
+    // border-style: solid;
 }
 
 img{
@@ -86,9 +60,10 @@ img{
 .msg-header{
     height: 10%;
     width: 100%;
-    // border: 1px solid #ccc;
-    background-color: red;
-    border-bottom: none;
+    background-color: cadetblue;
+    // border-bottom: solid black;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+    // border-bottom: solid black;
     // display: inline-block;
 }
 
@@ -132,7 +107,7 @@ img{
     font-size: large; 
 }
 .header-icons .fa-solid{
-    color:#000;
+    color:#fff;
     cursor: pointer;
     margin: 10px
 }
@@ -142,11 +117,11 @@ img{
     height: 80%;
     width: 100%;
     background-color: white;
-    border-bottom: solid;
-    border-top: solid;
+    // border-bottom: solid;
+    // border-top: solid;
 }
 .msg-inbox{
-    border: 1px solid blue;
+    // border: 1px solid black;
     overflow: hidden;
     padding-bottom:0px;
 }
@@ -173,9 +148,12 @@ img{
     width: 45%;
 }
 .received-msg-inbox p{
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+
     background: #efefef none repeat scroll 0 0;
     border-radius: 10px;
     color: #646464;
+    // color: white;
     font-size: 14px;
     margin: 0;
     padding: 5px 10px 5px 12px;
@@ -194,7 +172,9 @@ img{
     display: block;
 }
 .outgoing-chats-msg p{
-    background: red none repeat scroll 0 0;
+    background: cadetblue none repeat scroll 0 0;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+
     color: #fff;
     border-radius: 10px;
     font-size: 14px;
@@ -221,8 +201,10 @@ img{
     position: relative;
     height: 10%;
     width: 100%;
-    background-color: red;
-    border-bottom: solid;
+    // background-color: red;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+    background-color: cadetblue;
+    // border-bottom: solid;
     display: flex;
 }
 
@@ -249,7 +231,7 @@ img{
     border: none !important;
 }
 .input-group .fa-solid{
-    color: red;
+    color: cadetblue;
     float: right;
     font-size: large;
     margin: 8px 7px 0 0;
@@ -269,7 +251,7 @@ img{
 }
 .bottom-icons i{
     color: #fff;
-    padding: 5px;
+    padding: 3px 5px 5px 5px;
     cursor: pointer;
 }
 
@@ -288,14 +270,14 @@ img{
         border-bottom: none;
         // display: inline-block;
     }  
-    // .msg-header-img{
-    //     // border-radius: 50%;
-    //     height: 50px;
-    //     width: 50px;
-    //     margin-left: 1%;
-    //     margin-top: 5px;
-    //     float: left;
-    // }   
+    .msg-header-img{
+        // border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-left: 2%;
+        margin-top: 15px;
+        float: left;
+    }   
     .active{
         width: 80px;
         float: left;
@@ -303,16 +285,17 @@ img{
     }
     
     .active h4{
-        font-size: 20px;
+        font-size: 15px;
+        margin-top: 4px;
         margin-left: 10px;
         color: #000;
         line-height: 1px;
     }
     
     .active h6{
-        font-size: 10px;
+        font-size: 8px;
         margin-left: 10px;
-        line-height:  5px;
+        line-height:  1px;
         color: #000;
     }
     
@@ -329,14 +312,33 @@ img{
         cursor: pointer;
         margin: 5px
     }
-    
+    .msg-bottom{
+        background-color: yellow;
+    }
+    .input-group .fa-solid{
+        color: black;
+    }
+    .outgoing-chats-msg p{
+        background: yellow none repeat scroll 0 0;
+        color: #000;
+    }
+    .bottom-icons i{
+        color: #000;
+        padding: 2px 3px 3px 3px;
+    }
+    .header-search {
+        color: black;
+        background-color: yellow;
+    }
+    .old-converstation{
+        background-color: yellow;
+    }
+
+
 }
 
 //1334-1140
 @media screen and(min-width:0px) and (max-width:1334px) {
-    .msg-bottom{
-        background-color: yellow;
-    }
     .bottom-icons{
         justify-content: center;
         width: 50px;
@@ -346,9 +348,11 @@ img{
         font-size: x-large;
     }
     .bottom-icons i{
-        color: #000;
-        padding: 3px;
+        padding: 2px 3px 3px 3px;
     }
+   
+   
+  
 }
 
 
