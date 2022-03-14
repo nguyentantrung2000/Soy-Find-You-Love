@@ -6,18 +6,18 @@
         <div class="header-search">
             <h2 style="font-weight: bold;margin:0 0 0 5px">Chat</h2>
             <div class="input-group" style="margin:0px 0px 0px 5px;float:left;height: 45%;">
-                <span class="input-group-text" >
+                <span class="input-group-text">
                 <i class="fa-solid fa-magnifying-glass" style="margin: 6px 0px 0px 5px;color: gray;"></i>
                 </span>
-                <input type ="text" class ="form-control" placeholder="Aa">
+                <input type="text" class="form-control" placeholder="Aa">
             </div>
         </div>
 
         <div class="old-converstation">
             <div list-users>
-                <div *ngFor ='let userChat of userChatService.data'>
-                    <app-user-chat [userChat] = 'userChat'></app-user-chat>
-                  </div>
+                <div *ngFor='let userChat of userChatService.userChatList'>
+                    <app-user-chat [userChat]='userChat'></app-user-chat>
+                </div>
             </div>
         </div>
 
@@ -25,7 +25,7 @@
 
     <div class="right-item">
         <div class="msg-header">
-            <div class ="msg-header-img">
+            <div class="msg-header-img">
                 <img src="../../../../assets/images/jisoo1.jpg">
             </div>
             <div class="active">
@@ -40,82 +40,83 @@
         </div>
         <div class="chat-page">
             <div class="msg-inbox">
-                    <div class="chats">
-                        <div class="msg-page">
+                <div class="chats">
+                    <div class="msg-page">
 
-                            <div class="received-chats">
-                                <div class="received-chats-img">
-                                    <img src="../../../../assets/images/jisoo1.jpg">
+                        <div class="received-chats">
+                            <div class="received-chats-img">
+                                <img src="../../../../assets/images/jisoo1.jpg">
+                            </div>
+                            <div class="received-msg">
+                                <div class="received-msg-inbox">
+                                    <p>Tam giác là tát giam
+                                        <3</p>
+                                            <span class="time">11:05 AM | November 3</span>
                                 </div>
-                                <div class="received-msg">
-                                    <div class="received-msg-inbox">
-                                        <p>Tam giác là tát giam <3</p>
-                                        <span class="time">11:05 AM | November 3</span>
-                                    </div>
-                                </div>   
+                            </div>
+                        </div>
+
+                        <div class="outgoing-chats">
+
+                            <div class="outgoing-chats-img">
+                                <img src="../../../../assets/images/lisa.jpg">
                             </div>
 
-                            <div class="outgoing-chats">
-
-                                <div class="outgoing-chats-img">
-                                    <img src="../../../../assets/images/lisa.jpg">
-                                </div> 
-
-                                <div class="outgoing-chats-msg">             
-                                        <p>Tát là đánh, giam là nhốt</p>
-                                        <span class="time">11:06 AM | November 3</span>
-                                </div>
-
+                            <div class="outgoing-chats-msg">
+                                <p>Tát là đánh, giam là nhốt</p>
+                                <span class="time">11:06 AM | November 3</span>
                             </div>
-
-                            <div class="received-chats">
-                                <div class="received-chats-img">
-                                    <img src="../../../../assets/images/jisoo1.jpg">
-                                </div>
-                                <div class="received-msg">
-                                    <div class="received-msg-inbox">
-                                        <p>Đánh nhốt là đốt nhánh</p>
-                                        <span class="time">11:07 AM | November 3</span>
-                                    </div>
-                                </div>   
-                            </div>
-
-                            <div class="outgoing-chats">
-                                <div class="outgoing-chats-img">
-                                    <img src="../../../../assets/images/lisa.jpg">
-                                </div> 
-
-                                <div class="outgoing-chats-msg">             
-                                        <p>Đốt là thiêu, nhánh là cành</p>
-                                        <span class="time">11:08 AM | November 3</span>
-                                </div>            
-                            </div>
-                            
-                            <div class="received-chats">
-                                <div class="received-chats-img">
-                                    <img src="../../../../assets/images/jisoo1.jpg">
-                                </div>
-                                <div class="received-msg">
-                                    <div class="received-msg-inbox">
-                                        <p>Thiêu cành là thanh you</p>
-                                        <span class="time">11:07 AM | November 3</span>
-                                    </div>
-                                </div>   
-                            </div>
-
-                            <div class="outgoing-chats">
-                                <div class="outgoing-chats-img">
-                                    <img src="../../../../assets/images/lisa.jpg">
-                                </div> 
-
-                                <div class="outgoing-chats-msg">             
-                                        <p>Welcome everybody welcome to the party</p>
-                                        <span class="time">11:08 AM | November 3</span>
-                                </div>            
-                            </div> 
 
                         </div>
+
+                        <div class="received-chats">
+                            <div class="received-chats-img">
+                                <img src="../../../../assets/images/jisoo1.jpg">
+                            </div>
+                            <div class="received-msg">
+                                <div class="received-msg-inbox">
+                                    <p>Đánh nhốt là đốt nhánh</p>
+                                    <span class="time">11:07 AM | November 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="outgoing-chats">
+                            <div class="outgoing-chats-img">
+                                <img src="../../../../assets/images/lisa.jpg">
+                            </div>
+
+                            <div class="outgoing-chats-msg">
+                                <p>Đốt là thiêu, nhánh là cành</p>
+                                <span class="time">11:08 AM | November 3</span>
+                            </div>
+                        </div>
+
+                        <div class="received-chats">
+                            <div class="received-chats-img">
+                                <img src="../../../../assets/images/jisoo1.jpg">
+                            </div>
+                            <div class="received-msg">
+                                <div class="received-msg-inbox">
+                                    <p>Thiêu cành là thanh you</p>
+                                    <span class="time">11:07 AM | November 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="outgoing-chats">
+                            <div class="outgoing-chats-img">
+                                <img src="../../../../assets/images/lisa.jpg">
+                            </div>
+
+                            <div class="outgoing-chats-msg">
+                                <p>Welcome everybody welcome to the party</p>
+                                <span class="time">11:08 AM | November 3</span>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
             </div>
         </div>
 
@@ -127,7 +128,7 @@
                 <i class="fa-solid fa-face-smile"></i>
             </div>
             <div class="input-group">
-                <input type ="text" class ="form-control" placeholder="Aa">
+                <input type="text" class="form-control" placeholder="Aa">
                 <div class="input-group-append">
                     <span class="input-group-text">
                         <i class="fa-solid fa-paper-plane"></i>
