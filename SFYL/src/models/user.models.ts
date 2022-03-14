@@ -1,3 +1,5 @@
+
+
 export interface User {
   displayName: String;
   email: number;
@@ -5,3 +7,5 @@ export interface User {
   likeList: [];
   wattingList: [];
 }
+
+
