@@ -54,10 +54,6 @@ server.post("/user", async(request, response) => {
                 message: "User is exits!"
             })
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> e9be1e4ba9ed1609ecf4180659a1b184acdbf3a3
     } catch (error) {
         console.log(error);
     }
@@ -68,7 +64,7 @@ server.post("/user/location", async(request, response) => {
 
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
-    await firebase.firestore().collection(collectionName).doc(docId).set({
+    await firebase.firestore().collection(collectionName).doc(docId).update({
         Location: firebase.firestore.FieldValue.arrayUnion({ lat, long })
     });
 

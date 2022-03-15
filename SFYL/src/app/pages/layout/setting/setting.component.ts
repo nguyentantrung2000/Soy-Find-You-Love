@@ -5,6 +5,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogLogoutComponent } from 'src/app/components/dialog-logout/dialog-logout.component';
 import { DialogDeleteAccComponent } from 'src/app/components/dialog-delete-acc/dialog-delete-acc.component';
 import { HttpClient } from '@angular/common/http';
+import { HttpClientService } from 'src/app/services/http-client.service';
+import { environment } from '../../../../environments/environment';
+import { LoginGGService } from 'src/app/services/login-gg.service';
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
@@ -30,7 +33,12 @@ export class SettingComponent implements OnInit {
 
     return value;
   }
-  constructor(public dialog: MatDialog, public http: HttpClient) {}
+  constructor(
+    public dialog: MatDialog,
+    public http: HttpClient,
+    public userLocation: HttpClientService,
+    public login: LoginGGService
+  ) {}
 
   openDialog() {
     this.dialog.open(DialogLogoutComponent);
@@ -65,11 +73,21 @@ export class SettingComponent implements OnInit {
           console.log(this.lat);
           console.log(this.lng);
           // this.cal();
+          await this.http.post(environment.endpoint + '/user/location', {
+            data: {
+              collectionName: 'User',
+              docId: this.login.user?.uid,
+              Location: {
+                lats: this.lat,
+                long: this.lng,
+              },
+            },
+          });
         });
       });
     }
   }
-  public updateLocationUser() {}
+
   public cal() {
     let lat1 = this.lat;
     let lon1 = this.lng;
