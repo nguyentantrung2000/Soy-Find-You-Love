@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { User_chat } from 'src/models/uset_chat.models';
+import { User_chat } from 'src/models/user_chat.models';
 @Component({
   selector: 'app-user-chat',
   templateUrl: './user-chat.component.html',
