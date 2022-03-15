@@ -24,6 +24,7 @@ import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-log
 import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatChipsModule,
   ],
   exports: [
     ReactiveFormsModule,
@@ -75,6 +77,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatChipsModule,
   ],
 })
 export class ShareModule {}
