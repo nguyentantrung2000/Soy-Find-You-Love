@@ -1,9 +1,9 @@
 .container {
-    // position: relative;
-    // top: 85px;
-    // left: 10rem;
-    margin-top: 90px;
-    margin-left: 10rem;
+    position: relative;
+    top: 87px;
+    left: 10rem;
+    // margin-top: 90px;
+    // margin-left: 10rem;
     background-color: aquamarine;
     height: 39rem;
     max-width: 85%;
@@ -25,7 +25,8 @@
 .header-search {
     height: 10%;
     width: 100%;
-    background-color: cadetblue;
+    // background-color: cadetblue;
+    background-color: rgb(255, 153, 0);
     color: white;
     // border-bottom: solid;
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
@@ -63,7 +64,8 @@ img{
 .msg-header{
     height: 10%;
     width: 100%;
-    background-color: cadetblue;
+    // background-color: cadetblue;
+    background-color: rgb(255, 153, 0);
     // border-bottom: solid black;
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
     // border-bottom: solid black;
@@ -175,7 +177,7 @@ img{
     display: block;
 }
 .outgoing-chats-msg p{
-    background: cadetblue none repeat scroll 0 0;
+    background: rgb(248, 168, 48) none repeat scroll 0 0;
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
 
     color: #fff;
@@ -204,10 +206,10 @@ img{
     position: relative;
     height: 10%;
     width: 100%;
-    // background-color: red;
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
-    background-color: cadetblue;
+    // background-color: cadetblue;
     // border-bottom: solid;
+    background-color: rgb(248, 168, 48);
     display: flex;
 }
 
@@ -234,7 +236,7 @@ img{
     border: none !important;
 }
 .input-group .fa-solid{
-    color: cadetblue;
+    color: rgb(248, 168, 48);
     float: right;
     font-size: large;
     margin: 8px 7px 0 0;
