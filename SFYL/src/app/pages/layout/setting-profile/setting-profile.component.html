@@ -1,8 +1,8 @@
 <div class="main">
     <div class=" content">
-        <div class="top">
+        <!-- <div class="top">
             <p style="font-size: xx-large; font-weight: bolder;">Chỉnh sửa thông tin cá nhân</p>
-        </div>
+        </div> -->
 
         <div class="body">
             <div class="left">
@@ -69,9 +69,9 @@
                                 <p>Công ty</p>
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Công ty ABC</mat-label>
-                                    <input matInput type="text" [(ngModel)]="value">
-                                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear"
-                                        (click)="value=''">
+                                    <input matInput type="text" [(ngModel)]="value1">
+                                    <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value1=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -80,9 +80,9 @@
                                 <p>Trường</p>
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Trường ABC</mat-label>
-                                    <input matInput type="text" [(ngModel)]="value">
-                                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear"
-                                        (click)="value=''">
+                                    <input matInput type="text" [(ngModel)]="value2">
+                                    <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value2=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -105,8 +105,114 @@
                 </div>
             </div>
             <div class="right">
-                <div class="right-body"></div>
-                <div class="button"></div>
+                <div class="right-top">
+                    <div class="hobby">
+                        <h3>Sở thích</h3>
+                        <mat-form-field class="example-chip-list" appearance="fill">
+                            <mat-chip-list #chipList aria-label="Fruit selection">
+                                <mat-chip *ngFor="let hobby of hobbies" (removed)="remove(hobby)">
+                                    {{hobby.name}}
+                                    <button matChipRemove>
+                                        <mat-icon>cancel</mat-icon>
+                                    </button>
+                                </mat-chip>
+                                <input placeholder="Add more..." [matChipInputFor]="chipList"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+                            </mat-chip-list>
+                        </mat-form-field>
+                    </div>
+                    <div class="life-style">
+                        <h3>Phong cách sống</h3>
+                        <div class="life-style-list">
+                            <div class="sub-life-style1">
+                                <p>Cung hoàng đạo</p>
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="font-weight:bolder">Chọn cung hoàng đạo</mat-label>
+                                    <mat-select>
+                                        <mat-option style="font-weight:bolder" value="one">Bạch Dương</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Kim Ngưu</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Song Tử</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Cự Giải</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Sư Tử</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Xử Nữ</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Thiên Bình</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Thiên Yết</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Nhân Mã </mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Ma Kết </mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Bảo Bình</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Song Ngư</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="sub-life-style2">
+                                <p>Chế độ ăn uống</p>
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="font-weight:bolder">Chọn chế độ ăn</mat-label>
+                                    <mat-select>
+                                        <mat-option style="font-weight:bolder" value="one">Ăn chay</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Ăn mặn</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Ăn đa dạng</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Chỉ ăn thịt</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Kosher</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Halal</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Ăn tạp</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="sub-life-style3">
+                                <p>Thú cưng</p>
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="font-weight:bolder">Loại thú cưng</mat-label>
+                                    <mat-select>
+                                        <mat-option style="font-weight:bolder" value="one">Chó</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Mèo</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Bò sát</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Động vật lưỡng cư
+                                        </mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Cá</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Không nuôi thú cưng
+                                        </mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Tất cả các loại</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="sub-life-style4">
+                                <p>Giáo dục</p>
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="font-weight:bolder">Loại giáo dục</mat-label>
+                                    <mat-select>
+                                        <mat-option style="font-weight:bolder" value="one">Phổ thông</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Cử nhân</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Thạc sĩ</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Tiến sĩ</mat-option>
+                                        <mat-option style="font-weight:bolder" value="two">Cá</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="sub-life-style5">
+                                <p>Thể thao</p>
+                                <mat-form-field class="example-form-field" appearance="fill">
+                                    <mat-label>*VD: Bóng đá</mat-label>
+                                    <input matInput type="text" [(ngModel)]="value3">
+                                    <button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value3=''">
+                                        <mat-icon>close</mat-icon>
+                                    </button>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="btn">
+                        <button mat-raised-button>Lưu thông tin</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
