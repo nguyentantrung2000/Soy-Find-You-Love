@@ -15,6 +15,7 @@ export class SettingComponent implements OnInit {
   lng: any;
   a: any;
   Location: any;
+  Location1: any;
   formatLabel(value: number) {
     if (value >= 1000) {
       return Math.round(value / 1000) + 'km';
@@ -58,15 +59,21 @@ export class SettingComponent implements OnInit {
         await this.http.get(request_url).subscribe(async (res: any) => {
           this.a = await res;
           this.Location = res.results[0].formatted;
-          console.log(this.Location);
-          this.cal();
+          this.Location1 = res.results[0].geometry;
+          let b = this.Location1[Object.keys(this.Location1)[0]];
+          console.log('haha' + b);
+          // console.log(this.lat);
+          // console.log(this.lng);
+          // this.cal();
         });
       });
     }
   }
+  public updateLocationUser() {}
   public cal() {
     let lat1 = this.lat;
     let lon1 = this.lng;
+
     let lat2 = 10.75076;
     let lon2 = 106.63153;
 

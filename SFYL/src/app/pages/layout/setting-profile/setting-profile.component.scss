@@ -1,7 +1,9 @@
 .main {
-  position: fixed;
-  top: 50px;
-  left: 5%;
+  // position: fixed;
+  // top: 50px;
+  // left: 5%;
+  margin-top: 50px;
+  margin-left: 5%;
   width: 95vw;
   height: 90vh;
   display: grid;
@@ -11,7 +13,7 @@
 .img {
   width: 96%;
   height: 94%;
-  margin: 8px 0 0 30px;
+  margin: 8px 0 0 8px;
   border-radius: 8px;
 }
 
@@ -22,6 +24,11 @@
   margin-left: 49px;
   margin-top: -13px;
   // box-shadow: 3px 2px 0 0 gray;
+}
+
+mat-option {
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .huhu .huhu2 {
@@ -43,10 +50,15 @@
   // box-shadow: 3px 2px 0 0 gray;
 }
 
-.btn button {
+.profile .btn button {
   margin-left: 0px;
   width: 100%;
+  // width: 344px;
   font-size: 30px;
+  // background-color: crimson;
+  color: black;
+  box-shadow: 5px 5px #888888;
+  border-style: solid;
 }
 
 .sub-hehe h3 {
@@ -56,7 +68,7 @@
 }
 
 .hehe {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .hehe p {
@@ -68,7 +80,7 @@
 }
 
 .hehe .hehe1 mat-form-field {
-  margin-left: 205px;
+  margin-left: 150px;
   margin-top: -15px;
 }
 
@@ -89,7 +101,7 @@
 }
 
 .hehe .hehe2 mat-form-field {
-  margin-left: 236px;
+  margin-left: 181px;
   margin-top: -15px;
 }
 
@@ -98,7 +110,7 @@
 }
 
 .hehe .hehe3 mat-form-field {
-  margin-left: 244px;
+  margin-left: 189px;
   margin-top: -15px;
 }
 
@@ -107,7 +119,7 @@
 }
 
 .sub-hihi {
-  margin-left: 30px;
+  margin-left: 10px;
   display: flex;
 }
 
@@ -125,6 +137,7 @@
 
 mat-slide-toggle {
   margin-left: 6px;
+  z-index: -1;
 }
 
 .hihi h3 {
@@ -134,7 +147,7 @@ mat-slide-toggle {
 }
 
 .sub-hihi .hihi2 {
-  margin-left: 116px;
+  margin-left: 66px;
 }
 
 .sub-hihi .hihi1 {
@@ -142,38 +155,43 @@ mat-slide-toggle {
 }
 
 .content {
-  width: 95vw;
+  width: 88vw;
   // display: flex;
-  padding: 1px 0;
+  padding: 2px 0;
   // align-items: center;
   flex-direction: column;
   display: grid;
   place-items: center;
   // margin-top: 2rem;
-  margin-left: 5%;
+  margin-left: 2%;
   margin-top: 1.5%;
 }
 
 .content .top {
-  height: 15%;
+  height: 4%;
   width: 100%;
   // background-color: black;
 }
 
 .content .body {
-  width: 95vw;
-  height: 37vw;
-  background-color: black;
+  width: 100%;
+  height: 36vw;
+  // background-color: black;
   display: flex;
   margin-top: 15px;
   align-items: center;
   place-items: center;
+  // border: 8px solid black;
+  // border-radius: 10px;
 }
 
 .content .body .left {
   height: 100%;
-  width: 55vw;
-  background-color: gray;
+  width: 46%;
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 6px 8px #888888;
+  // background-color: gray;
 }
 
 .left-top {
@@ -181,7 +199,7 @@ mat-slide-toggle {
 }
 
 .profile {
-  margin-left: 78px;
+  margin-left: 44px;
   margin-top: 10px;
 }
 
@@ -195,25 +213,713 @@ mat-slide-toggle {
 }
 
 .content .body .left .left-top {
-  width: 46vw;
+  width: 44vw;
   height: 50%;
-  background-color: rgb(207, 183, 183);
+  // background-color: rgb(207, 183, 183);
+  border-radius: 2px;
 }
 
 .content .body .left .left-botton {
-  width: 46vw;
+  width: 44vw;
   height: 50%;
-  background-color: rgb(204, 154, 78);
+  // background-color: rgb(204, 154, 78);
 }
 
 .content .body .right {
-  height: 37vw;
-  width: 59vw;
-  background-color: brown;
+  // height: 37vw;
+  // width: 59vw;
+  // width: 49vw;
+  height: 100%;
+  width: 54%;
+  border: 4px solid black;
+  border-radius: 8px;
+  margin-left: 18px;
+  box-shadow: 6px 8px #888888;
+  // background-color: brown;
 }
 
-.content .body .right .right-body {
-  height: 25vw;
-  width: 47vw;
-  background-color: gray;
+.content .body .right .right-top {
+  height: 90%;
+  width: 100%;
+  // background-color: gray;
+}
+
+.content .body .right .right-bottom {
+  height: 10%;
+  width: 100%;
+  // background-color: rgb(218, 116, 195);
+}
+
+.example-chip-list {
+  width: 80%;
+  margin-left: 0px;
+}
+
+.hobby {
+  margin-left: 30px;
+}
+
+.hobby h3 {
+  padding-top: 10px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.life-style {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.life-style h3 {
+  margin-top: 10px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.sub-life-style1,
+.sub-life-style2,
+.sub-life-style3,
+.sub-life-style4,
+.sub-life-style5 {
+  margin-left: 30px;
+  display: flex;
+}
+
+.life-style-list .sub-life-style1 mat-form-field {
+  margin-left: 76px;
+  margin-top: -17px;
+}
+
+.sub-life-style1 p,
+.sub-life-style2 p,
+.sub-life-style3 p,
+.sub-life-style4 p,
+.sub-life-style5 p {
+  font-size: x-large;
+}
+
+.life-style-list .sub-life-style2 mat-form-field {
+  margin-left: 82px;
+  margin-top: -17px;
+}
+
+.life-style-list .sub-life-style3 mat-form-field {
+  margin-left: 152px;
+  margin-top: -17px;
+}
+
+.life-style-list .sub-life-style4 mat-form-field {
+  margin-left: 158px;
+  margin-top: -17px;
+}
+
+.life-style-list .sub-life-style5 mat-form-field {
+  margin-left: 157px;
+  margin-top: -17px;
+  width: 200px;
+}
+
+.right-bottom .btn button {
+  margin-left: 190px;
+  margin-top: -2px;
+  width: 50%;
+  font-size: 30px;
+  // background-color: crimson;
+  color: black;
+  box-shadow: 5px 5px #888888;
+  border-style: solid;
+}
+
+.profile .btn button:hover:not(.active) {
+  background-image: linear-gradient(
+    to right top,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
+  font-weight: bold;
+  color: white !important;
+}
+
+.right-bottom .btn button:hover:not(.active) {
+  background-image: linear-gradient(
+    to right top,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
+  font-weight: bold;
+  color: white !important;
+}
+//width: 1867, height:1286
+//=================================================
+@media screen and(max-width: 1400px) {
+  .profile {
+    margin-left: 16px;
+  }
+  .sub-hihi {
+    margin-top: -10px;
+    margin-left: -24px;
+  }
+  .hehe {
+    margin-left: -32px;
+  }
+  .example-chip-list {
+    margin-left: 0px;
+    margin-top: -30px;
+  }
+  .right-bottom .btn button {
+    margin-left: 154px;
+    margin-top: -4px;
+  }
+  .life-style {
+    margin-left: 30px;
+    margin-top: -14px;
+  }
+  .profile .btn button {
+    width: 82%;
+    margin-left: 38px;
+  }
+  .huhu .huhu1 {
+    margin-top: -12px;
+  }
+  .huhu .huhu2 {
+    margin-top: -10px;
+  }
+  .huhu .huhu3 {
+    margin-top: -4px;
+  }
+}
+//=====================================
+@media screen and(max-width: 1362px) {
+  .huhu .huhu1 mat-form-field {
+    margin-left: 32px;
+  }
+  .huhu .huhu2 mat-form-field {
+    margin-left: 60px;
+  }
+  .huhu .huhu3 mat-form-field {
+    margin-left: 18px;
+  }
+  .btn {
+    margin-top: -14px;
+  }
+  .hehe .hehe1 mat-form-field {
+    margin-left: 110px;
+  }
+  .hehe .hehe2 mat-form-field {
+    margin-left: 136px;
+  }
+  .hehe .hehe3 mat-form-field {
+    margin-left: 144px;
+  }
+  .hehe .hehe1 {
+    margin-top: -12px;
+  }
+  .hehe .hehe2 {
+    margin-top: -10px;
+  }
+  .hehe .hehe3 {
+    margin-top: -10px;
+  }
+  .sub-hihi p {
+    font-size: 20px;
+  }
+  .hehe p {
+    font-size: 20px;
+  }
+  .profile p {
+    font-size: 20px;
+  }
+  .profile .huhu1 p {
+    margin-top: 10px;
+  }
+  .profile .huhu2 p {
+    margin-top: 8px;
+  }
+  .example-chip-list {
+    margin-top: -32px;
+  }
+  .life-style {
+    margin-left: 30px;
+    margin-top: -20px;
+  }
+  .sub-life-style1,
+  .sub-life-style4,
+  .sub-life-style5 {
+    margin-top: -8px;
+  }
+
+  .sub-life-style2 {
+    margin-top: -6px;
+  }
+  .sub-life-style2 {
+    margin-top: -10px;
+  }
+  .sub-life-style1 p,
+  .sub-life-style2 p,
+  .sub-life-style3 p,
+  .sub-life-style4 p,
+  .sub-life-style5 p {
+    font-size: 20px;
+  }
+  .life-style-list .sub-life-style3 mat-form-field {
+    margin-left: 142px;
+  }
+  .life-style-list .sub-life-style4 mat-form-field {
+    margin-left: 148px;
+  }
+  .life-style-list .sub-life-style5 mat-form-field {
+    margin-left: 148px;
+  }
+}
+//=======================================
+@media screen and (max-width: 1170px) {
+  .huhu .huhu1 mat-form-field,
+  .huhu .huhu2 mat-form-field,
+  .huhu .huhu3 mat-form-field {
+    width: 40%;
+  }
+  .profile h3 {
+    font-size: 18px;
+  }
+  .profile {
+    margin-top: 4px;
+  }
+  .huhu .huhu1 {
+    margin-top: -26px;
+  }
+  .huhu .huhu2 {
+    margin-top: -20px;
+  }
+  .huhu .huhu3 {
+    margin-top: -12px;
+  }
+  .profile .btn button {
+    width: 41%;
+    margin-left: 68px;
+    font-size: 20px;
+    margin-top: 8px;
+  }
+  .hehe .hehe1 mat-form-field,
+  .hehe .hehe2 mat-form-field,
+  .hehe .hehe3 mat-form-field {
+    width: 28%;
+  }
+  .hehe p {
+    font-size: 18px;
+  }
+  .img {
+    width: 96%;
+    height: 78%;
+  }
+  .sub-hehe {
+    margin-top: -36px;
+  }
+  .sub-hihi p {
+    font-size: 15px;
+  }
+  .sub-hihi .hihi2 {
+    margin-left: 58px;
+  }
+  .content .body {
+    height: 46vw;
+    margin-left: 28px;
+  }
+  .top p {
+    margin-left: 18px;
+  }
+  .hehe .hehe2 mat-form-field {
+    margin-left: 134px;
+  }
+  .hehe .hehe3 mat-form-field {
+    margin-left: 140px;
+  }
+  .life-style-list .sub-life-style1 mat-form-field {
+    margin-left: 46px;
+  }
+  .life-style-list .sub-life-style2 mat-form-field {
+    margin-left: 52px;
+  }
+  .life-style-list .sub-life-style3 mat-form-field {
+    margin-left: 110px;
+  }
+  .life-style-list .sub-life-style4 mat-form-field,
+  .life-style-list .sub-life-style5 mat-form-field {
+    margin-left: 116px;
+  }
+  .right-bottom .btn button {
+    margin-left: 114px;
+  }
+  .life-style-list {
+    margin-left: -28px;
+  }
+}
+//======================
+@media screen and (max-width: 1000px) {
+  .content .body {
+    height: 60vw;
+    // margin-left: 28px;
+  }
+  .content .body .left {
+    width: 41.5vw;
+    margin-left: 20px;
+  }
+  .top p {
+    margin-left: 61px;
+    margin-bottom: 20px;
+  }
+  .content .body .right {
+    width: 40vw;
+    margin-left: 16px;
+  }
+  .img {
+    width: 120px;
+    height: 80%;
+  }
+  .profile {
+    margin-top: 0px;
+  }
+  .profile .btn button {
+    // margin-top: 0px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+  }
+
+  .huhu .huhu1 mat-form-field {
+    margin-left: 26px;
+  }
+  .huhu .huhu2 mat-form-field {
+    margin-left: 43px;
+  }
+  .profile p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .profile .huhu3 p {
+    margin-top: 4px;
+  }
+  .sub-hehe h3 {
+    font-size: 18px;
+  }
+  .sub-hehe {
+    margin-left: -20px;
+  }
+  .hehe {
+    margin-top: 30px;
+  }
+  .hehe .hehe1 mat-form-field {
+    margin-left: 60px;
+    width: 36%;
+  }
+  .hehe .hehe2 mat-form-field {
+    margin-left: 84px;
+    width: 36%;
+  }
+  .hehe .hehe3 mat-form-field {
+    margin-left: 90px;
+    width: 36%;
+  }
+  .sub-hihi .hihi2 {
+    margin-left: 12px;
+  }
+  .hihi {
+    margin-left: -20px;
+    margin-top: 2px;
+  }
+  .hihi h3 {
+    font-size: 18px;
+  }
+  .sub-hihi p {
+    font-size: 14px;
+  }
+  .hobby {
+    margin-top: -8px;
+    margin-left: 10px;
+  }
+  .hobby h3 {
+    font-size: 18px;
+  }
+  .example-chip-list {
+    margin-left: -2px;
+    width: 330px;
+  }
+  .life-style h3 {
+    font-size: 18px;
+  }
+  .life-style {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .life-style-list p {
+    font-size: 14px;
+  }
+  .sub-life-style1 {
+    margin-top: -20px;
+  }
+  .sub-life-style3 {
+    margin-top: -10px;
+  }
+  .life-style-list .sub-life-style1 mat-form-field {
+    margin-left: 22px;
+    width: 50%;
+  }
+  .life-style-list .sub-life-style2 mat-form-field {
+    margin-left: 26px;
+    width: 50%;
+  }
+  .life-style-list .sub-life-style3 mat-form-field {
+    margin-left: 68px;
+    width: 50%;
+  }
+  .life-style-list .sub-life-style4 mat-form-field,
+  .life-style-list .sub-life-style5 mat-form-field {
+    margin-left: 72px;
+    width: 50%;
+  }
+  .right-bottom .btn button {
+    width: 50%;
+    margin-left: 106px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: 86px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    margin-top: -50px;
+  }
+  .content .body {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .content .body .left {
+    display: flex;
+    width: 84.5vw;
+  }
+  .img {
+    width: 70px;
+    height: 80%;
+  }
+  .profile h3 {
+    font-size: 14px;
+  }
+  .profile p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .sub-hehe {
+    margin-left: -42px;
+    margin-top: 0px;
+  }
+  .sub-hehe h3 {
+    font-size: 14px;
+  }
+  .hehe {
+    margin-top: -16px;
+  }
+  .hehe p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .hehe .hehe2 {
+    margin-top: -10px;
+  }
+  .hehe .hehe2 mat-form-field {
+    margin-left: 76px;
+  }
+  .hehe .hehe3 mat-form-field {
+    margin-left: 82px;
+  }
+  .hihi {
+    margin-left: -41px;
+    margin-top: -16px;
+  }
+  .hihi h3 {
+    font-size: 14px;
+  }
+  .sub-hihi p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .profile .btn button {
+    width: 68%;
+    margin-left: -6px;
+  }
+
+  .content .body .right {
+    height: 35vw;
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 84.5vw;
+  }
+  .content .body .right .right-top {
+    display: flex;
+  }
+  .hobby h3 {
+    font-size: 14px;
+  }
+  .life-style {
+    margin-top: -8px;
+    margin-left: 20px;
+  }
+  .life-style h3 {
+    font-size: 14px;
+  }
+  .life-style-list p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .right-bottom .btn button {
+    position: absolute;
+    width: 40%;
+    margin-top: -56px;
+    margin-left: 22px;
+  }
+  .life-style-list .sub-life-style3 mat-form-field {
+    margin-left: 62px;
+  }
+  .life-style-list .sub-life-style4 mat-form-field,
+  .life-style-list .sub-life-style5 mat-form-field {
+    margin-left: 66px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .example-chip-list {
+    width: 234px;
+  }
+  .right-bottom .btn button {
+    width: 32%;
+    margin-top: -44px;
+  }
+  .life-style {
+    margin-left: 60px;
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .content {
+    margin-top: -150px;
+  }
+  .content .body .left {
+    width: 60vw;
+    height: 70vw;
+    display: grid;
+  }
+  .img {
+    width: 124px;
+    height: 154px;
+  }
+  .sub-hehe {
+    margin-left: -26px;
+    margin-top: -10px;
+  }
+  .profile .btn button {
+    width: 60%;
+    margin-left: 15px;
+    margin-top: -2px;
+  }
+  .hihi {
+    margin-left: -23px;
+    margin-top: -16px;
+  }
+  .sub-hihi {
+    margin-top: -21px;
+    margin-left: -12px;
+  }
+  .sub-hihi .hihi2 {
+    margin-left: 42px;
+  }
+
+  .content .body .right {
+    width: 60vw;
+    height: 90vw;
+  }
+  .content .body .right .right-top {
+    display: grid;
+  }
+  .life-style {
+    margin-top: -88px;
+    margin-left: 10px;
+  }
+  .right-bottom .btn button {
+    width: 32%;
+    margin-top: -12px;
+    margin-left: 94px;
+  }
+}
+
+@media screen and(max-width: 600px) {
+  .content {
+    margin-top: -150px;
+  }
+  .content .body .left {
+    width: 70vw;
+    height: 80vw;
+  }
+
+  .hehe .hehe1 mat-form-field,
+  .hehe .hehe2 mat-form-field {
+    margin-left: 94px;
+  }
+
+  .hehe .hehe3 mat-form-field {
+    margin-left: 84px;
+  }
+
+  .hihi {
+    margin-left: -25px;
+    margin-top: -16px;
+  }
+  .sub-hihi {
+    margin-top: -21px;
+    margin-left: -18px;
+    margin-right: -52px;
+  }
+  .sub-hihi .hihi2 {
+    margin-left: 60px;
+    // padding-left: 20px;
+  }
+
+  .content .body .right {
+    width: 70vw;
+    height: 120vw;
+  }
+  // .content .body .right .right-top {
+  //   display: grid;
+  // }
+  .life-style {
+    margin-top: -90px;
+    margin-left: 10px;
+  }
+  .right-bottom .btn button {
+    width: 32%;
+    margin-top: 2px;
+    margin-left: 94px;
+  }
 }

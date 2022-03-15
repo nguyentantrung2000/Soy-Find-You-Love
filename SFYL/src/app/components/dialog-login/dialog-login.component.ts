@@ -40,8 +40,10 @@ export class DialogLoginComponent implements OnInit {
               email: this.login.user?.email,
               name: this.login.user?.displayName,
               photoURL: this.login.user?.photoURL,
+              Location: [],
               Like: [],
               unLike: [],
+              Watting: [],
             },
           },
           { responseType: 'text' }
