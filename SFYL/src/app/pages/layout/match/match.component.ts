@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { Gesture, GestureController, IonCard } from '@ionic/angular';
 
@@ -14,24 +14,28 @@ export class MatchComponent implements OnInit {
     name: 'Anna',
     age:20,
     image:'../../../assets/images/anna.jpg',
-    visible: true
+    // visible: true
+    power:0
   },
   {
     name: 'Lucy',
     age:20,
     image:'../../../assets/images/lucy.jpg',
-    visible: true
+    // visible: true
+    power:0
   },
   {
     name: 'Diana',
     age:20,
     image:'../../../assets/images/diana.jpg',
-    visible: true
+    // visible: true
+    power:0
   },
 ];
 
   @ViewChildren(IonCard, {read: ElementRef}) cards: QueryList<ElementRef> | undefined;
-  constructor(public userData: DataService, private gestureCtrl: GestureController) {}
+  longPressActive = false;
+  constructor(public userData: DataService, private gestureCtrl: GestureController, private zone: NgZone) {}
 
   ngOnInit() {
     const cardArray = this.cards?.toArray;
@@ -39,10 +43,36 @@ export class MatchComponent implements OnInit {
   }
 
   useLongPress(cardArray: any){
-    for (let i = 0; i< cardArray. Length; i++) {
+    for (let i = 0; i < cardArray.length; i++) {
       const card = cardArray [i];
-      console. log('card:',card)
+      console. log('card: ',card);
+      const gesture = this.gestureCtrl.create({
+        el: card.nativeElement,
+        gestureName: 'long-press',
+        onStart: ev => {
+            this.longPressActive = true;
+            this.increasePower(i);
+        },
+        onEnd: ev =>{ 
+          this.longPressActive = false;
+        }
+      });
+      gesture.enable(true);
       }          
+  }
+
+  increasePower(i:any){
+    console.log('incrase')
+    
+    setTimeout(()=>{
+      if(this.longPressActive){
+        this.zone.run(()=>{
+          this.avatars[i].power++;
+        this.increasePower(i);
+        })
+      }
+      
+    },200)
   }
 
   useTinderSwipe(){

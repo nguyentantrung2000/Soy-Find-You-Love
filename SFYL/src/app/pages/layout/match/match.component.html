@@ -1,12 +1,14 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="main">
     <div class="content">
-        <div class="card" *ngFor="let avatar of avatars" [style.position]="'absolute'">
+        <div class="card" *ngFor="let avatar of avatars">
+            <!-- [style.position]="'absolute'" -->
             <div class="user">
                 <img class="user" [src]="avatar.image" [style]="'100%'">
 
                 <div class="profile">
                     <div class="name">{{avatar.name}} <span>{{avatar.age}}</span></div>
+                    <div>{{avatar.power}}</div>
                     <!-- <h2 class="name">{{avatar.name}},{{avatar.age}}</h2> -->
                     <div class="local">
                         <mat-icon>location_on</mat-icon>
