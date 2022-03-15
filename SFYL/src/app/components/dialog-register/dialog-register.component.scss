@@ -28,7 +28,11 @@
   #login-box #cancel:hover:not(.active) {
     opacity: 100% !important;
   }
-
+  :host::ng-deep .example-form-field{
+    border-radius: 8px;
+    background-color: none;
+    font-weight: bolder;
+  }
   #login-box button:hover:not(.active){
     background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
     font-weight: bold;
