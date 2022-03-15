@@ -54,12 +54,6 @@ server.post("/user", async(request, response) => {
                 message: "User is exits!"
             })
         }
-        // if (a != null) {
-
-        // } else {
-        //     console.log('hello');
-
-        // }
 
     } catch (error) {
         console.log(error);
@@ -141,7 +135,6 @@ server.get("/user/listLike", async(request, response) => {
     });
     response.send(result)
 })
-
 
 
 
