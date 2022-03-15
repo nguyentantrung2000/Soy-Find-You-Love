@@ -37,7 +37,10 @@
 .old-converstation {
     height: 90%;
     width: 100%;
-    background-color: cadetblue;
+    // background-color: cadetblue;
+    background-color: white;
+    flex-grow: 1;
+    overflow: auto;
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
     // background-color: aliceblue;
 }
