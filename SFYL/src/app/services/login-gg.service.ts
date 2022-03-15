@@ -20,13 +20,13 @@ export class LoginGGService {
       console.log(this.user);
     });
   }
-  public async loginGG() {
-    try {
-      await signInWithPopup(this.auth, new GoogleAuthProvider());
-      this.router.navigate(['/layout/match']);
-    } catch (err) {
-      alert('login fail!');
-    }
+  public loginGG() {
+    // try {
+    return signInWithPopup(this.auth, new GoogleAuthProvider());
+    // this.router.navigate(['/layout/match']);
+    // } catch (err) {
+    //   alert('login fail!');
+    // }
   }
   public async logOut() {
     await signOut(this.auth);

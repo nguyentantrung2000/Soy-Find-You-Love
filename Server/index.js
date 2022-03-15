@@ -45,7 +45,7 @@ server.post("/user", async(request, response) => {
     try {
         let isExits = await firebase.firestore().collection(collectionName).doc(docId).get();
         if (isExits.data() == undefined) {
-            await firestore.collection(body.collectionName).add(body.data);
+            await firestore.collection(body.collectionName).doc(docId).set(body.data);
             response.send({
                 message: "Successful!!!",
             });
@@ -54,7 +54,10 @@ server.post("/user", async(request, response) => {
                 message: "User is exits!"
             })
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> e9be1e4ba9ed1609ecf4180659a1b184acdbf3a3
     } catch (error) {
         console.log(error);
     }
