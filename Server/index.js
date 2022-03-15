@@ -66,6 +66,20 @@ server.post("/user", async(request, response) => {
     }
 
 });
+// user location
+server.post("/user/location", async(request, response) => {
+
+    let collectionName = request.body.collectionName;
+    let docId = request.body.docId;
+    await firebase.firestore().collection(collectionName).doc(docId).set({
+        Location: firebase.firestore.FieldValue.arrayUnion({ lat, long, city })
+    });
+
+    response.send({
+        message: "Update location !!!"
+    })
+
+})
 server.put("/user/update", async(request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
@@ -88,14 +102,22 @@ server.put("/user/update", async(request, response) => {
 
 ///LikeList
 server.post("/user/likelist", async(request, response) => {
-
         let collectionName = request.body.collectionName;
-        let docId = request.body.docId;
-        let docIDs = request.body.docIDs;
-        await firebase.firestore().collection(collectionName).doc(docId).update({
-            Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
-        });
-
+        let docId = request.body.docId; ////nguoi dung
+        let docIDs = request.body.docIDs; ////nguoi dung duoc thich 
+        let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
+        console.log(isExits.data().Like);
+        for (let i = 0; i < isExits.data().Watting.length; i++) {
+            if (docId == i) {
+                await firebase.firestore().collection(collectionName).doc(docId).update({
+                    Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
+                });
+            } else {
+                await firebase.firestore().collection(collectionName).doc(docId).update({
+                    Watting: firebase.firestore.FieldValue.arrayUnion(docIDs)
+                });
+            }
+        }
         response.send({
             message: "Like"
         })
