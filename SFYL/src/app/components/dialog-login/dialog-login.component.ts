@@ -59,28 +59,5 @@ export class DialogLoginComponent implements OnInit {
     } catch (error) {
       console.log(error)
     }
-    // this.login.loginGG();
-
-    // if (this.login.user != null) {
-    //   await this.http
-    //     .post(
-    //       environment.endpoint + 'user',
-    //       {
-    //         collectionName: 'User',
-    //         data: {
-    //           email: this.login.user?.email,
-    //           name: this.login.user?.displayName,
-    //           photoURL: this.login.user?.photoURL,
-    //           Location: [],
-    //           Like: [],
-    //           unLike: [],
-    //           Watting: [],
-    //         },
-    //       },
-    //       { responseType: 'text' }
-    //     ).toPromise();
-    //     this.dialog.closeAll();    
-    // }
-
   }
 }
