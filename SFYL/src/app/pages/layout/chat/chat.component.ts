@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserCharService } from 'src/app/services/user-char.service';
+import { UserCharService } from 'src/app/services/user-chat.service';
 import { User_chat } from 'src/models/user_chat.models';
 
 @Component({
@@ -8,12 +8,14 @@ import { User_chat } from 'src/models/user_chat.models';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
-  value1 = '';
+  // value1 = '';
   public arr!: Array<User_chat>
   constructor(
     public userChatService:UserCharService
   ) { }
  
+ 
+
   ngOnInit(): void {
   }
 
