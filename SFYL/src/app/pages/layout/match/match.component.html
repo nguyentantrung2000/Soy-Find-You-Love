@@ -1,14 +1,19 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div *ngIf="!this.userData.userList">
+    <p>
+        Loading....
+    </p>
+</div>
 <div class="main">
     <div class="content">
         <div class="card">
             <div class="user">
-                <img class="user" src="{{this.friendList1[this.index].photoURL}}">
+                <img class="user" [src]="this.userData.userList[this.index]?.photoURL || undefined">
                 <div class="profile">
-                    <div class="name">{{this.friendList1[this.index].name}}<span>{{this.friendList1[this.index].dob}}</span></div>
+                    <div class="name">{{this.userData.userList[this.index]?.name}}<span>{{this.userData.userList[this.index]?.dob}}</span></div>
                     <div class="local">
                         <mat-icon>location_on</mat-icon>
-                        <span>Cách đây 1km</span>
+                        <span>Cách đây {{this.userData.userList[this.index]?.distance}}km</span>
                     </div>
                 </div>
             </div>
