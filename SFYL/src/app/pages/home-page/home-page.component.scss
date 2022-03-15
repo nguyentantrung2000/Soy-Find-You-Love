@@ -111,14 +111,26 @@
   border-radius: 20px;
 }
 
-button:hover:not(.active){
-  background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+button:hover:not(.active) {
+  background-image: linear-gradient(
+    to right top,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
   font-weight: bolder;
   color: white !important;
   opacity: 100% !important;
 }
-
-
 
 #content {
   margin-top: 30px;
@@ -177,7 +189,7 @@ button:hover:not(.active){
   // margin-left: 10px;
   // margin-right: 10px;
   width: calc(100% / 4);
-  // border: 2px solid;
+  border: 2px solid;
   // text-align: center;
   padding-left: 20px;
   padding-right: 20px;
