@@ -6,9 +6,9 @@
 </div>
 <div class="main">
     <div class="content">
-        <div class="top">
+        <!-- <div class="top">
             <p style="font-size: xx-large; margin-left: 10%;">Thông tin cá nhân</p>
-        </div>
+        </div> -->
         <div class="body">
             <div class="left">
                 <div class="left-top">
@@ -18,28 +18,33 @@
 
                     <div class="profile">
                         <div class="name" id="word2">{{this.login.user?.displayName}}</div>
-                        <div class="job" id="word">Sinh Viên <span id="word">20 Tuổi</span></div>
+                        <!-- <div class="job" id="word">Sinh Viên <span id="word">20 Tuổi</span></div> -->
                         <div class="date">
                             <mat-icon>date_range</mat-icon>
                             <span id="word">11/01/2001</span>
                         </div>
                         <div class="gender">
                             <mat-icon>transgender</mat-icon>
-                            <span id="word">Nam</span></div>
+                            <span id="word">Nam</span>
+                        </div>
                         <div class="school">
                             <mat-icon>school</mat-icon>
-                            <span id="word">Đại học Hoa Sen</span></div>
+                            <span id="word">Đại học Hoa Sen</span>
+                        </div>
                         <div class="local">
                             <mat-icon> location_on</mat-icon>
-                            <span id="word">Hồ Chí Minh City</span></div>
+                            <span id="word">Hồ Chí Minh City</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="left-botton">
-                    <br>
+
                     <span id="word2">Giới Thiệu</span>
-                    <br>
-                    <div class="decription" id="word2">26 Sơn La chào aee nhó !!!</div>
+
+                    <div class="decription"><textarea rows="9" cols="70">
+                       26 Sơn La chào ae nhó!!!!!
+                      </textarea></div>
                 </div>
             </div>
 
@@ -55,7 +60,9 @@
 
 
                 <div class="button">
-                    <button class="setting" id="word2" (click)="navigate('/layout/setting-profile')">Chỉnh sửa hồ sơ</button>
+                    <button mat-raised-button class="setting" id="word2"
+                        (click)="navigate('/layout/setting-profile')">Chỉnh sửa hồ
+                        sơ</button>
                 </div>
             </div>
         </div>
