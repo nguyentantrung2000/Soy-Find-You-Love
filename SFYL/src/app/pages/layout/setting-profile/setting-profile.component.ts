@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClientService } from 'src/app/services/http-client.service';
 
 export interface Hobby {
   name: string;
@@ -11,8 +13,8 @@ export interface Hobby {
   styleUrls: ['./setting-profile.component.scss'],
 })
 export class SettingProfileComponent implements OnInit {
-  constructor() {}
-
+  constructor(public httpSv: HttpClientService, public FormBuilder:FormBuilder) {}
+  form!: FormGroup;
   ngOnInit(): void {}
 
   value = 'Clear all';
@@ -47,4 +49,18 @@ export class SettingProfileComponent implements OnInit {
       this.hobbies.splice(index, 1);
     }
   }
+  // public gioitinh = '';
+  // public noisong = '';
+  // public ngaysinh = '';
+  // public sothich = '';
+  public async test() {
+    let form = this.form.value;
+    if (this.form.valid) {
+      console.log(this.form.valid);
+      alert(
+       `gioitinh:${form.gioitinh}\n noio:${form.noio}\n ngaysinh:${form.ngaysinh}\n sothich:${form.sothich}\n}`
+      );
+    }
+  }
+
 }

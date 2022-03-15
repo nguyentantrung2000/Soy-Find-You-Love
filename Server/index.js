@@ -54,6 +54,10 @@ server.post("/user", async(request, response) => {
                 message: "User is exits!"
             })
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e9be1e4ba9ed1609ecf4180659a1b184acdbf3a3
     } catch (error) {
         console.log(error);
     }
@@ -159,8 +163,11 @@ server.get("/user/listLike", async(request, response) => {
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 2dfde25f67074c7dbeec26559e45f058fb87923b
 // server.post("/user/unlike", async(request, response)=>{
 //   let collectionName = request.body.collectionName;
 //   let docId = request.body.docId;
