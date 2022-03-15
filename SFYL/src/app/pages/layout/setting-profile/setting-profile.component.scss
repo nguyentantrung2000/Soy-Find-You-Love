@@ -1,7 +1,9 @@
 .main {
-  position: fixed;
-  top: 50px;
-  left: 5%;
+  // position: fixed;
+  // top: 50px;
+  // left: 5%;
+  margin-top: 50px;
+  margin-left: 5%;
   width: 95vw;
   height: 90vh;
   display: grid;
@@ -135,6 +137,7 @@ mat-option {
 
 mat-slide-toggle {
   margin-left: 6px;
+  z-index: -1;
 }
 
 .hihi h3 {
@@ -327,7 +330,27 @@ mat-slide-toggle {
   border-style: solid;
 }
 
-button:hover:not(.active) {
+.profile .btn button:hover:not(.active) {
+  background-image: linear-gradient(
+    to right top,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
+  font-weight: bold;
+  color: white !important;
+}
+
+.right-bottom .btn button:hover:not(.active) {
   background-image: linear-gradient(
     to right top,
     #e64966,
@@ -796,5 +819,107 @@ button:hover:not(.active) {
   }
   .life-style {
     margin-left: 60px;
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .content {
+    margin-top: -150px;
+  }
+  .content .body .left {
+    width: 60vw;
+    height: 70vw;
+    display: grid;
+  }
+  .img {
+    width: 124px;
+    height: 154px;
+  }
+  .sub-hehe {
+    margin-left: -26px;
+    margin-top: -10px;
+  }
+  .profile .btn button {
+    width: 60%;
+    margin-left: 15px;
+    margin-top: -2px;
+  }
+  .hihi {
+    margin-left: -23px;
+    margin-top: -16px;
+  }
+  .sub-hihi {
+    margin-top: -21px;
+    margin-left: -12px;
+  }
+  .sub-hihi .hihi2 {
+    margin-left: 42px;
+  }
+
+  .content .body .right {
+    width: 60vw;
+    height: 90vw;
+  }
+  .content .body .right .right-top {
+    display: grid;
+  }
+  .life-style {
+    margin-top: -88px;
+    margin-left: 10px;
+  }
+  .right-bottom .btn button {
+    width: 32%;
+    margin-top: -12px;
+    margin-left: 94px;
+  }
+}
+
+@media screen and(max-width: 600px) {
+  .content {
+    margin-top: -150px;
+  }
+  .content .body .left {
+    width: 70vw;
+    height: 80vw;
+  }
+
+  .hehe .hehe1 mat-form-field,
+  .hehe .hehe2 mat-form-field {
+    margin-left: 94px;
+  }
+
+  .hehe .hehe3 mat-form-field {
+    margin-left: 84px;
+  }
+
+  .hihi {
+    margin-left: -25px;
+    margin-top: -16px;
+  }
+  .sub-hihi {
+    margin-top: -21px;
+    margin-left: -18px;
+    margin-right: -52px;
+  }
+  .sub-hihi .hihi2 {
+    margin-left: 60px;
+    // padding-left: 20px;
+  }
+
+  .content .body .right {
+    width: 70vw;
+    height: 120vw;
+  }
+  // .content .body .right .right-top {
+  //   display: grid;
+  // }
+  .life-style {
+    margin-top: -90px;
+    margin-left: 10px;
+  }
+  .right-bottom .btn button {
+    width: 32%;
+    margin-top: 2px;
+    margin-left: 94px;
   }
 }

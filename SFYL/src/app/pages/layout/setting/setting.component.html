@@ -11,9 +11,9 @@
                 <!-- </div> -->
                 <div class="top-left-content">
                     <div class="display1">
-                        <h2 class="content withMatSlider"> Địa điểm: </h2>
-                        <button mat-icon-button>
-                            <mat-icon> location_on</mat-icon>
+                        <h2 class="content withMatSlider"> Địa điểm: {{this.Location}} </h2>
+                        <button mat-icon-button matTooltip="Chúng tôi sẽ xin quyền truy cập vị trí hiện tại của bạn ">
+                            <mat-icon (click)="Distance()"> location_on</mat-icon>
                         </button>
                     </div>
                     <div class="display1">
@@ -24,8 +24,7 @@
                         <h2 class="content withMatSlider">Phạm vi tìm kiếm: </h2>
                         <!-- </a> -->
                         <!-- <b> -->
-                        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1000" min="0"
-                            max="100000" aria-label="units"></mat-slider>
+                        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1000" min="0" max="100000" aria-label="units"></mat-slider>
                         <!-- </b> -->
                     </div>
                     <div class="contentWithSlider">
@@ -33,8 +32,7 @@
                         <h2 class="content withMatSlider">Độ tuổi ưu tiên:</h2>
                         <!-- </a> -->
                         <!-- <b> -->
-                        <mat-slider thumbLabel [displayWith]="formatAge" tickInterval="1000" step="1" min="18" max="60"
-                            aria-label="units"></mat-slider>
+                        <mat-slider thumbLabel [displayWith]="formatAge" tickInterval="1000" step="1" min="18" max="60" aria-label="units"></mat-slider>
                         <!-- </b> -->
                     </div>
                 </div>
@@ -54,9 +52,7 @@
                         <!-- </b> -->
                     </div>
 
-                    <h2 class="sub-content">*Khi đã tắt, bạn sẽ không được hiển thị trong stack thẻ. Bạn có thể vẫn xem
-                        và
-                        trò chuyện với người tương hợp</h2>
+                    <h2 class="sub-content">*Khi đã tắt, bạn sẽ không được hiển thị trong stack thẻ. Bạn có thể vẫn xem và trò chuyện với người tương hợp</h2>
                 </div>
             </div>
         </div>
@@ -64,55 +60,51 @@
             <div class="set">
                 <h2 class="header">THIẾT LẬP TÀI KHOẢN</h2>
                 <div class="top-left-content">
-                <h2 class="content"> Email : </h2>
-                <div class="display3">
+                    <h2 class="content"> Email : </h2>
+                    <div class="display3">
 
-                    <!-- <a> -->
+                        <!-- <a> -->
                         <h2 class="content">Trạng thái hoạt động </h2>
-                    <!-- </a> -->
-                    <!-- <b> -->
+                        <!-- </a> -->
+                        <!-- <b> -->
                         <mat-slide-toggle></mat-slide-toggle>
-                    <!-- </b> -->
+                        <!-- </b> -->
 
-                </div>
-                <div class="display3">
+                    </div>
+                    <div class="display3">
 
-                    <!-- <a> -->
+                        <!-- <a> -->
                         <h2 class="content">Thông báo đã xem </h2>
-                    <!-- </a> -->
-                    <!-- <b> -->
+                        <!-- </a> -->
+                        <!-- <b> -->
                         <mat-slide-toggle></mat-slide-toggle>
-                    <!-- </b> -->
-                </div>
+                        <!-- </b> -->
+                    </div>
                 </div>
             </div>
             <div class="tind">
                 <h2 class="header">THÔNG BÁO</h2>
                 <div class="display3">
-                    <!-- <a> -->
-                        <h2 class="content"> Email <button mat-icon-button>
-                                <mat-icon
-                                    matTooltip="Kiểm soát emai bạn muốn nhận được - tất cả, chỉ những thứ quan trọng.">
+                    <h2 class="content"> Email </h2>
+                    <button mat-icon-button matTooltip="Kiểm soát emai bạn muốn nhận được - tất cả, chỉ những thứ quan trọng.">
+                                <mat-icon>
                                     info</mat-icon>
                             </button>
-                        </h2>
-                    <!-- </a> -->
-                    <!-- <b> -->
-                        <button mat-icon-button>
+
+                    <button mat-icon-button>
                             <mat-icon>arrow_circle_down</mat-icon>
                         </button>
-                    <!-- </b> -->
                 </div>
                 <div class="display3">
                     <!-- <a> -->
-                        <h2 class="content">Thông báo cập nhật <button mat-icon-button>
+                    <h2 class="content">Thông báo cập nhật</h2> <button mat-icon-button>
                                 <mat-icon
                                     matTooltip="Nếu bạn tắt tính năng này bạn sẽ không xem được các hoạt động gần đây của bạn">
                                     info</mat-icon>
-                            </button></h2>
+                            </button>
                     <!-- </a> -->
                     <!-- <b> -->
-                        <button mat-icon-button>
+                    <button mat-icon-button>
                             <mat-icon>arrow_circle_up</mat-icon>
                         </button>
                     <!-- </b> -->

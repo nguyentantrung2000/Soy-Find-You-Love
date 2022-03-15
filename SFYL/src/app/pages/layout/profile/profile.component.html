@@ -13,47 +13,49 @@
             <div class="left">
                 <div class="left-top">
                     <div class="card">
-                        <img class="user" src="../../../assets/images/791698c99d6b7cfd993f61100a7cde73.jpg">
+                        <img class="user" src="{{this.login.user?.photoURL}}">
                     </div>
 
                     <div class="profile">
-                        <div class="name">Bùi Thanh Huy</div>
-                        <div class="job">Sinh Viên <span>20 Tuổi</span></div>
+                        <div class="name" id="word2">{{this.login.user?.displayName}}</div>
+                        <div class="job" id="word">Sinh Viên <span id="word">20 Tuổi</span></div>
                         <div class="date">
                             <mat-icon>date_range</mat-icon>
-                            <span>11/01/2001</span>
+                            <span id="word">11/01/2001</span>
                         </div>
                         <div class="gender">
                             <mat-icon>transgender</mat-icon>
-                            <span>Nam</span></div>
+                            <span id="word">Nam</span></div>
                         <div class="school">
-                            <mat-icon>school</mat-icon><span>Đại học Hoa Sen</span></div>
+                            <mat-icon>school</mat-icon>
+                            <span id="word">Đại học Hoa Sen</span></div>
                         <div class="local">
-                            <mat-icon> location_on</mat-icon><span>Hồ Chí Minh City</span></div>
+                            <mat-icon> location_on</mat-icon>
+                            <span id="word">Hồ Chí Minh City</span></div>
                     </div>
                 </div>
 
                 <div class="left-botton">
                     <br>
-                    <span>Giới Thiệu</span>
+                    <span id="word2">Giới Thiệu</span>
                     <br>
-                    <div class="decription">26 Sơn La chào aee nhó !!!</div>
+                    <div class="decription" id="word2">26 Sơn La chào aee nhó !!!</div>
                 </div>
             </div>
 
             <div class="right">
                 <div class="right-body">
                     <div class="right-body-top">
-                        <span>Sở thích</span>
+                        <span id="word2">Sở thích</span>
                     </div>
                     <div class="right-body-botton">
-                        <span>Phong cách sống</span>
+                        <span id="word2">Phong cách sống</span>
                     </div>
                 </div>
 
 
                 <div class="button">
-                    <button class="setting">Chỉnh sửa hồ sơ</button>
+                    <button class="setting" id="word2" (click)="navigate('/layout/setting-profile')">Chỉnh sửa hồ sơ</button>
                 </div>
             </div>
         </div>

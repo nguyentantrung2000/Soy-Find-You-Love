@@ -12,7 +12,7 @@ export const environment = {
     messagingSenderId: '1044351428939',
   },
   production: false,
-  endpoint: 'http://192.168.1.27',
+  endpoint: 'http://127.0.0.1:3000/',
 };
 
 /*

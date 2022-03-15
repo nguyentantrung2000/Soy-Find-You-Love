@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { LoginGGService } from 'src/app/services/login-gg.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
+  constructor(public router: Router, public login: LoginGGService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  navigate(path: string) {
+    this.router.navigate([path]);
   }
-
 }
