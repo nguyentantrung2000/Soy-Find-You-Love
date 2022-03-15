@@ -60,10 +60,10 @@ export class SettingComponent implements OnInit {
           this.a = await res;
           this.Location = res.results[0].formatted;
           this.Location1 = res.results[0].geometry;
-          let b = this.Location1[Object.keys(this.Location1)[0]];
-          console.log('haha' + b);
-          // console.log(this.lat);
-          // console.log(this.lng);
+          // let b = this.Location1[Object.keys(this.Location1)[0]];
+          // console.log('haha' + b);
+          console.log(this.lat);
+          console.log(this.lng);
           // this.cal();
         });
       });

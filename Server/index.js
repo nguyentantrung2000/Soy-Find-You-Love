@@ -66,7 +66,7 @@ server.post("/user/location", async(request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     await firebase.firestore().collection(collectionName).doc(docId).set({
-        Location: firebase.firestore.FieldValue.arrayUnion({ lat, long, city })
+        Location: firebase.firestore.FieldValue.arrayUnion({ lat, long })
     });
 
     response.send({
@@ -160,11 +160,6 @@ server.get("/user/listLike", async(request, response) => {
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2dfde25f67074c7dbeec26559e45f058fb87923b
 // server.post("/user/unlike", async(request, response)=>{
 //   let collectionName = request.body.collectionName;
 //   let docId = request.body.docId;
