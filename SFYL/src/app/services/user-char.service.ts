@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User_chat } from 'src/models/uset_chat.models';
+import { User_chat } from 'src/models/user_chat.models';
 @Injectable({
   providedIn: 'root',
 })
@@ -8,56 +8,81 @@ export class UserCharService {
     {
       displayName: 'Hào Ca',
       photoURL: '../../../assets/images/hh.jpg',
-      mess: [
-        {
-          chat: '26 Sơn La chào anh em nhá !',
-          time: { hours: 12, minutes: 20 },
-        },
-      ],
+      mess: '26 Sơn La chào anh em nhá !',
+      time: '11:10',
+      messageRead: true 
     },
 
     {
       displayName: 'Hào Cá',
       photoURL: '../../../assets/images/hh.jpg',
-      mess: [
-        {
-          chat: '27 Điện Biên chào anh em nhá !',
-          time: { hours: 12, minutes: 10 },
-        },
-      ],
+      mess: '27 Điện Biên chào anh em nhá !',
+      time: '11:10', 
+      messageRead: false 
     },
 
     {
       displayName: 'Hào Cả',
       photoURL: '../../../assets/images/hh.jpg',
-      mess: [
-        {
-          chat: '28 Hòa Bình chào anh em nhá !',
-          time: { hours: 11, minutes: 50 },
-        },
-      ],
+      mess: '28 Hòa Bình chào anh em nhá !',
+      time: '11:10',
+      messageRead: true 
     },
 
     {
       displayName: 'Hào Cà',
       photoURL: '../../../assets/images/hh.jpg',
-      mess: [
-        {
-          chat: '29 Hà Nội chào anh em nhá !',
-          time: { hours: 10, minutes: 48 },
-        },
-      ],
+      mess: '29 Hà Nội chào anh em nhá !',
+      time: '11:10',
+      messageRead: false 
     },
 
     {
       displayName: 'Hào Cạ',
       photoURL: '../../../assets/images/hh.jpg',
-      mess: [
-        {
-          chat: '30 cũng là Hà Nội chào anh em nhá !',
-          time: { hours: 10, minutes: 34 },
-        },
-      ],
+      mess: '30 cũng là Hà Nội chào anh em nhá !',
+      time: '11:10', 
+      messageRead: false 
+    },
+
+    {
+      displayName: 'Hào Cạ',
+      photoURL: '../../../assets/images/hh.jpg',
+      mess: '30 cũng là Hà Nội chào anh em nhá !',
+      time: '11:10',
+      messageRead: true 
+    },
+
+    {
+      displayName: 'Hào Cạ',
+      photoURL: '../../../assets/images/hh.jpg',
+      mess: '30 cũng là Hà Nội chào anh em nhá !',
+      time: '11:10',
+      messageRead: false 
+    },
+
+    {
+      displayName: 'Hào Cạ',
+      photoURL: '../../../assets/images/hh.jpg',
+      mess: '30 cũng là Hà Nội chào anh em nhá !',
+      time: '11:10',
+      messageRead: true 
+    },
+
+    {
+      displayName: 'Hào Cạ',
+      photoURL: '../../../assets/images/hh.jpg',
+      mess: '30 cũng là Hà Nội chào anh em nhá !',
+      time: '11:10',
+      messageRead: false 
+    },
+
+    {
+      displayName: 'Hào Cạ',
+      photoURL: '../../../assets/images/hh.jpg',
+      mess: '30 cũng là Hà Nội chào anh em nhá !',
+      time: '11:10',
+      messageRead: true
     },
   ];
 
