@@ -1,4 +1,4 @@
-<div class ="conversation">
+<div class ="conversation" (click)="conversationClicked.emit(userChat)">
     <div class="picture">
         <img [src] = 'userChat.photoURL'>
     </div>

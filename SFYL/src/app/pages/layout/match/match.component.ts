@@ -28,8 +28,6 @@ export class MatchComponent implements OnInit {
   ngOnInit(): void {
     this.Distance();
     this.userData.getAllData();
-    this.friendList1 = this.userData.userList;
-    console.log(this.friendList1);
   }
   async getNextUser() {
     if (this.index > this.userData.userList.length) {
