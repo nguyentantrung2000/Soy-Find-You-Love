@@ -32,33 +32,35 @@ export class DialogLoginComponent implements OnInit {
   ngOnInit(): void {}
   public async Login() {
     try {
-      let result = await this.login.loginGG();
-      if (result.user) {
-        this.http
-          .post(environment.endpoint + 'user', {
-            collectionName: 'User',
-            data: {
-              email: result.user.email,
-              name: result.user.displayName,
-              photoURL: result.user.photoURL,
-              location: {
-                lat: 0,
-                long: 0,
-              },
-              like: [],
-              unLike: [],
-              waiting: [],
-              docId: result.user.uid,
-              conversations: [],
-            },
-          })
-          .subscribe((response) => {
-            console.log(response);
-            this.router.navigate(['/layout/match']);
-          });
-        // await this.router.navigate(['/layout/match']);
-        this.dialog.closeAll();
-      }
+      await this.login.loginGG();
+      console.log(this.login.user);
+
+      // if (result?.user) {
+      //   this.http
+      //     .post(environment.endpoint + 'user', {
+      //       collectionName: 'User',
+      //       data: {
+      //         email: result.user.email,
+      //         name: result.user.displayName,
+      //         photoURL: result.user.photoURL,
+      //         location: {
+      //           lat: 0,
+      //           long: 0,
+      //         },
+      //         like: [],
+      //         unLike: [],
+      //         waiting: [],
+      //         docId: result.user.uid,
+      //         conversations: [],
+      //       },
+      //     })
+      //     .subscribe((response) => {
+      //       console.log(response);
+      //       this.router.navigate(['/layout/match']);
+      //     });
+      //   // await this.router.navigate(['/layout/match']);
+      //   this.dialog.closeAll();
+      // }
     } catch (error) {
       console.log(error);
     }

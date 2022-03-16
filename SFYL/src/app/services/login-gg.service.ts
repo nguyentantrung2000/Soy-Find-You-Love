@@ -14,22 +14,22 @@ import { Router } from '@angular/router';
 })
 export class LoginGGService {
   public location: any = JSON.parse(
-    localStorage.getItem('_location') as string
+    localStorage.getItem('dataSource') as string
   );
-  public user!:any;
+  public user!: User | null;
   constructor(private auth: Auth, private router: Router) {
     authState(this.auth).subscribe((user: User | null) => {
       this.user = user;
       console.log(this.user);
     });
   }
-  public loginGG() {
-    // try {
-    return signInWithPopup(this.auth, new GoogleAuthProvider());
-    // this.router.navigate(['/layout/match']);
-    // } catch (err) {
-    //   alert('login fail!');
-    // }
+  public async loginGG() {
+    try {
+      await signInWithPopup(this.auth, new GoogleAuthProvider());
+      this.router.navigate(['/layout/match']);
+    } catch (err) {
+      alert('login fail!');
+    }
   }
   public async logOut() {
     await signOut(this.auth);

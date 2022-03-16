@@ -66,22 +66,22 @@ server.post("/user", async(request, response) => {
 server.post("/user/location", async(request, response) => {
     let temp = request.body.data;
     try {
-        // let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
-        // if (isExits.data() != undefined) {
-        // firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
-        //     Location: temp.Location
-        // }).then((value) => {
-        //     console.log('value' + value);
-        // }).catch((error) => {
-        //     console.log(error);
-        // });
-        // return response.send({
-        //     message: "Update location !!!"
-        // })
-        // }
-        //   return response.status(400).send({
-        //     message: "User is exits!"
-        // })
+        let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
+        if (isExits.data() != undefined) {
+            firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
+                Location: temp.Location
+            }).then((value) => {
+                console.log('value' + value);
+            }).catch((error) => {
+                console.log(error);
+            });
+            return response.send({
+                message: "Update location !!!"
+            })
+        }
+        return response.status(400).send({
+            message: "User is exits!"
+        })
 
     } catch (err) {
         console.log(err);

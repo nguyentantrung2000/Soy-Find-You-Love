@@ -30,13 +30,13 @@ export class DataService {
         });
       }
       for (let i = 0; i < data.length; i++) {
-        if (this.login.user.email != data[i].email) {
+        if (this.login.user?.email != data[i].email) {
           this.userList.push(data[i]);
         }
       }
       // console.log(data);
-      // this.userList = data;
-      console.log(this.userList);
+      this.userList = data;
+      // console.log(this.userList);
     });
   }
   public cal(lat1: number, lon1: number, lat2: number, lon2: number) {
