@@ -124,4 +124,11 @@ export class MatchComponent implements OnInit {
   //     this.dialog.closeAll();
   //   }
   // }
+
+  public async postLike(apiPath:string){
+    await( await this.httpSv.LikeService("User",this.login.user?.uid,'CvSqmeI1vwQZxQO4LpSTVjB6ENk1'))
+    .subscribe((value: any)=>{
+      alert(value['message']);
+    });
+  }
 }

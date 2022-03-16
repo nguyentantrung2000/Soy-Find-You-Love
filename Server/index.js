@@ -61,7 +61,6 @@ server.post("/user", async(request, response) => {
 });
 // user location
 server.post("/user/location", async(request, response) => {
-
     let temp = request.body.data;
     try {
         // let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
@@ -69,7 +68,7 @@ server.post("/user/location", async(request, response) => {
              firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
                 Location: temp.Location
             }).then((value)=>{
-                console.log('value'+value);
+                console.log('value' + value);
             }).catch((error)=>{
                 console.log(error);
             });

@@ -8,7 +8,7 @@
     <div class="content">
         <div class="card">
             <div class="user">
-                <img class="user" [src]="this.userData.userList[this.index].photoURL">
+                <img class="user" [src]="this.userData.userList[this.index]?.photoURL">
                 <div class="profile">
                     <div class="name">{{this.userData.userList[this.index]?.name}}<span>{{this.userData.userList[this.index]?.dob}}</span></div>
                     <div class="local">
