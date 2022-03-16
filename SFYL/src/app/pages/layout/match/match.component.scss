@@ -32,10 +32,10 @@
 
 .main {
     position: fixed;
-    top: 70px;
-    left: 5%;
-    width: 95vw;
-    height: 90vh;
+    /* top: 70px; */
+    /* left: 5%; */
+    width: 95%;
+    height: 90%;
     display: grid;
     place-items: center;
 }
@@ -49,8 +49,8 @@
     display: grid;
     place-items: center;
     // margin-top: 2rem;
-    margin-left: 5%;
-    margin-top: 1.5%;
+    // margin-left: 5%;
+    // margin-top: 1.5%;
 }
 
 .content .card {
