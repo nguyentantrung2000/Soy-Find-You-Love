@@ -34,33 +34,32 @@ export class DialogLoginComponent implements OnInit {
     try {
       await this.login.loginGG();
       console.log(this.login.user);
-
-      // if (result?.user) {
-      //   this.http
-      //     .post(environment.endpoint + 'user', {
-      //       collectionName: 'User',
-      //       data: {
-      //         email: result.user.email,
-      //         name: result.user.displayName,
-      //         photoURL: result.user.photoURL,
-      //         location: {
-      //           lat: 0,
-      //           long: 0,
-      //         },
-      //         like: [],
-      //         unLike: [],
-      //         waiting: [],
-      //         docId: result.user.uid,
-      //         conversations: [],
-      //       },
-      //     })
-      //     .subscribe((response) => {
-      //       console.log(response);
-      //       this.router.navigate(['/layout/match']);
-      //     });
-      //   // await this.router.navigate(['/layout/match']);
-      //   this.dialog.closeAll();
-      // }
+      if (this.login.user) {
+        this.http
+          .post(environment.endpoint + 'user', {
+            collectionName: 'User',
+            data: {
+              email: this.login.user.email,
+              name: this.login.user.displayName,
+              photoURL: this.login.user.photoURL,
+              location: {
+                lat: 0,
+                long: 0,
+              },
+              like: [],
+              unLike: [],
+              waiting: [],
+              docId: this.login.user.uid,
+              conversations: [],
+            },
+          })
+          .subscribe((response) => {
+            console.log(response);
+            // this.router.navigate(['/layout/match']);
+          });
+        this.dialog.closeAll();
+        await this.router.navigate(['/layout/match']);
+      }
     } catch (error) {
       console.log(error);
     }
