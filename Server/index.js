@@ -111,8 +111,8 @@ server.post("/user/likelist", async(request, response) => {
         let collectionName = request.body.data.collectionName;
         let docId = request.body.data.docId; ////nguoi dung
         let docIDs = request.body.data.docIDs; ////nguoi dung duoc thich 
-        console.log(docId , docIDs)
-        // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
+        console.log(docId, docIDs)
+            // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
         await firebase.firestore().collection(collectionName).doc(docId).update({
             Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
         });
@@ -130,9 +130,10 @@ server.post("/user/likelist", async(request, response) => {
     ////////UnLikeList
 server.post("/user/unlikelist", async(request, response) => {
 
-    let collectionName = request.body.collectionName;
-    let docId = request.body.docId;
-    let docIDs = request.body.docIDs;
+    let collectionName = request.body.data.collectionName;
+    console.log(collectionName);
+    let docId = request.body.data.docId;
+    let docIDs = request.body.data.docIDs;
     await firebase.firestore().collection(collectionName).doc(docId).update({
         unLike: firebase.firestore.FieldValue.arrayUnion(docIDs)
     });
