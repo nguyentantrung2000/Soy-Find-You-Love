@@ -1,6 +1,6 @@
     .main {
-        // position: fixed;
-        top: 50px;
+        position: fixed;
+        top: 70px;
         left: 5%;
         width: 95vw;
         height: 90vh;
@@ -23,9 +23,11 @@
     
     .content .card {
         position: relative;
-        height: 370px;
+        height: 360px;
         display: grid;
         place-items: center;
+        box-shadow: 0 5px 10px 0 gray, 0 5px 10px 0 gray;
+        border-radius: 10px;
     }
     
     .content .card .user {
@@ -44,14 +46,15 @@
     
     .content .card .user .name {
         color: #fff;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 700;
         letter-spacing: 0.5px;
         text-shadow: 1px 1px 3px #444;
+        margin-bottom: 5px;
     }
     
     .content .card .user .name span {
-        font-size: 26px;
+        font-size: 24px;
     }
     
     .content .card .local {
@@ -81,23 +84,23 @@
     
     .content .buttons .no mat-icon {
         color: #fd2e79;
-        font-size: 50px;
-        margin-bottom: 26px;
-        margin-left: -2px;
+        font-size: 55px;
+        margin-bottom: 29px;
+        margin-left: -4.5px;
     }
     
     .content .buttons .star mat-icon {
         color: #2bb1ff;
-        font-size: 50px;
-        margin-bottom: 26px;
-        margin-left: -2px;
+        font-size: 49px;
+        margin-bottom: 25px;
+        margin-left: -1px;
     }
     
     .content .buttons .heart mat-icon {
         color: #11e298;
-        font-size: 50px;
-        margin-bottom: 26px;
-        margin-left: -2px;
+        font-size: 45px;
+        margin-bottom: 19px;
+        // margin-left: -2px;
     }
     
     .no,
