@@ -2,18 +2,17 @@
 <div class="main">
     <div class="content">
         <div class="card" *ngFor="let avatar of avatars">
-            <!-- [style.position]="'absolute'" -->
             <div class="user">
-                <img class="user" [src]="avatar.image" [style]="'100%'">
+                <img class="user" [src]="avatar.image" [style.witdth]="'100%'">
 
                 <div class="profile">
                     <div class="name">{{avatar.name}} <span>{{avatar.age}}</span></div>
-                    <div>{{avatar.power}}</div>
                     <!-- <h2 class="name">{{avatar.name}},{{avatar.age}}</h2> -->
                     <div class="local">
                         <mat-icon>location_on</mat-icon>
                         <span>Cách đây 1km</span>
                     </div>
+                    <!-- <div>{{avatar.power}}</div> -->
                 </div>
             </div>
         </div>
@@ -58,3 +57,7 @@
 
         </div> -->
     </div>
+
+    <sw-card-wrapper>
+
+    </sw-card-wrapper>

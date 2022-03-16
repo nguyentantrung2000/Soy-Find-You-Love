@@ -25,7 +25,7 @@ import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-log
 import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+// import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel } from '@ionic/angular';
 @NgModule({
   declarations: [
     NavBarComponent,
