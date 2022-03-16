@@ -19,7 +19,8 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Giới tính</mat-label>
                                     <mat-select [(ngModel)]="datas" (change)="changeGender($event)">
-                                        <mat-option *ngFor="let gen of Gender" style="font-weight:bolder" value="one">{{gen.gen}}</mat-option>
+                                        <mat-option *ngFor="let gen of Gender" style="font-weight:bolder" value="one">
+                                            {{gen.gen}}</mat-option>
 
                                     </mat-select>
                                 </mat-form-field>
@@ -59,7 +60,8 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Sinh viên</mat-label>
                                     <input matInput type="text" [(ngModel)]="value">
-                                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -69,7 +71,8 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Công ty ABC</mat-label>
                                     <input matInput type="text" [(ngModel)]="value1">
-                                    <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+                                    <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value1=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -79,7 +82,8 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Trường ABC</mat-label>
                                     <input matInput type="text" [(ngModel)]="value2">
-                                    <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+                                    <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value2=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -106,14 +110,16 @@
                     <div class="hobby">
                         <h3>Sở thích</h3>
                         <mat-form-field class="example-chip-list" appearance="fill">
-                            <mat-chip-list #chipList aria-label="Fruit selection" formControlName="sothich">
+                            <mat-chip-list #chipList aria-label="Fruit selection">
                                 <mat-chip *ngFor="let hobby of hobbies" (removed)="remove(hobby)">
                                     {{hobby.name}}
                                     <button matChipRemove>
                                         <mat-icon>cancel</mat-icon>
                                     </button>
                                 </mat-chip>
-                                <input placeholder="Add more..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+                                <input placeholder="Add more..." [matChipInputFor]="chipList"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
                             </mat-chip-list>
                         </mat-form-field>
                     </div>
@@ -194,7 +200,8 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Bóng đá</mat-label>
                                     <input matInput type="text" [(ngModel)]="value3">
-                                    <button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+                                    <button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear"
+                                        (click)="value3=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>

@@ -36,10 +36,10 @@ export class HttpClientService {
   /// Post Like
   public async LikeService(
     collectionName: string,
-    docId: string,
-    docIDs: string
+    docId: string|undefined,
+    docIDs: string 
   ) {
-    return this.http.post(environment.endpoint + '/user/likelist', {
+    return this.http.post(environment.endpoint + 'user/likelist', {
       data: {
         collectionName: collectionName,
         docId: docId,
@@ -52,7 +52,7 @@ export class HttpClientService {
     docId: string,
     docIDs: string
   ) {
-    return this.http.post(environment.endpoint + '/user/unlikelist', {
+    return this.http.post(environment.endpoint + 'user/unlikelist', {
       data: {
         collectionName: collectionName,
         docId: docId,
