@@ -1,186 +1,189 @@
-    .main {
-        position: fixed;
-        top: 50px;
-        left: 5%;
-        width: 95vw;
-        height: 90vh;
-        display: grid;
-        place-items: center;
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid lightcoral;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
     }
-    
-    // .page {
-    //     margin-top: 20px;
-    //     height: 85%;
-    //     width: 20%;
-    //     background-color: white;
-    //     // max-width: 300px;
-    //     // min-width: 20px;
-    //     margin: auto;
-    // }
-    // .top {
-    //     height: 75%;
-    //     width: 100%;
-    //     margin: auto;
-    // }
-    // .bottom {
-    //     margin: auto;
-    //     width: 100%;
-    //     height: 25%;
-    // }
-    // .img {
-    //     height: auto;
-    //     max-width: 300px;
-    //     min-width: 20px;
-    //     width: 100%;
-    // }
-    // // .topimg {
-    // //     width: 100%;
-    // //     background-color: black;
-    // // }
-    // .boxbottom {
-    //     background-color: black;
-    // }
-    .content {
-        width: 95vw;
-        // display: flex;
-        padding: 1px 0;
-        // align-items: center;
-        flex-direction: column;
-        display: grid;
-        place-items: center;
-        // margin-top: 2rem;
-        margin-left: 5%;
-        margin-top: 1.5%;
+    100% {
+        -webkit-transform: rotate(360deg);
     }
-    
-    .content .card {
-        position: relative;
-        height: 370px;
-        display: grid;
-        place-items: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
-    
-    .content .card .user {
-        width: 300px;
-        height: 360px;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 1px 10px 0 Orgba(8, 28, 20, 8.5);
+    100% {
+        transform: rotate(360deg);
     }
-    
-    .content .card .user .profile {
-        position: absolute;
-        bottom: 0;
-        left: 20px;
-    }
-    
-    .content .card .user .name {
-        color: #fff;
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        text-shadow: 1px 1px 3px #444;
-    }
-    
-    .content .card .user .name span {
-        font-size: 26px;
-    }
-    
-    .content .card .local {
-        display: flex;
-        align-items: center;
-        padding: 0 0 20px 0;
-    }
-    
-    .content .card .local mat-icon {
-        margin: 5px 0;
-        color: white;
-        font-size: x-large;
-    }
-    
-    .content .card .local span {
-        color: #fff;
-        // padding: 0 5px;
-        text-shadow: 1px 1px 3px #444;
-    }
-    
-    .content .buttons {
-        display: flex;
-        margin-top: 10px;
-        align-items: center;
-        place-items: center;
-    }
-    
-    .content .buttons .no mat-icon {
-        color: #fd2e79;
-        font-size: 50px;
-        margin-bottom: 26px;
-        margin-left: -2px;
-    }
-    
-    .content .buttons .star mat-icon {
-        color: #2bb1ff;
-        font-size: 50px;
-        margin-bottom: 26px;
-        margin-left: -2px;
-    }
-    
-    .content .buttons .heart mat-icon {
-        color: #11e298;
-        font-size: 50px;
-        margin-bottom: 26px;
-        margin-left: -2px;
-    }
-    
-    .no,
-    .star,
-    .heart {
-        background-color: #fff;
-        width: 60px;
-        height: 60px;
-        box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
-        display: flex;
-        align-items: center;
-        border-radius: 70px;
-        margin: 4px;
-        transition: 0.2s transform;
-    }
-    
-    .no:hover,
-    .star:hover,
-    .heart:hover {
-        transform: scale(1.1);
-    }
-    
-    .content .tutorial {
-        width: 100%;
-        align-items: center;
-        place-items: center;
-        color: white;
-        // padding: 1rem;
-    }
-    
-    ul {
-        list-style-type: none;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        place-items: center;
-        width: 88.5%;
-    }
-    
-    ul li {
-        padding-left: 3%;
-        text-align: center;
-        display: flex;
-        place-items: center;
-    }
-    
-    ul .space {
-        width: 110px;
-        height: 30px;
-        background-color: white;
-        border-radius: 8px;
-        margin-top: 10px;
-        margin-left: 3%;
-    }
+}
+
+.main {
+    position: fixed;
+    top: 70px;
+    left: 5%;
+    width: 95vw;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.content {
+    width: 95vw;
+    display: flex;
+    padding: 1px 0;
+    // align-items: center;
+    flex-direction: column;
+    display: grid;
+    place-items: center;
+    // margin-top: 2rem;
+    margin-left: 5%;
+    margin-top: 1.5%;
+}
+
+.content .card {
+    position: relative;
+    height: 360px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px 0 gray, 0 5px 10px 0 gray;
+    border-radius: 10px;
+}
+
+.content .card .user {
+    width: 300px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px 0 Orgba(8, 28, 20, 8.5);
+}
+
+.content .card .user .profile {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.content .card .user .name {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px #444;
+    margin-bottom: 5px;
+}
+
+.content .card .user .name span {
+    font-size: 24px;
+}
+
+.content .card .local {
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px 0;
+}
+
+.content .card .local mat-icon {
+    margin: 5px 0;
+    color: white;
+    font-size: x-large;
+}
+
+.content .card .local span {
+    color: #fff;
+    // padding: 0 5px;
+    text-shadow: 1px 1px 3px #444;
+}
+
+.content .buttons {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    place-items: center;
+}
+
+.content .buttons .no mat-icon {
+    color: #fd2e79;
+    font-size: 55px;
+    margin-bottom: 29px;
+    margin-left: -4.5px;
+}
+
+.content .buttons .star mat-icon {
+    color: #2bb1ff;
+    font-size: 49px;
+    margin-bottom: 25px;
+    margin-left: -1px;
+}
+
+.content .buttons .heart mat-icon {
+    color: #11e298;
+    font-size: 45px;
+    margin-bottom: 19px;
+    // margin-left: -2px;
+}
+
+.no,
+.star,
+.heart {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+    display: flex;
+    align-items: center;
+    border-radius: 70px;
+    margin: 4px;
+    transition: 0.2s transform;
+}
+
+.no:hover,
+.star:hover,
+.heart:hover {
+    transform: scale(1.1);
+}
+
+.content .tutorial {
+    width: 100%;
+    align-items: center;
+    place-items: center;
+    color: white;
+    // padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    width: 88.5%;
+}
+
+ul li {
+    padding-left: 3%;
+    text-align: center;
+    display: flex;
+    place-items: center;
+}
+
+ul .space {
+    width: 110px;
+    height: 30px;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 3%;
+}

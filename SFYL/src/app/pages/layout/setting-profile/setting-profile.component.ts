@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClientService } from 'src/app/services/http-client.service';
 
 export interface Hobby {
@@ -22,12 +22,24 @@ export class SettingProfileComponent implements OnInit {
   public changeGender(event: any) {
     console.log('gioitinh' + event);
   }
-  constructor(
-    public httpSv: HttpClientService,
-    public FormBuilder: FormBuilder
-  ) {}
+  // constructor(
+  //   public httpSv: HttpClientService,
+  //   public FormBuilder: FormBuilder
+  // ) { }
   form!: FormGroup;
-  ngOnInit(): void {}
+   constructor(public httpSv: HttpClientService, public FormBuilder:FormBuilder) {
+    this.form = this.FormBuilder.group({
+      gioitinh: ['', Validators.required],
+      noio:['',Validators.required],
+      ngaysinh:['',Validators.required],
+      sothich:['', Validators.required],
+
+
+    });
+  }
+
+
+  ngOnInit(): void { }
 
   value = 'Clear all';
   value1 = 'Clear all';

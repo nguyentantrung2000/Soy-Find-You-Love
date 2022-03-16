@@ -38,9 +38,9 @@ export class DialogLoginComponent implements OnInit {
           .post(environment.endpoint + 'user', {
             collectionName: 'User',
             data: {
-              email: this.login.user?.email,
-              name: this.login.user?.displayName,
-              photoURL: this.login.user?.photoURL,
+              email: result.user.email,
+              name: result.user.displayName,
+              photoURL: result.user.photoURL,
               location: {
                 lat: 0,
                 long: 0,
@@ -48,14 +48,15 @@ export class DialogLoginComponent implements OnInit {
               like: [],
               unLike: [],
               waiting: [],
-              docId: this.login.user?.uid,
+              docId: result.user.uid,
               conversations: [],
             },
           })
           .subscribe((response) => {
             console.log(response);
+            this.router.navigate(['/layout/match']);
           });
-        await this.router.navigate(['/layout/match']);
+        // await this.router.navigate(['/layout/match']);
         this.dialog.closeAll();
       }
     } catch (error) {

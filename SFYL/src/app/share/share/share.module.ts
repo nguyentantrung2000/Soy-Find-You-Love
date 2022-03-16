@@ -28,6 +28,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatChipsModule } from '@angular/material/chips';
 
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -84,7 +85,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
-    RoomChatComponent
+    RoomChatComponent,
   ],
 })
 export class ShareModule {}
