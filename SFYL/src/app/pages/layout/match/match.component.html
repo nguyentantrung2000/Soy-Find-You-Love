@@ -21,7 +21,7 @@
 
         <div class="buttons">
             <button class="no">
-                <mat-icon>close</mat-icon>
+                <mat-icon (click)="postUnLike(this.userData.userList[this.index]?.docId)"> close</mat-icon>
             </button>
 
             <button class="star">
@@ -29,7 +29,7 @@
             </button>
 
             <button class="heart">
-                <mat-icon (click)="getNextUser()" >favorite</mat-icon>
+                <mat-icon (click)="postLike(this.userData.userList[this.index]?.docId)" >favorite</mat-icon>
             </button>
         </div>
 

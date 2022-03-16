@@ -4,6 +4,8 @@ import { DataService } from 'src/app/services/data.service';
 import { LoginGGService } from 'src/app/services/login-gg.service';
 import { HttpClientService } from './../../../services/http-client.service';
 import { environment } from '../../../../environments/environment';
+import { I } from '@angular/cdk/keycodes';
+import { doc } from 'firebase/firestore';
 @Component({
   selector: 'app-match',
   templateUrl: './match.component.html',
@@ -37,6 +39,7 @@ export class MatchComponent implements OnInit {
       this.index += 1;
       this.userData.userList[this.index];
     }
+   
   }
   public Distance() {
     if (navigator.geolocation) {
@@ -125,8 +128,14 @@ export class MatchComponent implements OnInit {
   //   }
   // }
 
-  public async postLike(apiPath:string){
-    await( await this.httpSv.LikeService("User",this.login.user?.uid,'CvSqmeI1vwQZxQO4LpSTVjB6ENk1'))
+  public async postLike(Id:string){
+    await( await this.httpSv.LikeService("User",this.login.user?.uid,Id))
+    .subscribe((value: any)=>{
+      alert(value['message']);
+    });
+  }
+  public async postUnLike(Id:string){
+    await( await this.httpSv.UnLikeService("User",this.login.user?.uid,Id))
     .subscribe((value: any)=>{
       alert(value['message']);
     });

@@ -38,9 +38,9 @@ export class DialogLoginComponent implements OnInit {
           .post(environment.endpoint + 'user', {
             collectionName: 'User',
             data: {
-              email: this.login.user?.email,
-              name: this.login.user?.displayName,
-              photoURL: this.login.user?.photoURL,
+              email:   this.login.user.email,
+              name: this.login.user.displayName,
+              photoURL: this.login.user.photoURL,
               Location: {
                 lat: 0,
                 long: 0,
@@ -48,7 +48,7 @@ export class DialogLoginComponent implements OnInit {
               Like: [],
               unLike: [],
               Watting: [],
-              docId: this.login.user?.uid,
+              docId: this.login.user.uid,
             },
           })
           .subscribe((response) => {

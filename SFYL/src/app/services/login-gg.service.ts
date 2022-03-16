@@ -16,7 +16,7 @@ export class LoginGGService {
   public location: any = JSON.parse(
     localStorage.getItem('_location') as string
   );
-  public user!: User | null;
+  public user!:any;
   constructor(private auth: Auth, private router: Router) {
     authState(this.auth).subscribe((user: User | null) => {
       this.user = user;
