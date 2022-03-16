@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit,Output } from '@angular/core';
 
 import { UserChatService } from 'src/app/services/user-chat.service';
-import { User_chat } from 'src/models/user_chat.models';
+import { User_chat } from 'src/models/user_chat.model';
 
 @Component({
   selector: 'app-chat',

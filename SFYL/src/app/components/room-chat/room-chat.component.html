@@ -3,7 +3,7 @@
         <img src="../../../../assets/images/jisoo1.jpg">
     </div>
     <div class="active">
-        <h4>JiSoo</h4>
+        <h4>{{displayName}}</h4>
         <h6>3 hours ago...</h6>
     </div>
     <div class="header-icons">
@@ -13,37 +13,45 @@
     </div>
 </div>
 <div class="chat-page">
-    <div class="msg-inbox">
+    <div class="msg-inbox" #scrollMe [scrollTop]="scrollMe.scrollHeight">
         <div class="chats">
-            <div class="msg-page">
-
-                <div class="received-chats">
+            <div class="msg-page" *ngFor="let message of conversation.messages">
+                <!-- {{message.body}}
+            </div> -->
+                <div *ngIf="message.id == '1'" class="received-chats">
                     <div class="received-chats-img">
                         <img src="../../../../assets/images/jisoo1.jpg">
                     </div>
                     <div class="received-msg">
                         <div class="received-msg-inbox">
-                            <p>Tam giác là tát giam
-                                </p>
-                                    <span class="time">{{ date  | date: 'medium' }}</span>
+                            <p>{{message.body}}</p>
+                            <span class="time">{{ date  | date: 'medium' }}</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="outgoing-chats">
+                <div *ngIf="message.id == '2'" >
 
-                    <div class="outgoing-chats-img">
+                    <!-- <div class="outgoing-chats-img">
                         <img src="../../../../assets/images/lisa.jpg">
                     </div>
 
                     <div class="outgoing-chats-msg">
-                        <p>Tát là đánh, giam là nhốt</p>
+                        
+                        <p>{{message.body}}t</p>
+                        <span class="time">{{ date  | date: 'medium' }}</span>
+                    </div> -->
+                    <div class="my-msg">
+                        <div class="my-msg-content">
+                            <p>{{message.body}}</p>
+                            <img class="my-msg-img" src="../../../../assets/images/lisa.jpg">
+                        </div>
                         <span class="time">{{ date  | date: 'medium' }}</span>
                     </div>
 
                 </div>
 
-                <div class="received-chats">
+                <!-- <div class="received-chats">
                     <div class="received-chats-img">
                         <img src="../../../../assets/images/jisoo1.jpg">
                     </div>
@@ -87,9 +95,9 @@
                         <p>Welcome everybody welcome to the party</p>
                         <span class="time">{{ date  | date: 'medium' }}</span>
                     </div>
-                </div>
+                </div> -->
 
-            </div>
+           </div>
         </div>
     </div>
 </div>
@@ -102,11 +110,11 @@
         <i class="fa-solid fa-face-smile"></i>
     </div>
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Aa">
-        <div class="input-group-append">
+        <input #msg type="text" class="form-control" [(ngModel)]="message" placeholder="Aa" (keyup.enter)="onEnter(msg.value)">
+        <button class="input-group-append" (click)="onSubmit()">
             <span class="input-group-text">
                 <i class="fa-solid fa-paper-plane"></i>
             </span>
-        </div>
+        </button>
     </div>
 </div>

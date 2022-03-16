@@ -41,14 +41,15 @@ export class DialogLoginComponent implements OnInit {
               email: this.login.user?.email,
               name: this.login.user?.displayName,
               photoURL: this.login.user?.photoURL,
-              Location: {
+              location: {
                 lat: 0,
                 long: 0,
               },
-              Like: [],
+              like: [],
               unLike: [],
-              Watting: [],
+              waiting: [],
               docId: this.login.user?.uid,
+              conversations: [],
             },
           })
           .subscribe((response) => {
