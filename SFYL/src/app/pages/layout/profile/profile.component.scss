@@ -1,7 +1,9 @@
 .main {
-  position: fixed;
-  top: 50px;
-  left: 5%;
+  // position: fixed;
+  // top: 50px;
+  // left: 5%;
+  margin-top: 50px;
+  margin-left: 5%;
   width: 95vw;
   height: 90vh;
   display: grid;
@@ -46,7 +48,7 @@
 
 .content .body .left {
   height: 100%;
-  width: 50%;
+  width: 46%;
   display: grid;
   border: 6px solid black;
   border-radius: 20px;
@@ -90,11 +92,11 @@
 .content .body .left .left-top .name {
   width: auto;
   height: auto;
-  color: lightcoral;
-  font-size: 25px;
-  font-weight: 700;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
   letter-spacing: 0.5px;
-  text-shadow: 1px 1px 3px #444;
+  // text-shadow: 1px 1px 3px #444;
   display: grid;
   align-items: center;
   // padding: 0 0 20px 0;
@@ -105,7 +107,7 @@
   height: auto;
   align-items: center;
   margin-top: 10px;
-  color: gray;
+  color: black;
   font-size: 20px;
   font-weight: 700;
   display: flex;
@@ -113,12 +115,12 @@
   margin-bottom: auto;
 }
 
-// .content .body .left .left-top .job span {
-//   // font-weight: 700;
-//   // color: gray;
-//   margin-left: 16px;
-//   // font-size: 20px;
-// }
+.content .body .left .left-top .job span {
+  // font-weight: 700;
+  // color: gray;
+  margin-left: 16px;
+  // font-size: 20px;
+}
 
 .content .body .left .left-top .date {
   width: auto;
@@ -206,11 +208,53 @@
   margin-left: 25px;
 }
 
+textarea {
+  width: 350px;
+  height: 134px;
+}
+
 .content .body .left .left-botton .decription {
   font-size: 25px;
   letter-spacing: 0.5px;
   margin-left: 25px;
   margin-top: 2%;
+  width: fit-content;
+}
+
+.left-botton .sub-left-botton {
+  display: flex;
+}
+
+.left-botton .sub-left-botton .btn {
+  margin-left: 36px;
+  margin-top: 110px;
+}
+
+.content .body .left .left-botton .sub-left-botton button {
+  box-shadow: 5px 5px #888888;
+  border-style: solid;
+  font-size: 24px;
+  width: 86px;
+}
+
+.content .body .left .sub-left-botton button:hover:not(.active) {
+  background-image: linear-gradient(
+    to right top,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
+  font-weight: bold;
+  color: white !important;
 }
 
 .content .body .right {
@@ -251,6 +295,55 @@
   letter-spacing: 0.5px;
 }
 
+.content .body .right .right-body .right-body-botton .list {
+  font-size: 16px;
+  font-weight: bolder;
+  color: blue;
+  margin-top: 12px;
+}
+
+.content .body .right .right-body .right-body-top .list {
+  font-size: 16px;
+  font-weight: bolder;
+  color: blue;
+  margin-top: 12px;
+}
+.content .body .right .right-body .right-body-botton .list {
+  display: flex;
+}
+
+.content .body .right .right-body .right-body-top .list {
+  display: flex;
+}
+.right-body .right-body-top .list2,
+.right-body .right-body-botton .list1 {
+  border: 2px solid aqua;
+  border-radius: 10px;
+  margin-right: 6px;
+  width: 20%;
+  height: 38px;
+}
+.right-body .right-body-top .list .list2 p {
+  text-align: center;
+  margin-top: 8px;
+}
+
+// .right-body .right-body-botton .list1 {
+//   border: 2px solid aqua;
+//   border-radius: 10px;
+//   margin-right: 6px;
+//   width: 20%;
+//   height: 38px;
+// }
+
+.right-body .right-body-botton .list .list1 p {
+  text-align: center;
+  margin-top: 8px;
+}
+
+// .example-chip-list {
+//   width: 100%;
+// }
 .content .body .right .right-body .right-body-botton span {
   color: black;
   font-size: 25px;
@@ -261,8 +354,8 @@
 .content .body .right .right-body .right-body-botton {
   height: 13vw;
   width: 25vw;
-  align-items: center;
-  place-items: center;
+  // align-items: center;
+  // place-items: center;
   // margin-left: 1.5vw;
   // margin-top: 3%;
   border-radius: 10px;
@@ -305,25 +398,210 @@
   color: white !important;
 }
 
-// .setting:hover {
-//   transform: scale(1.1);
-// }
-
-@media only screen and (max-width: 63.9375em) {
-  main {
-    flex-direction: column-reverse;
+//width: 1746, height: 1270
+@media screen and (max-width: 1260px) {
+  .content .body .left .left-top {
+    margin-left: 4%;
   }
-  #word {
-    font-size: 15px;
+  .content .body .left .left-top .user {
+    width: 15vw;
+    height: 16vw;
   }
-  #word2 {
+  .content .body .left .left-top .name,
+  .content .body .left .left-top .job {
     font-size: 20px;
   }
+  .content .body .left .left-top .date span,
+  .content .body .left .left-top .gender span,
+  .content .body .left .left-top .school span,
+  .content .body .left .left-top .local span {
+    font-size: 16px;
+  }
+  .content .body .left .left-top .profile {
+    margin-left: -8px;
+    margin-top: -4px;
+  }
+  textarea {
+    width: 300px;
+    height: 134px;
+  }
+  .content .body .left .left-botton {
+    margin-left: 2%;
+    margin-top: -8%;
+  }
+  .content .body .right-body .right-body-top {
+    margin-top: -12px;
+  }
+  .left-botton .sub-left-botton .btn {
+    margin-left: 36px;
+    margin-top: 106px;
+  }
+  .content .body .right .right-body .right-body-top .list,
+  .content .body .right .right-body .right-body-botton .list {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  // .content .body .right .right-body .right-body-botton .list {
+  //   font-size: 12px;
+  //   margin-top: 12px;
+  // }
+  .content .body .right .button .setting {
+    font-size: 22px;
+    margin-left: 102px;
+  }
 }
+/////////////////////////////////////////////
+@media screen and (max-width: 1000px) {
+  textarea {
+    width: 246px;
+    height: 108px;
+  }
+  .left-botton .sub-left-botton .btn {
+    margin-left: 26px;
+    margin-top: 80px;
+  }
+  .content .body .left .left-botton span {
+    font-size: 22px;
+  }
+  .content .body .right .button .setting {
+    height: 4vw;
+    width: 50%;
+    font-size: 20px;
+    margin-top: 3.5%;
+    margin-left: 90px;
+  }
+  .content .body .right .right-body .right-body-top span,
+  .content .body .right .right-body .right-body-botton span {
+    font-size: 22px;
+  }
+  .right-body .right-body-top .list2 {
+    width: 30%;
+    height: 38px;
+  }
+  .right-body .right-body-botton .list {
+    width: 130%;
+    height: 38px;
+  }
+}
+///////////////////////////////////////////////
+@media screen and(max-width:700px) {
+  .content {
+    margin-top: -260px;
+  }
+  .content .body {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  textarea {
+    width: 180px;
+    height: 108px;
+  }
+  .content .body .left {
+    height: 50vw;
+    width: 46vw;
+  }
+  .content .body .right {
+    height: 60vw;
+    width: 46vw;
+    margin-left: 2px;
+    margin-top: 4px;
+  }
+  .content .body .left .left-top .name,
+  .content .body .left .left-top .job {
+    font-size: 14px;
+  }
+  .content .body .left .left-top .date span,
+  .content .body .left .left-top .gender span,
+  .content .body .left .left-top .school span,
+  .content .body .left .left-top .local span {
+    font-size: 12px;
+  }
+  .content .body .left .left-top .job {
+    margin-top: -1px;
+  }
+  .content .body .left .left-top .user {
+    margin-top: -8px;
+    margin-left: -6px;
+    height: 20vw;
+  }
+  .content .body .left .left-botton {
+    margin-left: -14px;
+    margin-top: -80px;
+  }
+  .content .body .left .left-botton .sub-left-botton button {
+    font-weight: bolder;
+    font-size: 16px;
+    width: 80px;
+  }
+  .left-botton .sub-left-botton .btn {
+    margin-left: 14px;
+    margin-top: 76px;
+  }
+  .content .body .right .right-body .right-body-top {
+    margin-top: 8px;
+  }
+  .content .body .right .right-body .right-body-botton {
+    margin-top: 36px;
+  }
+  .content .body .right .button .setting {
+    height: 10%;
+    width: 66%;
+    font-size: 20px;
+    margin-top: 140px;
+    margin-left: 56px;
+  }
+  .content .body .right .right-body .right-body-top span,
+  .content .body .right .right-body .right-body-botton span,
+  .content .body .left .left-botton span {
+    font-size: 20px;
+  }
+  .content .body .right .right-body .right-body-top .list,
+  .content .body .right .right-body .right-body-botton .list {
+    font-size: 10px;
+  }
+  .content .body .right .right-body .right-body-botton .list {
+    width: 300px;
+  }
+}
+//////////////////////////////////
+@media screen and(max-width: 560px) {
+  .content {
+    margin-top: -300px;
+  }
+  .content .body .left {
+    height: 76vw;
+    width: 60vw;
+  }
+  .content .body .left .left-top .profile {
+    margin-left: 28px;
+    // margin-top: -4px;
+  }
+  .content .body .left .left-top .user {
+    margin-top: -2px;
+    margin-left: -6px;
+    height: 30vw;
+    width: 22vw;
+  }
+  .content .body .left .left-top .job {
+    font-size: 10px;
+  }
+  .content .body .left .left-top .date span,
+  .content .body .left .left-top .gender span,
+  .content .body .left .left-top .school span,
+  .content .body .left .left-top .local span {
+    font-size: 10px;
+  }
+  .content .body .left .left-botton {
+    margin-left: -14px;
+    margin-top: -60px;
+  }
 
-/* Mobile: width < 740px */
-
-// @media only screen and (max-width: 46.1875em) {}
-// /*Tablet: width >= 740px and width < 1024px */
-// @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-// }
+  .content .body .right {
+    height: 76vw;
+    width: 60vw;
+  }
+  .content .body .right-body-botton .list .list2 {
+    width: fit-content;
+  }
+}
