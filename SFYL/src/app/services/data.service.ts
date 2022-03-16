@@ -16,7 +16,7 @@ export class DataService {
   public getAllData() {
     let allUser = collection(this.fs, 'User');
     collectionData(allUser).subscribe((data: any) => {
-      // console.log(this.userList);
+      // console.log('hahaha' + this.userList);
       for (let i = 0; i < data.length; i++) {
         let distance = this.cal(
           this.login.location.lat,
