@@ -13,6 +13,19 @@ export interface Hobby {
   styleUrls: ['./setting-profile.component.scss'],
 })
 export class SettingProfileComponent implements OnInit {
+  datas: string | undefined;
+
+  gioitinh: any;
+  noio: any;
+  ngaysinh: any;
+  Gender = [{ gen: 'Nam' }, { gen: 'Nữ' }];
+  public changeGender(event: any) {
+    console.log('gioitinh' + event);
+  }
+  // constructor(
+  //   public httpSv: HttpClientService,
+  //   public FormBuilder: FormBuilder
+  // ) { }
   form!: FormGroup;
    constructor(public httpSv: HttpClientService, public FormBuilder:FormBuilder) {
     this.form = this.FormBuilder.group({
@@ -20,13 +33,13 @@ export class SettingProfileComponent implements OnInit {
       noio:['',Validators.required],
       ngaysinh:['',Validators.required],
       sothich:['', Validators.required],
-    
+
 
     });
   }
- 
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void { }
 
   value = 'Clear all';
   value1 = 'Clear all';
@@ -64,14 +77,7 @@ export class SettingProfileComponent implements OnInit {
   // public noisong = '';
   // public ngaysinh = '';
   // public sothich = '';
-  public async test() {
-    let form = this.form.value;
-    if (this.form.valid) {
-      console.log(this.form.valid);
-      alert(
-       `gioitinh:${form.gioitinh}\n noio:${form.noio}\n ngaysinh:${form.ngaysinh}\n sothich:${form.sothich}\n}`
-      );
-    }
+  public async test(data: any) {
+    alert(this.Gender[data].gen);
   }
-
 }

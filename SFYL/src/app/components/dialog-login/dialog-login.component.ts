@@ -20,44 +20,45 @@ export class DialogLoginComponent implements OnInit {
     public dialog: MatDialog,
     public http: HttpClient,
     private router: Router
-  ) { }
+  ) {}
   openDialog1() {
     this.dialog.open(DialogRegisterComponent);
   }
   openDialog2() {
-    this.dialog.closeAll()
+    this.dialog.closeAll();
     this.dialog.open(RecoverAccountComponent);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
   public async Login() {
     try {
-      let result = await this.login.loginGG()
+      let result = await this.login.loginGG();
       if (result.user) {
         this.http
-          .post(
-            environment.endpoint + 'user',
-            {
-              collectionName: 'User',
-              data: {
-                email: this.login.user?.email,
-                name: this.login.user?.displayName,
-                photoURL: this.login.user?.photoURL,
-                Location: [],
-                Like: [],
-                unLike: [],
-                Watting: [],
-                docId: this.login.user?.uid
+          .post(environment.endpoint + 'user', {
+            collectionName: 'User',
+            data: {
+              email: this.login.user?.email,
+              name: this.login.user?.displayName,
+              photoURL: this.login.user?.photoURL,
+              Location: {
+                lat: 0,
+                long: 0,
               },
-            }
-          ).subscribe(response=>{
-            console.log(response)
+              Like: [],
+              unLike: [],
+              Watting: [],
+              docId: this.login.user?.uid,
+            },
           })
+          .subscribe((response) => {
+            console.log(response);
+          });
         await this.router.navigate(['/layout/match']);
         this.dialog.closeAll();
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 }

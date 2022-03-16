@@ -18,9 +18,10 @@
                                 <p>Giới tính</p>
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Giới tính</mat-label>
-                                    <mat-select >
-                                        <mat-option style="font-weight:bolder" value="one">Nam</mat-option>
-                                        <mat-option style="font-weight:bolder" value="two">Nữ</mat-option>
+                                    <mat-select [(ngModel)]="datas" (change)="changeGender($event)">
+                                        <mat-option *ngFor="let gen of Gender" style="font-weight:bolder" value="one">
+                                            {{gen.gen}}</mat-option>
+
                                     </mat-select>
                                 </mat-form-field>
                             </div>
@@ -28,7 +29,7 @@
                                 <p>Nơi ở</p>
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Nơi ở</mat-label>
-                                    <mat-select >
+                                    <mat-select>
                                         <mat-option value="one" style="font-weight:bolder">Hồ Chí Minh</mat-option>
                                         <mat-option value="two" style="font-weight:bolder">Hà Nội</mat-option>
                                         <mat-option value="two" style="font-weight:bolder">Huế</mat-option>
@@ -39,7 +40,7 @@
                                 <p>Ngày sinh</p>
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Choose a date</mat-label>
-                                    <input matInput [matDatepicker]="picker" >
+                                    <input matInput [matDatepicker]="picker">
                                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                     <mat-datepicker #picker></mat-datepicker>
                                 </mat-form-field>
@@ -109,7 +110,7 @@
                     <div class="hobby">
                         <h3>Sở thích</h3>
                         <mat-form-field class="example-chip-list" appearance="fill">
-                            <mat-chip-list #chipList aria-label="Fruit selection" >
+                            <mat-chip-list #chipList aria-label="Fruit selection">
                                 <mat-chip *ngFor="let hobby of hobbies" (removed)="remove(hobby)">
                                     {{hobby.name}}
                                     <button matChipRemove>
@@ -210,7 +211,7 @@
                 </div>
                 <div class="right-bottom">
                     <div class="btn">
-                        <button mat-raised-button>Lưu thông tin</button>
+                        <button (click)="test(datas)" mat-raised-button>Lưu thông tin</button>
                     </div>
                 </div>
             </div>

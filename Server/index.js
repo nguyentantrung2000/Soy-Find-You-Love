@@ -54,10 +54,6 @@ server.post("/user", async(request, response) => {
                 message: "User is exits!"
             })
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> e9be1e4ba9ed1609ecf4180659a1b184acdbf3a3
     } catch (error) {
         console.log(error);
     }
@@ -66,15 +62,23 @@ server.post("/user", async(request, response) => {
 // user location
 server.post("/user/location", async(request, response) => {
 
-    let collectionName = request.body.collectionName;
-    let docId = request.body.docId;
-    await firebase.firestore().collection(collectionName).doc(docId).set({
-        Location: firebase.firestore.FieldValue.arrayUnion({ lat, long, city })
-    });
+    // let collectionName = request.body.collectionName;
+    // let docId = request.body.docId;
+    let temp = request.body.data;
+    console.log(temp)
+    try {
+        await firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
+            Location: temp.Location
+        });
+        response.send({
+            message: "Update location !!!"
+        })
+    } catch (err) {
+        console.log(err);
+    }
 
-    response.send({
-        message: "Update location !!!"
-    })
+
+
 
 })
 server.put("/user/update", async(request, response) => {
@@ -163,11 +167,6 @@ server.get("/user/listLike", async(request, response) => {
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2dfde25f67074c7dbeec26559e45f058fb87923b
 // server.post("/user/unlike", async(request, response)=>{
 //   let collectionName = request.body.collectionName;
 //   let docId = request.body.docId;
