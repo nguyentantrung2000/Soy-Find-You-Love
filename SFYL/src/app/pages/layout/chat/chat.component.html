@@ -24,6 +24,12 @@
     </div>
 
     <div class="right-item">
-        <app-room-chat *ngIf="conversation"></app-room-chat>
+        <div *ngIf="!conversation" id ="chatPlaceholder">
+            <img width="40%" style="z-index: 0;" src="../../../../assets/images/love_icon.PNG">
+            <h2>Nơi Tình Yêu Bắt Đầu</h2>
+            <p>Tìm cách bắt chuyện? Khi bạn có tương hợp với người khác,<br> bạn có thể gửi tin nhắn cho họ dưới mục "Các kết nối"</p>
+        </div> 
+        <app-room-chat [conversation]="conversation" *ngIf="conversation"></app-room-chat>
+       
     </div>
 </div>

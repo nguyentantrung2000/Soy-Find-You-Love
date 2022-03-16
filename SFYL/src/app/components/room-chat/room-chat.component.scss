@@ -30,14 +30,14 @@ img{
 }
 
 .active{
-    width: 80px;
+    width: 25%;
     float: left;
     margin-top: 20px;
 }
 
 .active h4{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 10px;
     color: #fff;
     line-height: 1px;
@@ -76,29 +76,39 @@ img{
     // border: 1px solid black;
     overflow: hidden;
     padding-bottom:0px;
+    height: 100%;
+    overflow-y: scroll;
 }
 .chats{
-    padding: 15px 5px 10px 15px;
+    padding: 15px;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-.msg-page{
-    height: 480px;
-    overflow-y: auto;
-}
+
+// .msg-page{
+//     height: 480px;
+//     overflow-y: auto;
+    // display: flex;
+    // flex-direction: column;
+// }
 .received-chats-img{
-    display: inline-block;
+    // display: inline-block;
     height: 20px;
     width: 20px;
     float: left;
 }
 .received-msg{
-    display: inline-block;
+    // display: inline-block;
+    // align-items: flex-start;
     padding: 0 0 0 10px;
     vertical-align: top;
-    width: 92%;
+    margin-left: 15px;
+    width: 80%;
 }
-.received-msg-inbox{
-    width: 45%;
-}
+// .received-msg-inbox{
+//     // width: 45%;
+// }
 .received-msg-inbox p{
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
 
@@ -109,7 +119,7 @@ img{
     font-size: 14px;
     margin: 0;
     padding: 5px 10px 5px 12px;
-    width: 100%;
+    width: fit-content;
 }
 .time{
     color: #777;
@@ -121,7 +131,8 @@ img{
 .outgoing-chats{
     overflow: hidden;
     margin: 5px 10px;
-    display: block;
+    display: block
+    // align-items: flex-start;
 }
 .outgoing-chats-msg p{
     background: rgb(248, 168, 48) none repeat scroll 0 0;
@@ -133,20 +144,50 @@ img{
     margin: 0;
     color: #fff;
     padding: 5px 5px 5px 12px;
-    width: 100%;
+    width: fit-content;
 }
 .outgoing-chats-msg{
-    float:left;
+    float:right;
+    margin-right: 10px;
     width: 45%;
     margin-left: 50%;
 }
 .outgoing-chats-img{
-    // display: inline-block;
+    display: inline-block;
     margin-left: 15px;
-    // margin-top: -15px;
+    margin-top: -15px;
     width: 20px;
     height: 20px;
-    float:right;
+    // float:right;
+}
+
+.my-msg{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    float: right;
+    align-items: flex-end;
+    padding: 10px 0;
+}
+
+.my-msg-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.my-msg-content p{
+    margin: 0 10px 0 0;
+    background: rgb(248, 168, 48) none repeat scroll 0 0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 12px 5px 12px;
+    width: fit-content;
+}
+
+.my-msg-img{
+    width: 20px;
+    height: 20px;
 }
 
 .msg-bottom{
@@ -213,12 +254,13 @@ img{
     border-radius: 20px;
 }
 
-@media screen and(min-width:0px) and (max-width:545px) {
+//0-545
+@media screen and(min-width:0px) and (max-width:650px) {
     .msg-header{
         height: 10%;
         width: 100%;
         // border: 1px solid #ccc;
-        background-color: yellow;
+        background-color: pink;
         border-bottom: none;
         // display: inline-block;
     }  
@@ -265,13 +307,13 @@ img{
         margin: 5px
     }
     .msg-bottom{
-        background-color: yellow;
+        background-color: pink
     }
     .input-group .fa-solid{
         color: black;
     }
     .outgoing-chats-msg p{
-        background: yellow none repeat scroll 0 0;
+        background: pink none repeat scroll 0 0;
         color: #000;
     }
     .bottom-icons i{
@@ -280,7 +322,7 @@ img{
     }
     .header-search {
         color: black;
-        background-color: yellow;
+        background-color: pink;
     }
 }
 //1334-1140
@@ -297,3 +339,23 @@ img{
         padding: 2px 3px 3px 3px;
     }
 }
+
+// ================= CUSTOM SCROLLBAR==============
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
