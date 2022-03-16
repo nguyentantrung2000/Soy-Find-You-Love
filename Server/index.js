@@ -40,12 +40,14 @@ server.get("/user/:id", async function(request, response) {
 
 server.post("/user", async(request, response) => {
     let body = request.body;
-    let collectionName = request.body.collectionName;
-    let docId = request.body.data.docId;
+    console.log(body);
+    let collectionName = body.collectionName;
+    console.log(collectionName)
+    let docId = body.data.docId;
     try {
         let isExits = await firebase.firestore().collection(collectionName).doc(docId).get();
         if (isExits.data() == undefined) {
-            await firestore.collection(body.collectionName).doc(docId).set(body.data);
+            await firebase.firestore().collection(collectionName).doc(docId).set(body.data);
             response.send({
                 message: "Successful!!!",
             });
@@ -61,7 +63,6 @@ server.post("/user", async(request, response) => {
 });
 // user location
 server.post("/user/location", async(request, response) => {
-
     let temp = request.body.data;
     try {
         // let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
@@ -107,9 +108,10 @@ server.put("/user/update", async(request, response) => {
 
 ///LikeList
 server.post("/user/likelist", async(request, response) => {
-        let collectionName = request.body.collectionName;
-        let docId = request.body.docId; ////nguoi dung
-        let docIDs = request.body.docIDs; ////nguoi dung duoc thich 
+        let collectionName = request.body.data.collectionName;
+        let docId = request.body.data.docId; ////nguoi dung
+        let docIDs = request.body.data.docIDs; ////nguoi dung duoc thich 
+        console.log(docId , docIDs)
         // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
         await firebase.firestore().collection(collectionName).doc(docId).update({
             Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
