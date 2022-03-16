@@ -38,23 +38,25 @@ export class DialogLoginComponent implements OnInit {
           .post(environment.endpoint + 'user', {
             collectionName: 'User',
             data: {
-              email:   this.login.user.email,
-              name: this.login.user.displayName,
-              photoURL: this.login.user.photoURL,
-              Location: {
+              email: result.user.email,
+              name: result.user.displayName,
+              photoURL: result.user.photoURL,
+              location: {
                 lat: 0,
                 long: 0,
               },
-              Like: [],
+              like: [],
               unLike: [],
-              Watting: [],
-              docId: this.login.user.uid,
+              waiting: [],
+              docId: result.user.uid,
+              conversations: [],
             },
           })
           .subscribe((response) => {
             console.log(response);
+            this.router.navigate(['/layout/match']);
           });
-        await this.router.navigate(['/layout/match']);
+        // await this.router.navigate(['/layout/match']);
         this.dialog.closeAll();
       }
     } catch (error) {

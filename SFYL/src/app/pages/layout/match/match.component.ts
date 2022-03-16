@@ -128,19 +128,19 @@ export class MatchComponent implements OnInit {
   // }
 
   public async postLike(Id: string) {
-    await (
-      await this.httpSv.LikeService('User', this.login.user?.uid, Id)
-    ).subscribe((value: any) => {
-      alert(value['message']);
-    });
-    this.getNextUser();
+  //   await (
+  //     await this.httpSv.LikeService('User', this.login.user?.uid, Id)
+  //   ).subscribe((value: any) => {
+  //     alert(value['message']);
+  //   });
+  //   this.getNextUser();
   }
   public async postUnLike(Id: string) {
-    await (
-      await this.httpSv.UnLikeService('User', this.login.user?.uid, Id)
-    ).subscribe((value: any) => {
-      alert(value['message']);
-    });
-    this.getNextUser();
+  //   await (
+  //     await this.httpSv.UnLikeService('User', this.login.user?.uid, Id)
+  //   ).subscribe((value: any) => {
+  //     alert(value['message']);
+    // });
+  //   this.getNextUser();
   }
 }
