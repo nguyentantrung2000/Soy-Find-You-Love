@@ -66,21 +66,21 @@ server.post("/user/location", async(request, response) => {
     try {
         // let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
         // if (isExits.data() != undefined) {
-             firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
-                Location: temp.Location
-            }).then((value)=>{
-                console.log('value'+value);
-            }).catch((error)=>{
-                console.log(error);
-            });
-            // return response.send({
-            //     message: "Update location !!!"
-            // })
+        firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
+            Location: temp.Location
+        }).then((value) => {
+            console.log('value' + value);
+        }).catch((error) => {
+            console.log(error);
+        });
+        // return response.send({
+        //     message: "Update location !!!"
+        // })
         // }
         //   return response.status(400).send({
         //     message: "User is exits!"
         // })
-     
+
     } catch (err) {
         console.log(err);
     }
@@ -110,19 +110,16 @@ server.post("/user/likelist", async(request, response) => {
         let collectionName = request.body.collectionName;
         let docId = request.body.docId; ////nguoi dung
         let docIDs = request.body.docIDs; ////nguoi dung duoc thich 
-        let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
-        console.log(isExits.data().Like);
-        for (let i = 0; i < isExits.data().Watting.length; i++) {
-            if (docId == i) {
-                await firebase.firestore().collection(collectionName).doc(docId).update({
-                    Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
-                });
-            } else {
-                await firebase.firestore().collection(collectionName).doc(docId).update({
-                    Watting: firebase.firestore.FieldValue.arrayUnion(docIDs)
-                });
-            }
-        }
+        // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
+        await firebase.firestore().collection(collectionName).doc(docId).update({
+            Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
+        });
+
+        await firebase.firestore().collection(collectionName).doc(docIDs).update({
+            Watting: firebase.firestore.FieldValue.arrayUnion(docId)
+        });
+
+
         response.send({
             message: "Like"
         })
@@ -135,9 +132,11 @@ server.post("/user/unlikelist", async(request, response) => {
     let docId = request.body.docId;
     let docIDs = request.body.docIDs;
     await firebase.firestore().collection(collectionName).doc(docId).update({
-        Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
+        unLike: firebase.firestore.FieldValue.arrayUnion(docIDs)
     });
-
+    await firebase.firestore().collection(collectionName).doc(docId).update({
+        Watting: firebase.firestore.FieldValue.arrayRemove(docIDs)
+    });
     response.send({
         message: "UnLike"
     })
