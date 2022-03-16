@@ -5,6 +5,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogLogoutComponent } from 'src/app/components/dialog-logout/dialog-logout.component';
 import { DialogDeleteAccComponent } from 'src/app/components/dialog-delete-acc/dialog-delete-acc.component';
 import { HttpClient } from '@angular/common/http';
+import { HttpClientService } from 'src/app/services/http-client.service';
+import { environment } from '../../../../environments/environment';
+import { LoginGGService } from 'src/app/services/login-gg.service';
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
@@ -15,6 +18,7 @@ export class SettingComponent implements OnInit {
   lng: any;
   a: any;
   Location: any;
+  Location1: any;
   formatLabel(value: number) {
     if (value >= 1000) {
       return Math.round(value / 1000) + 'km';
@@ -29,7 +33,12 @@ export class SettingComponent implements OnInit {
 
     return value;
   }
-  constructor(public dialog: MatDialog, public http: HttpClient) {}
+  constructor(
+    public dialog: MatDialog,
+    public http: HttpClient,
+    public userLocation: HttpClientService,
+    public login: LoginGGService
+  ) {}
 
   openDialog() {
     this.dialog.open(DialogLogoutComponent);
@@ -58,31 +67,42 @@ export class SettingComponent implements OnInit {
         await this.http.get(request_url).subscribe(async (res: any) => {
           this.a = await res;
           this.Location = res.results[0].formatted;
-          console.log(this.Location);
-          this.cal();
+          this.Location1 = res.results[0].geometry;
+          // let b = this.Location1[Object.keys(this.Location1)[0]];
+          // console.log('haha' + b);
+          console.log(this.lat);
+          console.log(this.lng);
+          this.login.location = {
+            lat: this.lat,
+            long: this.lng,
+          };
+          localStorage.setItem(
+            '_location',
+            JSON.stringify({
+              lat: this.lat,
+              long: this.lng,
+            })
+          );
+          await this.http
+            .post(environment.endpoint + 'user/location', {
+              data: {
+                collectionName: 'User',
+                docId: this.login.user?.uid,
+                Location: {
+                  lats: this.lat,
+                  long: this.lng,
+                },
+              },
+            })
+            .subscribe((res) => {
+              console.log(res);
+            });
         });
       });
     }
   }
-  public cal() {
-    let lat1 = this.lat;
-    let lon1 = this.lng;
-    let lat2 = 10.75076;
-    let lon2 = 106.63153;
 
-    let R = 6371e3; // metres
-    let φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
-    let φ2 = (lat2 * Math.PI) / 180;
-    let Δφ = ((lat2 - lat1) * Math.PI) / 180;
-    let Δλ = ((lon2 - lon1) * Math.PI) / 180;
-
-    let a =
-      Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
-      Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
-    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-    let d = (R * c) / 1000; // in metres
-    console.log(Math.round(d) + 'km');
+  ngOnInit(): void {
+    // this.Distance();
   }
-  ngOnInit(): void {}
 }

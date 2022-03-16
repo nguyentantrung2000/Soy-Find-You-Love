@@ -13,19 +13,22 @@ import { DialogRegisterComponent } from '../../components/dialog-register/dialog
 import { CheckEmailComponent } from 'src/app/components/check-email/check-email.component';
 import { UserChatComponent } from 'src/app/components/user-chat/user-chat.component';
 import { SigninSuccessComponent } from 'src/app/components/signin-success/signin-success.component';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatFormFieldModule } from '@angular/material/form-field';
-
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { DialogDeleteAccComponent } from '../../components/dialog-delete-acc/dialog-delete-acc.component';
 import { DialogLogoutComponent } from '../../components/dialog-logout/dialog-logout.component';
 import { RecoverAccountComponent } from 'src/app/components/recover-account/recover-account.component';
+import { RoomChatComponent } from 'src/app/components/room-chat/room-chat.component';
+
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-// import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel } from '@ionic/angular';
+import { MatChipsModule } from '@angular/material/chips';
+
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -37,7 +40,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     DialogDeleteAccComponent,
     DialogLogoutComponent,
     RecoverAccountComponent,
-    UserChatComponent
+    UserChatComponent,
+    RoomChatComponent
   ],
   imports: [
     CommonModule,
@@ -55,6 +59,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatChipsModule,
   ],
   exports: [
     UserChatComponent,
@@ -79,6 +84,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatChipsModule,
+    RoomChatComponent,
   ],
 })
 export class ShareModule {}

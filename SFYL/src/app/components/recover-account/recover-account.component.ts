@@ -17,6 +17,7 @@ export class RecoverAccountComponent implements OnInit {
     });
   }
   openDialog() {
+    this.dialog.closeAll();
     this.dialog.open(CheckEmailComponent);
   }
   ngOnInit(): void {}

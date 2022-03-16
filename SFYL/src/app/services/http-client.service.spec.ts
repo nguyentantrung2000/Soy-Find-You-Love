@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UserCharService } from './user-chat.service';
+import { HttpClientService } from './http-client.service';
 
-describe('UserCharService', () => {
-  let service: UserCharService;
+describe('HttpClientService', () => {
+  let service: HttpClientService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(UserCharService);
+    service = TestBed.inject(HttpClientService);
   });
 
   it('should be created', () => {

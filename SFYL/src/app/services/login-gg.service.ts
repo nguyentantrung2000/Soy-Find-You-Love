@@ -13,6 +13,9 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class LoginGGService {
+  public location: any = JSON.parse(
+    localStorage.getItem('_location') as string
+  );
   public user!: User | null;
   constructor(private auth: Auth, private router: Router) {
     authState(this.auth).subscribe((user: User | null) => {
@@ -20,13 +23,13 @@ export class LoginGGService {
       console.log(this.user);
     });
   }
-  public async loginGG() {
-    try {
-      await signInWithPopup(this.auth, new GoogleAuthProvider());
-      this.router.navigate(['/layout/match']);
-    } catch (err) {
-      alert('login fail!');
-    }
+  public loginGG() {
+    // try {
+    return signInWithPopup(this.auth, new GoogleAuthProvider());
+    // this.router.navigate(['/layout/match']);
+    // } catch (err) {
+    //   alert('login fail!');
+    // }
   }
   public async logOut() {
     await signOut(this.auth);
