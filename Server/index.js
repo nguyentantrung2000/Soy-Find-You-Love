@@ -62,24 +62,28 @@ server.post("/user", async(request, response) => {
 // user location
 server.post("/user/location", async(request, response) => {
 
-    // let collectionName = request.body.collectionName;
-    // let docId = request.body.docId;
     let temp = request.body.data;
-    console.log(temp)
     try {
-        await firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
-            Location: temp.Location
-        });
-        response.send({
-            message: "Update location !!!"
-        })
+        // let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
+        // if (isExits.data() != undefined) {
+             firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
+                Location: temp.Location
+            }).then((value)=>{
+                console.log('value'+value);
+            }).catch((error)=>{
+                console.log(error);
+            });
+            // return response.send({
+            //     message: "Update location !!!"
+            // })
+        // }
+        //   return response.status(400).send({
+        //     message: "User is exits!"
+        // })
+     
     } catch (err) {
         console.log(err);
     }
-
-
-
-
 })
 server.put("/user/update", async(request, response) => {
     let collectionName = request.body.collectionName;

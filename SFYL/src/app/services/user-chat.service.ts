@@ -3,7 +3,7 @@ import { User_chat } from 'src/models/user_chat.models';
 @Injectable({
   providedIn: 'root',
 })
-export class UserCharService {
+export class UserChatService {
   public userChatList: Array<User_chat> = [
     {
       displayName: 'Hào Ca',
