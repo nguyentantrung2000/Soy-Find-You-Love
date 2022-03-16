@@ -1,4 +1,3 @@
-<form [formGroup]="form" (submit)="test()">
 <div class="main">
     <div class=" content">
         <!-- <div class="top">
@@ -19,9 +18,9 @@
                                 <p>Giới tính</p>
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Giới tính</mat-label>
-                                    <mat-select formControlName="gioitinh">
-                                        <mat-option style="font-weight:bolder" value="one">Nam</mat-option>
-                                        <mat-option style="font-weight:bolder" value="two">Nữ</mat-option>
+                                    <mat-select [(ngModel)]="datas" (change)="changeGender($event)">
+                                        <mat-option *ngFor="let gen of Gender" style="font-weight:bolder" value="one">{{gen.gen}}</mat-option>
+
                                     </mat-select>
                                 </mat-form-field>
                             </div>
@@ -29,7 +28,7 @@
                                 <p>Nơi ở</p>
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Nơi ở</mat-label>
-                                    <mat-select formControlName="noio">
+                                    <mat-select>
                                         <mat-option value="one" style="font-weight:bolder">Hồ Chí Minh</mat-option>
                                         <mat-option value="two" style="font-weight:bolder">Hà Nội</mat-option>
                                         <mat-option value="two" style="font-weight:bolder">Huế</mat-option>
@@ -40,7 +39,7 @@
                                 <p>Ngày sinh</p>
                                 <mat-form-field appearance="fill">
                                     <mat-label style="font-weight:bolder">Choose a date</mat-label>
-                                    <input matInput [matDatepicker]="picker" formControlName="ngaysinh">
+                                    <input matInput [matDatepicker]="picker">
                                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                     <mat-datepicker #picker></mat-datepicker>
                                 </mat-form-field>
@@ -60,8 +59,7 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Sinh viên</mat-label>
                                     <input matInput type="text" [(ngModel)]="value">
-                                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear"
-                                        (click)="value=''">
+                                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -71,8 +69,7 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Công ty ABC</mat-label>
                                     <input matInput type="text" [(ngModel)]="value1">
-                                    <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear"
-                                        (click)="value1=''">
+                                    <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -82,8 +79,7 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Trường ABC</mat-label>
                                     <input matInput type="text" [(ngModel)]="value2">
-                                    <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear"
-                                        (click)="value2=''">
+                                    <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -117,9 +113,7 @@
                                         <mat-icon>cancel</mat-icon>
                                     </button>
                                 </mat-chip>
-                                <input placeholder="Add more..." [matChipInputFor]="chipList"
-                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+                                <input placeholder="Add more..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
                             </mat-chip-list>
                         </mat-form-field>
                     </div>
@@ -200,8 +194,7 @@
                                 <mat-form-field class="example-form-field" appearance="fill">
                                     <mat-label>*VD: Bóng đá</mat-label>
                                     <input matInput type="text" [(ngModel)]="value3">
-                                    <button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear"
-                                        (click)="value3=''">
+                                    <button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
                                         <mat-icon>close</mat-icon>
                                     </button>
                                 </mat-form-field>
@@ -211,11 +204,10 @@
                 </div>
                 <div class="right-bottom">
                     <div class="btn">
-                        <button mat-raised-button>Lưu thông tin</button>
+                        <button (click)="test(datas)" mat-raised-button>Lưu thông tin</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</form>

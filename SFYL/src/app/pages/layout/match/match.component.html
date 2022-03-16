@@ -1,14 +1,19 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<div class="main">
+<div *ngIf="!userData.userList">
+    <p style="margin: 200px;" >
+        Loading....
+    </p>
+</div>
+<div *ngIf="userData.userList" class="main">
     <div class="content">
         <div class="card">
             <div class="user">
-                <img class="user" src="../../../assets/images/791698c99d6b7cfd993f61100a7cde73.jpg">
+                <img class="user" [src]="this.userData.userList[this.index].photoURL">
                 <div class="profile">
-                    <div class="name">Anna <span>20</span></div>
+                    <div class="name">{{this.userData.userList[this.index]?.name}}<span>{{this.userData.userList[this.index]?.dob}}</span></div>
                     <div class="local">
                         <mat-icon>location_on</mat-icon>
-                        <span>Cách đây 1km</span>
+                        <span>Cách đây {{this.userData.userList[this.index]?.distance}}km</span>
                     </div>
                 </div>
             </div>
@@ -24,7 +29,7 @@
             </button>
 
             <button class="heart">
-                <mat-icon >favorite</mat-icon>
+                <mat-icon (click)="getNextUser()" >favorite</mat-icon>
             </button>
         </div>
 

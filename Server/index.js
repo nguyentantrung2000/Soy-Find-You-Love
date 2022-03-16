@@ -62,15 +62,23 @@ server.post("/user", async(request, response) => {
 // user location
 server.post("/user/location", async(request, response) => {
 
-    let collectionName = request.body.collectionName;
-    let docId = request.body.docId;
-    await firebase.firestore().collection(collectionName).doc(docId).set({
-        Location: firebase.firestore.FieldValue.arrayUnion({ lat, long, city })
-    });
+    // let collectionName = request.body.collectionName;
+    // let docId = request.body.docId;
+    let temp = request.body.data;
+    console.log(temp)
+    try {
+        await firebase.firestore().collection(temp.collectionName).doc(temp.docId).update({
+            Location: temp.Location
+        });
+        response.send({
+            message: "Update location !!!"
+        })
+    } catch (err) {
+        console.log(err);
+    }
 
-    response.send({
-        message: "Update location !!!"
-    })
+
+
 
 })
 server.put("/user/update", async(request, response) => {
@@ -156,8 +164,6 @@ server.get("/user/listLike", async(request, response) => {
     });
     response.send(result)
 })
-
-
 
 
 
