@@ -22,6 +22,12 @@ export class LoginGGService {
       this.user = user;
     });
   }
+  public checkAuth(): boolean {
+    if (!this.user) {
+      return false;
+    }
+    return true;
+  }
   public async loginGG() {
     try {
       await signInWithPopup(this.auth, new GoogleAuthProvider()).then(
