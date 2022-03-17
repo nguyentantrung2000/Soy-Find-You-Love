@@ -1,13 +1,13 @@
 .container {
   margin: 10px 30px;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   // background-image: linear-gradient( to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
   // position: relative;
   // left: 10%;
   // top: 10%;
-  margin-top: 8%;
-  margin-left: 10%;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 .body {
@@ -255,7 +255,7 @@ button:hover:not(.active) {
   }
   .container {
     margin-top: 100px;
-    margin-left: 250px;
+    margin-left: 150px;
   }
   .body {
     flex-direction: column;

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 
 @Injectable({
   providedIn: 'root',
@@ -16,16 +15,16 @@ export class HttpClientService {
     return result;
   }
 
-  ///get UserId
-  public getUserId(params: string) {
-    return this.http.get(environment.endpoint + `/user/${params}`);
+  ///get UserWithId
+  public UserWithId(params: string) {
+    return this.http.get(environment.endpoint + `user/${params}`);
   }
   public async UpdateUserLocation(
     collectionName: string,
     docId: string,
     Location: { lat: string; long: string }
   ) {
-    return this.http.post(environment.endpoint + '/user/location', {
+    return this.http.post(environment.endpoint + 'user/location', {
       data: {
         collectionName: collectionName,
         docId: docId,

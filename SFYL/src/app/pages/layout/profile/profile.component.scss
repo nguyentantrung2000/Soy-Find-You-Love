@@ -50,7 +50,7 @@
   height: 100%;
   width: 46%;
   display: grid;
-  border: 6px solid black;
+  border: 2px solid black;
   border-radius: 20px;
 }
 
@@ -232,7 +232,7 @@ textarea {
 
 .content .body .left .left-botton .sub-left-botton button {
   box-shadow: 5px 5px #888888;
-  border-style: solid;
+  border: 2px solid;
   font-size: 24px;
   width: 86px;
 }
@@ -263,7 +263,7 @@ textarea {
   // background-color: brown;
   // align-items: center;
   // place-items: center;
-  border: 6px solid black;
+  border: 2px solid black;
   border-radius: 20px;
   margin-left: 14px;
 }
@@ -297,15 +297,15 @@ textarea {
 
 .content .body .right .right-body .right-body-botton .list {
   font-size: 16px;
-  font-weight: bolder;
-  color: blue;
+  font-weight: 900;
+  color: orangered;
   margin-top: 12px;
 }
 
 .content .body .right .right-body .right-body-top .list {
   font-size: 16px;
-  font-weight: bolder;
-  color: blue;
+  font-weight: 900;
+  color: orangered;
   margin-top: 12px;
 }
 .content .body .right .right-body .right-body-botton .list {
@@ -317,11 +317,12 @@ textarea {
 }
 .right-body .right-body-top .list2,
 .right-body .right-body-botton .list1 {
-  border: 2px solid aqua;
+  border: 2px solid rgb(233, 83, 14);
   border-radius: 10px;
   margin-right: 6px;
   width: 20%;
   height: 38px;
+  background-color: rgb(224, 177, 155);
 }
 .right-body .right-body-top .list .list2 p {
   text-align: center;
@@ -385,7 +386,7 @@ textarea {
   box-shadow: 5px 5px #888888;
   margin-top: 3.5%;
   margin-left: 140px;
-  border-style: solid;
+  border: 2px solid;
 }
 
 .content .body .right .button .setting:hover:not(.active) {

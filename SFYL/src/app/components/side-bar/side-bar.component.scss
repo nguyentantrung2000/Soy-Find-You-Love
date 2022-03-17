@@ -15,11 +15,31 @@ ul {
   overflow: hidden; /* nếu nội dung quá dài sẽ có thêm thanh cuộn để xem phần còn lại */
 }
 
-// li a.active {
-//   background-color: #58257b;
-//   font-weight: bold;
-//   color: white;
-// }
+li {
+  margin-top: 20%;
+  padding: 10%;
+  // width: 3%;
+  text-align: center;
+  // border-bottom: 1px solid #58257b;
+}
+button:focus {
+  background-image: linear-gradient(
+    to right top,
+    #e64966,
+    #e85365,
+    #ea5c65,
+    #eb6564,
+    #ec6d65,
+    #ed7564,
+    #ee7c64,
+    #ef8464,
+    #f08d63,
+    #f09664,
+    #f09f65,
+    #f0a867
+  );
+  color: white !important;
+}
 
 li button:hover:not(.active) {
   background-image: linear-gradient(
