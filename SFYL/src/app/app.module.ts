@@ -9,10 +9,11 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './share/share/share.module';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogMatchComponent } from './components/dialog-match/dialog-match.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DialogMatchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
