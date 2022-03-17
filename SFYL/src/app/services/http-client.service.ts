@@ -88,4 +88,12 @@ export class HttpClientService {
   //    collectionName:collectionName
   //  });
   // }
+
+  public async getChatList(params: any) {
+    console.log(params);
+    let res =  await this.http.get(
+      environment.endpoint + `user/conversation/${params}`
+    );
+    return res;
+  }
 }

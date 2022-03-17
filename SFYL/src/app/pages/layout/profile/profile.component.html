@@ -1,9 +1,9 @@
-<div id="side">
+<!-- <div id="side">
     <app-side-bar></app-side-bar>
 </div>
 <div id="nav">
     <app-nav-bar></app-nav-bar>
-</div>
+</div> -->
 <div class="main">
     <div class="content">
         <!-- <div class="top">
@@ -55,20 +55,15 @@
             <div class="right">
                 <div class="right-body">
                     <div class="right-body-top">
-                        <span>Sở thích</span>
-                        <!-- <mat-form-field class="example-chip-list" appearance="fill">
-                            <mat-chip-list #chipList aria-label="Fruit selection">
-                                <mat-chip *ngFor="let hobby of hobbies" (removed)="remove(hobby)">
-                                    {{hobby.name}}
-                                    <button matChipRemove>
-                                        <mat-icon>cancel</mat-icon>
-                                    </button>
-                                </mat-chip>
-                                <input placeholder="Add more..." [matChipInputFor]="chipList"
-                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
-                            </mat-chip-list>
-                        </mat-form-field> -->
+                        <div class="hobby">
+                            <span>Sở thích</span>
+                            <div id="cancel" style="height: 40px;width: 40px;color: gray;opacity: 0.5;">
+                                <mat-icon [mat-dialog-close] style="font-size: 22px;cursor: pointer;font-size: 38px;">
+                                    highlight_off
+                                </mat-icon>
+                            </div>
+                        </div>
+
                         <div class="list">
                             <div class="list2">
                                 <p>Shopping</p>

@@ -19,8 +19,8 @@
   flex-direction: column;
   place-items: center;
   // margin-top: 2rem;
-  margin-left: 5%;
-  margin-top: 1.5%;
+  margin-left: -10%;
+  margin-top: -12%;
   display: grid;
 }
 
@@ -350,6 +350,16 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
+.right .right-body-top .hobby {
+  display: flex;
+}
+.right .right-body-top .hobby #cancel mat-icon {
+  margin-top: -14%;
+  margin-left: 350px;
+}
+.right .right-body-top .hobby #cancel:hover:not(.active) {
+  opacity: 100% !important;
+}
 
 .content .body .right .right-body .right-body-botton {
   height: 13vw;
@@ -449,6 +459,10 @@ textarea {
     font-size: 22px;
     margin-left: 102px;
   }
+  .right .right-body-top .hobby #cancel mat-icon {
+    margin-top: -14%;
+    margin-left: 268px;
+  }
 }
 /////////////////////////////////////////////
 @media screen and (max-width: 1000px) {
@@ -482,11 +496,16 @@ textarea {
     width: 130%;
     height: 38px;
   }
+  .right .right-body-top .hobby #cancel mat-icon {
+    margin-top: -14%;
+    margin-left: 208px;
+  }
 }
 ///////////////////////////////////////////////
 @media screen and(max-width:700px) {
   .content {
-    margin-top: -260px;
+    margin-top: -80%;
+    margin-left: -44%;
   }
   .content .body {
     display: grid;
@@ -563,11 +582,15 @@ textarea {
   .content .body .right .right-body .right-body-botton .list {
     width: 300px;
   }
+  .right .right-body-top .hobby #cancel mat-icon {
+    margin-top: -14%;
+    margin-left: 188px;
+  }
 }
 //////////////////////////////////
 @media screen and(max-width: 560px) {
   .content {
-    margin-top: -300px;
+    margin-top: -108%;
   }
   .content .body .left {
     height: 76vw;
@@ -603,5 +626,9 @@ textarea {
   }
   .content .body .right-body-botton .list .list2 {
     width: fit-content;
+  }
+  .right .right-body-top .hobby #cancel mat-icon {
+    margin-top: -14%;
+    margin-left: 168px;
   }
 }

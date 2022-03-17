@@ -5,7 +5,6 @@ export interface User_chat{
     photoURL: String;
     time: String;
     messageRead: boolean;
-    latestMess: string;
+    latestMess: String;
     messages: Array<Message>;
-   
   }

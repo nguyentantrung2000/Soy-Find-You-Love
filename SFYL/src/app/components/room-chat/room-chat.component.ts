@@ -9,6 +9,7 @@ import { Component, OnInit, Input, OnChanges, AfterViewChecked, ViewChild, Eleme
 export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer!: ElementRef;
   @Input() conversation: any;
+  showEmojiPicker = false;
 
   displayName = '';
   message = '';
@@ -54,5 +55,17 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
     }
     this.conversation.messages.push(temp);
     this.message = "";
+  }
+
+  toggleEmojiPicker() {
+    this.showEmojiPicker = !this.showEmojiPicker;
+  }
+
+  addEmoji(event: any) {
+    const { message } = this;
+    const text = `${message}${event.emoji.native}`;
+
+    this.message = text;
+    this.showEmojiPicker = false;
   }
 }

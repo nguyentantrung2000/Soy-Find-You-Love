@@ -1,18 +1,16 @@
-<div class ="conversation" (click)="conversationClicked.emit(userChat)">
-    
-    
-    <div class="picture">
-        <img [src] = 'userChat.photoURL'>
+<div class="conversation" (click)="conversationClicked.emit(userChat)">
+  <div class="picture">
+    <img [src]='userChat.photoURL'>
+  </div>
+  <div class="content">
+    <div class="conversationHeader">
+      <div class="name">{{userChat.displayName}}</div>
+      <div class="time">{{userChat.time}}</div>
     </div>
-    <div class="content">
-        <div class="conversationHeader">
-            <div class="name">{{userChat.displayName}}</div>
-            <div class="time">{{userChat.time}}</div>
-        </div> 
-        <div class="message">
-            <img *ngIf="!userChat.messageRead" src="../../../assets/images/doubletick.png">
-            <img *ngIf="userChat.messageRead" src="../../../assets/images/doubletick_blue.png">
-            <!-- {{userChat.latestMess}} -->
-        </div>
+    <div class="message">
+      <img *ngIf="!userChat.messageRead" src="../../../assets/images/doubletick.png">
+      <img *ngIf="userChat.messageRead" src="../../../assets/images/doubletick_blue.png">
+      {{userChat.latestMess}}
     </div>
+  </div>
 </div>
