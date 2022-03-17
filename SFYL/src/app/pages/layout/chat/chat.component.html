@@ -13,10 +13,10 @@
             </div>
         </div>
 
-        <div class="old-converstation">
+        <div *ngIf="userChatService.userChatList !=  []" class="old-converstation">
             <div list-users>
-                <div *ngFor='let userChat of userChatService.userChatList'>
-                    <app-user-chat [userChat]='userChat' (conversationClicked)="onConversationSelected($event)"></app-user-chat>
+                <div *ngFor='let conversation of userChatService.userChatList'>
+                    <app-user-chat [conversation]='conversation' (conversationClicked)="onConversationSelected($event)"></app-user-chat>
                 </div>
             </div>
         </div>

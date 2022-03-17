@@ -232,14 +232,32 @@ server.get("/user/conversation/:docId", async(request, response) => {
         });
         result.forEach(async(doc) => {
             await firebase.firestore().collection('Conversations').doc(doc).get().then((data) => {
-                tempList.push(data.data());
+                tempList.push({conId:doc, conDetail: data.data()});
             })
-            response.send({ conversations: tempList });
+            response.send(tempList);
         })
 
     } catch (error) {
         response.send({ message: "Loi" });
     }
 });
+
+// server.get("/user/conversationDetail/:conId", async(request, response) => {
+//     let conId = request.params.conId;
+//     // let tempList = [];
+//     try {
+//         let result = await firebase.firestore().collection('Conversations').doc(conId).get();
+//         response.send(result)
+//         // result.forEach(async(doc) => {
+//         //     await firebase.firestore().collection('Conversations').doc(doc).get().then((data) => {
+//         //         tempList.push(data.data());
+//         //     })
+//         //     response.send(tempList);
+//         // })
+
+//     } catch (error) {
+//         response.send({ message: "Loi" });
+//     }
+// });
 
 
