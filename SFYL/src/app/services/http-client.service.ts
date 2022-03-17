@@ -49,7 +49,7 @@ export class HttpClientService {
   }
   public async UnLikeService(
     collectionName: string,
-    docId: string,
+    docId: string|undefined,
     docIDs: string
   ) {
     return this.http.post(environment.endpoint + 'user/unlikelist', {

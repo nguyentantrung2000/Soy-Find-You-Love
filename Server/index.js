@@ -16,16 +16,21 @@ server.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
 
-server.get("/user", async function(request, response) {
+server.get("/user", async function (request, response) {
     let body = request.body;
-    let querySnapshot = (await firestore.collection(body.collectionName).get()).docs.map(value => {
-        let temp = value.data();
-        return temp;
-    });
-    response.send(querySnapshot);
+    try {
+        let querySnapshot = (await firestore.collection(body.collectionName).get()).docs.map(value => {
+            let temp = value.data();
+            return temp;
+        });
+        response.send(querySnapshot);
+    }catch(err){
+        console.log(err)
+    }
+
 });
 
-server.get("/user/:id", async function(request, response) {
+server.get("/user/:id", async function (request, response) {
     let params = request.params.id;
     console.log(params);
     let querySnapshot = await firestore.collection("User").doc(params);
@@ -38,7 +43,7 @@ server.get("/user/:id", async function(request, response) {
 });
 
 
-server.post("/user", async(request, response) => {
+server.post("/user", async (request, response) => {
     let body = request.body;
     console.log(body);
     let collectionName = body.collectionName;
@@ -62,7 +67,7 @@ server.post("/user", async(request, response) => {
 
 });
 // user location
-server.post("/user/location", async(request, response) => {
+server.post("/user/location", async (request, response) => {
     let temp = request.body.data;
     try {
         // let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
@@ -86,7 +91,7 @@ server.post("/user/location", async(request, response) => {
         console.log(err);
     }
 })
-server.put("/user/update", async(request, response) => {
+server.put("/user/update", async (request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     console.log(collectionName, docId);
@@ -107,29 +112,28 @@ server.put("/user/update", async(request, response) => {
 });
 
 ///LikeList
-server.post("/user/likelist", async(request, response) => {
-        let collectionName = request.body.data.collectionName;
-        let docId = request.body.data.docId; ////nguoi dung
-        let docIDs = request.body.data.docIDs; ////nguoi dung duoc thich 
-        console.log(docId , docIDs)
-        // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
-        await firebase.firestore().collection(collectionName).doc(docId).update({
-            Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
-        });
+server.post("/user/likelist", async (request, response) => {
+    let collectionName = request.body.data.collectionName;
+    let docId = request.body.data.docId; ////nguoi dung
+    let docIDs = request.body.data.docIDs; ////nguoi dung duoc thich 
+    console.log(docId, docIDs)
+    // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
+    await firebase.firestore().collection(collectionName).doc(docId).update({
+        Like: firebase.firestore.FieldValue.arrayUnion(docIDs)
+    });
 
-        await firebase.firestore().collection(collectionName).doc(docIDs).update({
-            Watting: firebase.firestore.FieldValue.arrayUnion(docId)
-        });
+    await firebase.firestore().collection(collectionName).doc(docIDs).update({
+        Watting: firebase.firestore.FieldValue.arrayUnion(docId)
+    });
 
 
-        response.send({
-            message: "Like"
-        })
-
+    response.send({
+        message: "Like"
     })
-    ////////UnLikeList
-server.post("/user/unlikelist", async(request, response) => {
 
+})
+////////UnLikeList
+server.post("/user/unlikelist", async (request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     let docIDs = request.body.docIDs;
@@ -146,7 +150,7 @@ server.post("/user/unlikelist", async(request, response) => {
 })
 
 ///////get LikeList
-server.get("/user/listLike", async(request, response) => {
+server.get("/user/listLike", async (request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     console.log(collectionName, docId);
@@ -159,7 +163,7 @@ server.get("/user/listLike", async(request, response) => {
 
 /////get Unlistlike
 
-server.get("/user/listLike", async(request, response) => {
+server.get("/user/listLike", async (request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     console.log(collectionName, docId);
