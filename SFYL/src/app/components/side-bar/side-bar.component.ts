@@ -18,4 +18,6 @@ export class SideBarComponent implements OnInit {
   logOut() {
     this.dialog.open(DialogLogoutComponent);
   }
+
+  
 }

@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientService } from 'src/app/services/http-client.service';
 import { environment } from '../../../../environments/environment';
 import { LoginGGService } from 'src/app/services/login-gg.service';
+import { DialogMatchComponent } from 'src/app/components/dialog-match/dialog-match.component';
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
