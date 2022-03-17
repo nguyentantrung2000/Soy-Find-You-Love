@@ -5,12 +5,12 @@
   <div class="content">
     <div class="conversationHeader">
       <div class="name">{{otherUser.displayName}}</div>
-      <div class="time">{{userChat.time}}</div>
+      <div class="time">{{lastestMess.time.toString() | date:'shortTime'}}</div>
     </div>
     <div class="message">
-      <img *ngIf="!userChat.messageRead" src="../../../assets/images/doubletick.png">
-      <img *ngIf="userChat.messageRead" src="../../../assets/images/doubletick_blue.png">
-      <!-- {{userChat.latestMess}} -->
+      <img *ngIf="!lastestMess.messageRead" src="../../../assets/images/doubletick.png">
+      <img *ngIf="lastestMess.messageRead" src="../../../assets/images/doubletick_blue.png">
+      {{lastestMess.mess}}
     </div>
   </div>
 </div>

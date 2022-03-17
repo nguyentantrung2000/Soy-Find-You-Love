@@ -23,7 +23,6 @@ export class ChatComponent implements OnInit {
   onConversationSelected(conversation: any){
     this.conversation = conversation.conversation;
     this.otherUserInfo = conversation.otherUserInfo;
-    console.log(conversation.conversation)
   }
 
   ngOnInit(): void {

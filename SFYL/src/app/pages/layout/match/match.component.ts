@@ -35,7 +35,6 @@ export class MatchComponent implements OnInit {
     if (this.index > this.userData.userList.length) {
       this.index = 0;
     } else {
-      console.log(this.userData.userList[this.index]);
       this.index += 1;
       this.userData.userList[this.index];
     }
@@ -64,8 +63,6 @@ export class MatchComponent implements OnInit {
           this.Location1 = res.results[0].geometry;
           // let b = this.Location1[Object.keys(this.Location1)[0]];
           // console.log('haha' + b);
-          console.log(this.lat);
-          console.log(this.lng);
           this.login.location = {
             lat: this.lat,
             long: this.lng,
