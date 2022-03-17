@@ -10,7 +10,7 @@
     <div class="message">
       <img *ngIf="!lastestMess.messageRead" src="../../../assets/images/doubletick.png">
       <img *ngIf="lastestMess.messageRead" src="../../../assets/images/doubletick_blue.png">
-      {{lastestMess.mess}}
+      <div class="latestMess">{{lastestMess.mess}}</div>
     </div>
   </div>
 </div>

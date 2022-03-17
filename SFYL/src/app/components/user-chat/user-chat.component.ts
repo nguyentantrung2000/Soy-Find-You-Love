@@ -35,7 +35,7 @@ export class UserChatComponent implements OnInit, OnChanges {
     time: '',
     messageRead: false,
   };
-
+  
   otherUser: Participant = {
     displayName: '',
     photoURL: '',
@@ -98,7 +98,11 @@ export class UserChatComponent implements OnInit, OnChanges {
       : (participant_Info = participants[1]);
     await this.http.UserWithId(participant_Info).subscribe((data) => {
       let temp = data as User;
-      this.otherUser = {
+      let tempName = temp.name.trim().split(' ');
+      if (tempName.length > 2) {
+        temp.name = `${tempName[0]} ${tempName[1]}`;
+      } 
+      this.otherUser = {  
         displayName: temp.name,
         photoURL: temp.photoURL,
       };
