@@ -15,7 +15,7 @@
 <div class="chat-page">
     <div class="msg-inbox" #scrollMe [scrollTop]="scrollMe.scrollHeight">
         <section class="chats">
-            <div class="msg-page" *ngFor="let message of conversation.conDetail.messages">
+            <div class="msg-page" *ngFor="let message of this.listMessage">
                 <!-- {{message.body}}
             </div> -->
                 <div *ngIf="message.id != this.login.user?.uid" class="received-chats">
