@@ -5,9 +5,9 @@
                 <img style="width:80px; height:30%; padding: 0;margin: 0; vertical-align: middle;" src="../../../assets/images/icon.png" />
                 <a style="margin: 0; padding: 0;" href="">SFUL</a>
             </li>
-            <li><a href="">Tìm hiểu</a></li>
-            <li><a href="">An toàn</a></li>
-            <li><a href="">Hỗ trợ</a></li>
+            <li><a>Tìm hiểu</a></li>
+            <li routerLink="/safety"><a>An toàn</a></li>
+            <li (click)="openSupportPage()"><a>Hỗ trợ</a></li>
         </ul>
         <div class="login">
             <button (click)="openDialog1()" style="width:100px;color:red; font-weight: bolder;" mat-raised-button>

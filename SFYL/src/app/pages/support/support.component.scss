@@ -1,0 +1,46 @@
+.main {
+    height: 100%;
+    width: 100%;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+}
+
+.main .navbar {
+    height: 15%;
+    width: 90%;
+    margin-left: 5%;
+    // background-color: white;
+}
+
+.main .navbar a {
+    text-decoration: none;
+}
+
+// .main .navbar a:hover {
+//     cursor: pointer;
+//     text-decoration: underline;
+// }
+.main .body {
+    height: 50%;
+    width: 90%;
+    margin-left: 5%;
+    // background-color: burlywood;
+    margin-top: 7.5%;
+}
+
+.main .body .hero-mobile-greeting {
+    // background-color: brown;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 44px;
+    margin-bottom: 40px;
+    padding-left: 12px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 13%;
+}
+
+.example-form-field {
+    width: 50%;
+    margin-left: 25%;
+}
