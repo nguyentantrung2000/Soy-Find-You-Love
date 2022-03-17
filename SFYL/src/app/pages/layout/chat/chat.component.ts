@@ -12,6 +12,7 @@ import { User_chat } from 'src/models/user_chat.model';
 export class ChatComponent implements OnInit {
   // value1 = '';
   public conversation !: any;
+  public otherUserInfo !: any;
   public arr!: Array<User_chat>
   
   constructor(public userChatService:UserChatService, public login: LoginGGService){}
@@ -20,12 +21,12 @@ export class ChatComponent implements OnInit {
   // }
   
   onConversationSelected(conversation: any){
-    this.conversation = conversation;
+    this.conversation = conversation.conversation;
+    this.otherUserInfo = conversation.otherUserInfo;
   }
 
   ngOnInit(): void {
     this.userChatService.getConverList(this.login.user?.uid);
-    console.log()
   }
 
 }

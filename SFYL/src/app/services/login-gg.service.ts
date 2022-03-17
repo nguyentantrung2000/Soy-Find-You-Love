@@ -20,7 +20,6 @@ export class LoginGGService {
   constructor(private auth: Auth, private router: Router) {
     authState(this.auth).subscribe((user: User | null) => {
       this.user = user;
-      console.log(this.user);
     });
   }
   public async loginGG() {

@@ -1,5 +1,5 @@
 export interface User {
-  displayName: String;
+  name: String;
   email: number;
   photoURL: String;
   likeList: [];

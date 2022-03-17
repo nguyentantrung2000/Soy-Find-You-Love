@@ -13,6 +13,14 @@
             </div>
         </div>
 
+        <div *ngIf="userChatService.userChatList ==  []" id="not-chat-yet">
+            <img width="40%" style="z-index: 0;" src="../../../../assets/images/love_icon.PNG">
+            <h2>Chưa có cuộc trò chuyện nào ?</h2>
+            <p>
+                Like <b>mạnh</b> các đối tượng vào,
+                <br>không like lấy gì có người mà nhắn !!!
+            </p>
+        </div>
         <div *ngIf="userChatService.userChatList !=  []" class="old-converstation">
             <div list-users>
                 <div *ngFor='let conversation of userChatService.userChatList'>
@@ -25,11 +33,11 @@
 
     <div class="right-item">
         <div *ngIf="!conversation" id ="chatPlaceholder">
-            <img width="40%" style="z-index: 0;" src="../../../../assets/images/love_icon.PNG">
+            <img width="40%" style="z-index: 0;" src="../../../../assets/images/heart.jpg">
             <h2>Nơi Tình Yêu Bắt Đầu</h2>
-            <p>Tìm cách bắt chuyện? Khi bạn có tương hợp với người khác,<br> bạn có thể gửi tin nhắn cho họ dưới mục "Các kết nối"</p>
+            <p>Tích cực đi like - Vận may sẽ đến</p>
         </div> 
-        <app-room-chat [conversation]="conversation" *ngIf="conversation"></app-room-chat>
+        <app-room-chat [conversation]="conversation" [otherUserInfo]="otherUserInfo" *ngIf="conversation"></app-room-chat>
        
     </div>
 </div>

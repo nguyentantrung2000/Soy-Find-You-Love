@@ -33,7 +33,6 @@ export class DialogLoginComponent implements OnInit {
   public async Login() {
     try {
       await this.login.loginGG();
-      console.log(this.login.user);
       if (this.login.user) {
         this.http
           .post(environment.endpoint + 'user', {

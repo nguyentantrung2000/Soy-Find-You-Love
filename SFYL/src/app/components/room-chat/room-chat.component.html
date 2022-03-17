@@ -1,10 +1,10 @@
 <div class="msg-header">
     <div class="msg-header-img">
-        <img src="../../../../assets/images/jisoo1.jpg">
+        <img [src]="otherUserInfo.photoURL">
     </div>
     <div class="active">
         <h4>{{displayName}}</h4>
-        <h6>3 hours ago...</h6>
+        <!-- <h6>3 hours ago...</h6> -->
     </div>
     <div class="header-icons">
         <i class="fa-solid fa-phone"></i>
@@ -13,90 +13,41 @@
     </div>
 </div>
 <div class="chat-page">
+    <!-- <div id ="chatPlaceholder">
+        <img width="40%" style="z-index: 0;" src="../../../../assets/images/hello_bear.png">
+        <h2>Bạn có biết 69,96% những người 
+            <br>vì không chịu bắt chuyện khi match nhau 
+            <br>mà đã mất đi một mối quan hệ đẹp không ?!</h2>
+        <p>Vì thế đừng ngần ngại để gửi lời chào đến người kia đi nào !!!</p>
+    </div>  -->
     <div class="msg-inbox" #scrollMe [scrollTop]="scrollMe.scrollHeight">
         <section class="chats">
-            <div class="msg-page" *ngFor="let message of conversation.messages">
-                <!-- {{message.body}}
-            </div> -->
-                <div *ngIf="message.id == '1'" class="received-chats">
-                    <div class="received-chats-img">
+            <div class="msg-page" *ngFor="let message of this.listMessage">
+                <!-- {{message.body}} -->
+            <!-- </div> -->
+                <div *ngIf="message.id != this.login.user?.uid" class="received-chats">
+                    <!-- <div class="received-chats-img">
                         <img src="../../../../assets/images/jisoo1.jpg">
-                    </div>
+                    </div> -->
                     <div class="received-msg">
                         <div class="received-msg-inbox">
-                            <p>{{message.body}}</p>
+                            <p>{{message.mess}}</p>
                             <span class="time">{{ date  | date: 'medium' }}</span>
                         </div>
                     </div>
                 </div>
 
-                <div *ngIf="message.id == '2'" >
+                <div *ngIf="message.id == this.login.user?.uid" >
 
-                    <!-- <div class="outgoing-chats-img">
-                        <img src="../../../../assets/images/lisa.jpg">
-                    </div>
-
-                    <div class="outgoing-chats-msg">
-                        
-                        <p>{{message.body}}t</p>
-                        <span class="time">{{ date  | date: 'medium' }}</span>
-                    </div> -->
                     <div class="my-msg">
                         <div class="my-msg-content">
-                            <p>{{message.body}}</p>
+                            <p>{{message.mess}}</p>
                             <img class="my-msg-img" src="../../../../assets/images/lisa.jpg">
                         </div>
                         <span class="time">{{ date  | date: 'medium' }}</span>
                     </div>
 
                 </div>
-
-                <!-- <div class="received-chats">
-                    <div class="received-chats-img">
-                        <img src="../../../../assets/images/jisoo1.jpg">
-                    </div>
-                    <div class="received-msg">
-                        <div class="received-msg-inbox">
-                            <p>Đánh nhốt là đốt nhánh</p>
-                            <span class="time">{{ date  | date: 'medium' }}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="outgoing-chats">
-                    <div class="outgoing-chats-img">
-                        <img src="../../../../assets/images/lisa.jpg">
-                    </div>
-
-                    <div class="outgoing-chats-msg">
-                        <p>Đốt là thiêu, nhánh là cành</p>
-                        <span class="time">{{ date  | date: 'medium' }}</span>
-                    </div>
-                </div>
-
-                <div class="received-chats">
-                    <div class="received-chats-img">
-                        <img src="../../../../assets/images/jisoo1.jpg">
-                    </div>
-                    <div class="received-msg">
-                        <div class="received-msg-inbox">
-                            <p>Thiêu cành là thanh you</p>
-                            <span class="time">{{ date  | date: 'medium' }}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="outgoing-chats">
-                    <div class="outgoing-chats-img">
-                        <img src="../../../../assets/images/lisa.jpg">
-                    </div>
-
-                    <div class="outgoing-chats-msg">
-                        <p>Welcome everybody welcome to the party</p>
-                        <span class="time">{{ date  | date: 'medium' }}</span>
-                    </div>
-                </div> -->
-
            </div>
            <!-- <emoji-mart set="apple" class="emoji-mart" title="Pick your emoji…" (emojiSelect)="addEmoji($event)" *ngIf="showEmojiPicker" emoji="point_up"></emoji-mart> -->
            <emoji-mart set="apple"  (emojiSelect)="addEmoji($event)" *ngIf="showEmojiPicker" title="Pick your emoji…"></emoji-mart>
@@ -109,15 +60,15 @@
         <i class="fa-solid fa-camera"></i>
         <i class="fa-solid fa-microphone"></i> -->
         <!-- <button type="button"><i class="fa-solid fa-face-smile"></i></button> -->
-    <button class="bottom-icons" (click)="toggleEmojiPicker()">
+    <div class="bottom-icons" (click)="toggleEmojiPicker()">
         <i class="fa-solid fa-face-smile"></i>
-    </button>
+    </div>
     <div class="input-group">
         <input #msg type="text" class="form-control" [(ngModel)]="message" placeholder="Aa" (keyup.enter)="onEnter(msg.value)">
-        <button class="input-group-append" (click)="onSubmit()">
+        <button mat-icon-button aria-label= "Example icon button with a vertical three dot icon" (click)="onSubmit()">
             <span class="input-group-text">
                 <i class="fa-solid fa-paper-plane"></i>
             </span>
-        </button>
+          </button>
     </div>
 </div>
