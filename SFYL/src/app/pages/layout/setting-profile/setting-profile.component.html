@@ -1,10 +1,10 @@
 <div class="main">
     <div class=" content">
-<!-- <div class="top">
+        <!-- <div class="top">
             <p style="font-size: xx-large; font-weight: bolder;">Chỉnh sửa thông tin cá nhân</p>
         </div> -->
 
-<!-- <div class="body">
+        <div class="body">
             <div class="left">
                 <div class="left-top">
                     <div class="avatar">
@@ -108,7 +108,15 @@
             <div class="right">
                 <div class="right-top">
                     <div class="hobby">
-                        <h3>Sở thích</h3>
+                        <div class="sub-hobby">
+                            <h3>Sở thích</h3>
+                            <div id="cancel" style="height: 40px;width: 40px;color: gray;opacity: 0.5;">
+                                <mat-icon [mat-dialog-close] style="font-size: 22px;cursor: pointer;font-size: 38px;">
+                                    highlight_off
+                                </mat-icon>
+                            </div>
+                        </div>
+
                         <mat-form-field class="example-chip-list" appearance="fill">
                             <mat-chip-list #chipList aria-label="Fruit selection">
                                 <mat-chip *ngFor="let hobby of hobbies" (removed)="remove(hobby)">
@@ -122,6 +130,7 @@
                                     [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
                             </mat-chip-list>
                         </mat-form-field>
+
                     </div>
                     <div class="life-style">
                         <h3>Phong cách sống</h3>
@@ -190,7 +199,6 @@
                                         <mat-option style="font-weight:bolder" value="two">Cử nhân</mat-option>
                                         <mat-option style="font-weight:bolder" value="two">Thạc sĩ</mat-option>
                                         <mat-option style="font-weight:bolder" value="two">Tiến sĩ</mat-option>
-                                        <mat-option style="font-weight:bolder" value="two">Cá</mat-option>
                                     </mat-select>
                                 </mat-form-field>
                             </div>
@@ -217,4 +225,4 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>

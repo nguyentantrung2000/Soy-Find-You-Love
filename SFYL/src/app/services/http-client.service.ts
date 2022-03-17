@@ -89,7 +89,6 @@ export class HttpClientService {
   // }
 
   public async getChatList(params: any) {
-    console.log(params);
     let res =  await this.http.get(
       environment.endpoint + `user/conversation/${params}`
     );

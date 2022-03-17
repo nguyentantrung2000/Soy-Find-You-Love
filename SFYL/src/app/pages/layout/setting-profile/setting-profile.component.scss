@@ -135,7 +135,7 @@ mat-option {
   display: flex;
 }
 
-mat-slide-toggle {
+.hihi .sub-hihi mat-slide-toggle {
   margin-left: 6px;
   z-index: -1;
 }
@@ -163,8 +163,8 @@ mat-slide-toggle {
   display: grid;
   place-items: center;
   // margin-top: 2rem;
-  margin-left: 2%;
-  margin-top: 1.5%;
+  margin-left: -18%;
+  margin-top: -12%;
 }
 
 .content .top {
@@ -188,7 +188,7 @@ mat-slide-toggle {
 .content .body .left {
   height: 100%;
   width: 46%;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 8px;
   box-shadow: 6px 8px #888888;
   // background-color: gray;
@@ -231,7 +231,7 @@ mat-slide-toggle {
   // width: 49vw;
   height: 100%;
   width: 54%;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 8px;
   margin-left: 18px;
   box-shadow: 6px 8px #888888;
@@ -242,6 +242,11 @@ mat-slide-toggle {
   height: 90%;
   width: 100%;
   // background-color: gray;
+}
+
+.hobby .sub-hobby #cancel mat-icon {
+  margin-top: 34%;
+  margin-left: 490px;
 }
 
 .content .body .right .right-bottom {
@@ -255,6 +260,10 @@ mat-slide-toggle {
   margin-left: 0px;
 }
 
+.right .right-top .hobby .sub-hobby #cancel:hover:not(.active) {
+  opacity: 100% !important;
+}
+
 .hobby {
   margin-left: 30px;
 }
@@ -263,6 +272,9 @@ mat-slide-toggle {
   padding-top: 10px;
   font-size: x-large;
   font-weight: bolder;
+}
+.sub-hobby {
+  display: flex;
 }
 
 .life-style {
@@ -407,6 +419,10 @@ mat-slide-toggle {
   .huhu .huhu3 {
     margin-top: -4px;
   }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 420px;
+  }
 }
 //=====================================
 @media screen and(max-width: 1362px) {
@@ -490,6 +506,10 @@ mat-slide-toggle {
   .life-style-list .sub-life-style5 mat-form-field {
     margin-left: 148px;
   }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 420px;
+  }
 }
 //=======================================
 @media screen and (max-width: 1170px) {
@@ -571,6 +591,10 @@ mat-slide-toggle {
   }
   .life-style-list {
     margin-left: -28px;
+  }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 320px;
   }
 }
 //======================
@@ -705,6 +729,10 @@ mat-slide-toggle {
     margin-top: 10px;
     margin-left: 86px;
   }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 260px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -719,7 +747,7 @@ mat-slide-toggle {
 
   .content .body .left {
     display: flex;
-    width: 84.5vw;
+    width: 90vw;
   }
   .img {
     width: 70px;
@@ -775,7 +803,7 @@ mat-slide-toggle {
     height: 35vw;
     margin-top: 15px;
     margin-left: 20px;
-    width: 84.5vw;
+    width: 90vw;
   }
   .content .body .right .right-top {
     display: flex;
@@ -807,6 +835,13 @@ mat-slide-toggle {
   .life-style-list .sub-life-style5 mat-form-field {
     margin-left: 66px;
   }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 584px;
+  }
+  mat-icon {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 730px) {
@@ -819,6 +854,10 @@ mat-slide-toggle {
   }
   .life-style {
     margin-left: 60px;
+  }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 306px;
   }
 }
 
@@ -876,7 +915,7 @@ mat-slide-toggle {
 
 @media screen and(max-width: 600px) {
   .content {
-    margin-top: -150px;
+    margin-top: -90%;
   }
   .content .body .left {
     width: 70vw;
@@ -921,5 +960,9 @@ mat-slide-toggle {
     width: 32%;
     margin-top: 2px;
     margin-left: 94px;
+  }
+  .hobby .sub-hobby #cancel mat-icon {
+    margin-top: 20%;
+    margin-left: 240px;
   }
 }
