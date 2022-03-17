@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Participant } from 'src/models/participant_chat.model';
+import { User } from 'src/models/user.model';
 import { User_chat } from 'src/models/user_chat.model';
 import { HttpClientService } from './http-client.service';
 import { LoginGGService } from './login-gg.service';
@@ -149,11 +151,14 @@ export class UserChatService {
   // ];
 
   public data: Array<any> = [];
-  constructor(public login: LoginGGService, public chat: HttpClientService) {}
+  constructor(public login: LoginGGService, public http: HttpClientService) {}
 
   public userChatList: any = [];
+
+
   public async getConverList(userId: String | undefined) {
-    await this.chat.getChatList(userId).then((data) => {
+    await this.http.getChatList(userId).then((data) => {
+      console.log(data)
       data.subscribe((value) => {
         console.log(value);
         this.userChatList = value;

@@ -16,16 +16,16 @@ export class HttpClientService {
     return result;
   }
 
-  ///get UserId
-  public getUserId(params: string) {
-    return this.http.get(environment.endpoint + `/user/${params}`);
+  ///get UserWithId
+  public UserWithId(params: string) {
+    return this.http.get(environment.endpoint + `user/${params}`);
   }
   public async UpdateUserLocation(
     collectionName: string,
     docId: string,
     Location: { lat: string; long: string }
   ) {
-    return this.http.post(environment.endpoint + '/user/location', {
+    return this.http.post(environment.endpoint + 'user/location', {
       data: {
         collectionName: collectionName,
         docId: docId,
