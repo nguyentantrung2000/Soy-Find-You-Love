@@ -36,8 +36,8 @@ export class HttpClientService {
   /// Post Like
   public async LikeService(
     collectionName: string,
-    docId: string|undefined,
-    docIDs: string 
+    docId: string | undefined,
+    docIDs: string
   ) {
     return this.http.post(environment.endpoint + 'user/likelist', {
       data: {
@@ -49,7 +49,7 @@ export class HttpClientService {
   }
   public async UnLikeService(
     collectionName: string,
-    docId: string|undefined,
+    docId: string | undefined,
     docIDs: string
   ) {
     return this.http.post(environment.endpoint + 'user/unlikelist', {

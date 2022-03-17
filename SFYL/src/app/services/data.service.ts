@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { LoginGGService } from './login-gg.service';
+import { DateAdapter } from '@angular/material/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  public userList!: Array<any>;
+  public userList: any[] = [];
   constructor(
     public fs: Firestore,
     public http: HttpClient,
@@ -16,7 +17,7 @@ export class DataService {
   public getAllData() {
     let allUser = collection(this.fs, 'User');
     collectionData(allUser).subscribe((data: any) => {
-      // console.log(this.userList);
+      console.log('data ne' + data);
       for (let i = 0; i < data.length; i++) {
         let distance = this.cal(
           this.login.location.lat,
@@ -28,12 +29,18 @@ export class DataService {
           distance: distance,
         });
       }
-      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        if (this.login.user?.email != data[i].email) {
+          this.userList.push(data[i]);
+        }
+      }
+      // console.log(data);
       this.userList = data;
+      // console.log(this.userList);
     });
   }
   public cal(lat1: number, lon1: number, lat2: number, lon2: number) {
-    console.log(lat1, lon1, lat2, lon2);
+    // console.log(lat1, lon1, lat2, lon2);
     let R = 6371e3; // metres
     let φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
     let φ2 = (lat2 * Math.PI) / 180;

@@ -32,30 +32,33 @@ export class DialogLoginComponent implements OnInit {
   ngOnInit(): void {}
   public async Login() {
     try {
-      let result = await this.login.loginGG();
-      if (result.user) {
+      await this.login.loginGG();
+      console.log(this.login.user);
+      if (this.login.user) {
         this.http
           .post(environment.endpoint + 'user', {
             collectionName: 'User',
             data: {
-              email:   this.login.user.email,
+              email: this.login.user.email,
               name: this.login.user.displayName,
               photoURL: this.login.user.photoURL,
-              Location: {
+              location: {
                 lat: 0,
                 long: 0,
               },
-              Like: [],
+              like: [],
               unLike: [],
-              Watting: [],
+              waiting: [],
               docId: this.login.user.uid,
+              conversations: [],
             },
           })
           .subscribe((response) => {
             console.log(response);
+            // this.router.navigate(['/layout/match']);
           });
-        await this.router.navigate(['/layout/match']);
         this.dialog.closeAll();
+        await this.router.navigate(['/layout/match']);
       }
     } catch (error) {
       console.log(error);

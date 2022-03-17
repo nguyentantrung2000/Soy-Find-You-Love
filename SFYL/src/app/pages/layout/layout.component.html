@@ -1,4 +1,9 @@
-<app-side-bar></app-side-bar>
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
-
+<div class="layout-content">
+  <app-nav-bar class="nav-bar-content"></app-nav-bar>
+  <div class="content-container">
+    <app-side-bar class="side-bar-content"></app-side-bar>
+    <div class="right-content-container">
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>

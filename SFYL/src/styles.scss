@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap");
+@import '~@ctrl/ngx-emoji-mart/picker';
+
 * {
     font-family: "Maven Pro", sans-serif;
 }
@@ -8,6 +10,7 @@
 html,
 body {
     height: 100%;
+    // overflow: hidden;
     // background-image: linear-gradient( to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
 }
 

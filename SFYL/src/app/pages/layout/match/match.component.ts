@@ -39,7 +39,6 @@ export class MatchComponent implements OnInit {
       this.index += 1;
       this.userData.userList[this.index];
     }
-   
   }
   public Distance() {
     if (navigator.geolocation) {
@@ -128,16 +127,20 @@ export class MatchComponent implements OnInit {
   //   }
   // }
 
-  public async postLike(Id:string){
-    await( await this.httpSv.LikeService("User",this.login.user?.uid,Id))
-    .subscribe((value: any)=>{
+  public async postLike(Id: string) {
+    await (
+      await this.httpSv.LikeService('User', this.login.user?.uid, Id)
+    ).subscribe((value: any) => {
       alert(value['message']);
     });
+    this.getNextUser();
   }
-  public async postUnLike(Id:string){
-    await( await this.httpSv.UnLikeService("User",this.login.user?.uid,Id))
-    .subscribe((value: any)=>{
+  public async postUnLike(Id: string) {
+    await (
+      await this.httpSv.UnLikeService('User', this.login.user?.uid, Id)
+    ).subscribe((value: any) => {
       alert(value['message']);
     });
+    this.getNextUser();
   }
 }
