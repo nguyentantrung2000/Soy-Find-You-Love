@@ -45,7 +45,6 @@ export class UserChatComponent implements OnInit {
       latestMess: converMessage[converMessage.length - 1].mess,
       messages: [],
     };
-    console.log(converMessage[converMessage.length - 1].time)
   }
 
   public async getParticipantInfo() {
@@ -56,12 +55,10 @@ export class UserChatComponent implements OnInit {
       : (participant_Info = participants[1]);
     await this.http.UserWithId(participant_Info).subscribe((data) => {
       let temp = data as User;
-      console.log(temp)
       this.otherUser = {
         displayName: temp.name,
         photoURL: temp.photoURL,
       };
-      console.log(this.otherUser.displayName)
     });
   }
 }

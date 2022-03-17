@@ -1,6 +1,7 @@
 import { ConnectedOverlayPositionChange } from '@angular/cdk/overlay';
 import { Component, OnInit, Input, OnChanges, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
 import { LoginGGService } from 'src/app/services/login-gg.service';
+import { Participant } from 'src/models/participant_chat.model';
 
 @Component({
   selector: 'app-room-chat',
@@ -10,12 +11,12 @@ import { LoginGGService } from 'src/app/services/login-gg.service';
 export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer!: ElementRef;
   @Input() conversation: any;
-  @Input() otherUserInfo: any;
+  @Input() otherUserInfo !: Participant;
 
   showEmojiPicker = false;
 
-  displayName = '';
-  message = '';
+  displayName: String = '';
+  message: String = '';
   constructor(public login: LoginGGService) {
   }
 
@@ -29,7 +30,7 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
     if (temp.length > 2) {
       this.displayName = `${temp[0]} ${temp[1]}`;
     } else {
-      this.displayName = this.otherUserInfo.displayName;
+      this.displayName = this.otherUserInfo?.displayName;
     }
   }
 
