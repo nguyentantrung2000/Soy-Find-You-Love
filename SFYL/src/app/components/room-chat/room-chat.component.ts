@@ -1,5 +1,7 @@
 import { ConnectedOverlayPositionChange } from '@angular/cdk/overlay';
 import { Component, OnInit, Input, OnChanges, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
+import { LoginGGService } from 'src/app/services/login-gg.service';
+import { Participant } from 'src/models/participant_chat.model';
 
 @Component({
   selector: 'app-room-chat',
@@ -9,11 +11,13 @@ import { Component, OnInit, Input, OnChanges, AfterViewChecked, ViewChild, Eleme
 export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer!: ElementRef;
   @Input() conversation: any;
+  @Input() otherUserInfo !: Participant;
+
   showEmojiPicker = false;
 
-  displayName = '';
-  message = '';
-  constructor() {
+  displayName: String = '';
+  message: String = '';
+  constructor(public login: LoginGGService) {
   }
 
   date = Date.now().toString();
@@ -22,13 +26,12 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
   }
 
   ngOnChanges(): void {
-    var temp = this.conversation.displayName.trim().split(' ')
+    var temp = this.otherUserInfo.displayName.trim().split(' ')
     if (temp.length > 2) {
       this.displayName = `${temp[0]} ${temp[1]}`;
     } else {
-      this.displayName = this.conversation.displayName;
+      this.displayName = this.otherUserInfo?.displayName;
     }
-    console.log(this.conversation.messages);
   }
 
   ngAfterViewChecked() {
@@ -43,17 +46,18 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
 
   onSubmit() {
     var temp = {
-      id: "2", body: this.message, time: this.date,
+      id: this.login.user?.uid, body: this.message, time: this.date,
     }
-    this.conversation.messages.push(temp);
+    this.conversation.conDetail.messages.push(temp);
     this.message = "";
   }
 
   onEnter(msg: string) {
+    console.log(msg)
     var temp = {
-      id: "2", body: msg, time: this.date,
+      id: this.login.user?.uid, body: msg, time: this.date,
     }
-    this.conversation.messages.push(temp);
+    this.conversation.conDetail.messages.push(temp);
     this.message = "";
   }
 
