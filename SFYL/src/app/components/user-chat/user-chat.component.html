@@ -1,10 +1,10 @@
-<div class="conversation" (click)="conversationClicked.emit(userChat)">
+<div class="conversation" (click)="conversationClicked.emit({conversation:conversation, otherUserInfo: otherUser})">
   <div class="picture">
-    <img [src]='userChat.photoURL'>
+    <img [src]='otherUser.photoURL'>
   </div>
   <div class="content">
     <div class="conversationHeader">
-      <div class="name">{{userChat.displayName}}</div>
+      <div class="name">{{otherUser.displayName}}</div>
       <div class="time">{{userChat.time}}</div>
     </div>
     <div class="message">

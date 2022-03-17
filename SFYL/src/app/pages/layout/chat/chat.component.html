@@ -29,7 +29,7 @@
             <h2>Nơi Tình Yêu Bắt Đầu</h2>
             <p>Tìm cách bắt chuyện? Khi bạn có tương hợp với người khác,<br> bạn có thể gửi tin nhắn cho họ dưới mục "Các kết nối"</p>
         </div> 
-        <app-room-chat [conversation]="conversation" *ngIf="conversation"></app-room-chat>
+        <app-room-chat [conversation]="conversation" [otherUserInfo]="otherUserInfo" *ngIf="conversation"></app-room-chat>
        
     </div>
 </div>
