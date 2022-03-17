@@ -159,7 +159,6 @@ export class UserChatService {
   public async getConverList(userId: String | undefined) {
     await this.http.getChatList(userId).then((data) => {
       data.subscribe((value) => {
-        console.log(value);
         this.userChatList = value;
       });
     });
