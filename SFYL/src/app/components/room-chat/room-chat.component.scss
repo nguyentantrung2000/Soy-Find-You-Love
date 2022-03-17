@@ -219,6 +219,7 @@ img{
     background-color: #fff;
     display: flex;
 }
+
 .form-control{
     border: none !important;
     border-radius: 20px !important;
@@ -234,8 +235,14 @@ img{
     color: rgb(248, 168, 48);
     float: right;
     font-size: large;
-    margin: 8px 7px 0 0;
+    margin: 0px 8px 0 0;
     cursor: pointer;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 1px;
 }
 .input-group input{
     outline: none;
