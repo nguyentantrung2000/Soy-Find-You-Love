@@ -1,21 +1,38 @@
+// ================= CUSTOM SCROLLBAR==============
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
-img{
-    max-width: 50px;
-    max-height: 50px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
 
 .msg-header{
     height: 10%;
     width: 100%;
-    // background-color: cadetblue;
     background-color: rgb(255, 153, 0);
     // border-bottom: solid black;
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
-    // border-bottom: solid black;
     // display: inline-block;
+    img{
+        max-width: 50px;
+        max-height: 50px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
 }
 
 .msg-header-img{
@@ -31,7 +48,7 @@ img{
 .active{
     width: 25%;
     float: left;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .active h4{
@@ -39,6 +56,7 @@ img{
     font-size: 16px;
     margin-left: 10px;
     color: #fff;
+    font-weight: bold;
     line-height: 1px;
 }
 
@@ -68,8 +86,25 @@ img{
     height: 80%;
     width: 100%;
     background-color: white;
-    // border-bottom: solid;
-    // border-top: solid;
+    #chatPlaceholder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+
+        h2{
+            font-size: 25px;
+            font-weight: normal;
+            color:#555555;
+            text-align: center;
+        }
+        p{
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+        }
+    }
 }
 .msg-inbox{
     // border: 1px solid black;
@@ -101,9 +136,9 @@ img{
 .received-msg{
     // display: inline-block;
     // align-items: flex-start;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 0;
     vertical-align: top;
-    margin-left: 15px;
+    margin-left: 5px;
     width: 80%;
 }
 // .received-msg-inbox{
@@ -126,41 +161,41 @@ img{
     color: #777;
     display: block;
     font-size: 12px;
-    margin: 8px 0 0;
+    margin: 8px 0 0 0;
 }
 
-.outgoing-chats{
-    overflow: hidden;
-    margin: 5px 10px;
-    display: block
-    // align-items: flex-start;
-}
-.outgoing-chats-msg p{
-    background: rgb(248, 168, 48) none repeat scroll 0 0;
-    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+// .outgoing-chats{
+//     overflow: hidden;
+//     margin: 5px 10px;
+//     display: block
+//     // align-items: flex-start;
+// }
+// .outgoing-chats-msg p{
+//     background: rgb(248, 168, 48) none repeat scroll 0 0;
+//     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
 
-    color: #fff;
-    border-radius: 10px;
-    font-size: 14px;
-    margin: 0;
-    color: #fff;
-    padding: 5px 5px 5px 12px;
-    width: fit-content;
-}
-.outgoing-chats-msg{
-    float:right;
-    margin-right: 10px;
-    width: 45%;
-    margin-left: 50%;
-}
-.outgoing-chats-img{
-    display: inline-block;
-    margin-left: 15px;
-    margin-top: -15px;
-    width: 20px;
-    height: 20px;
-    // float:right;
-}
+//     color: #fff;
+//     border-radius: 10px;
+//     font-size: 14px;
+//     margin: 0;
+//     color: #fff;
+//     padding: 5px 5px 5px 12px;
+//     width: fit-content;
+// }
+// .outgoing-chats-msg{
+//     float:right;
+//     margin-right: 10px;
+//     width: 45%;
+//     margin-left: 50%;
+// }
+// .outgoing-chats-img{
+//     display: inline-block;
+//     margin-left: 15px;
+//     margin-top: -15px;
+//     width: 20px;
+//     height: 20px;
+//     // float:right;
+// }
 
 .my-msg{
     display: flex;
@@ -193,6 +228,7 @@ img{
 }
 
 .emoji-mart {
+    background-color: none;
     position: absolute;
     bottom: 20px;
     // right: 20px;
@@ -214,13 +250,14 @@ img{
     height: 50%;
     float:right;
     // margin-top: 14px;
-    margin-right: 10px;
+    margin-right: 15px;
     outline: none !important;
     border-radius: 20px;
     width: 95% !important;
     background-color: #fff;
     display: flex;
 }
+
 .form-control{
     border: none !important;
     border-radius: 20px !important;
@@ -236,8 +273,14 @@ img{
     color: rgb(248, 168, 48);
     float: right;
     font-size: large;
-    margin: 8px 7px 0 0;
+    margin: 0px 8px 0 0;
     cursor: pointer;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 1px;
 }
 .input-group input{
     outline: none;
@@ -271,7 +314,7 @@ img{
         height: 10%;
         width: 100%;
         // border: 1px solid #ccc;
-        background-color: pink;
+        // background-color: pink;
         border-bottom: none;
         // display: inline-block;
     }  
@@ -284,58 +327,131 @@ img{
         float: left;
     }   
     .active{
-        width: 80px;
+        width: 100px;
         float: left;
-        margin-top: 20px;
+        margin-top: 25px;
     }
-    
     .active h4{
-        font-size: 15px;
+        font-size: 13px;
         margin-top: 4px;
         margin-left: 10px;
-        color: #000;
+        color: #fff;
         line-height: 1px;
     }
-    
     .active h6{
         font-size: 8px;
         margin-left: 10px;
         line-height:  1px;
-        color: #000;
+        color: #fff;
     }
-    
+
+    .header-search {
+        color: white;
+        // background-color: pink;
+    }
     .header-icons{
         width: 80px;
         float:right;
         // position: fixed;
-        right:4%;
+        right:1%;
         margin-top: 7px;
         font-size: medium; 
     }
     .header-icons .fa-solid{
-        color:#000;
+        color:#fff;
         cursor: pointer;
-        margin: 5px
-    }
-    .msg-bottom{
-        background-color: pink
+        margin: 13px 0px 0px 5px;
     }
     .input-group .fa-solid{
-        color: black;
+        color: #fff;
     }
-    .outgoing-chats-msg p{
-        background: pink none repeat scroll 0 0;
-        color: #000;
+    .my-msg-content p{
+        margin: 0 10px 0 0;
+        // background: pink none repeat scroll 0 0;
+    
     }
-    .bottom-icons i{
-        color: #000;
-        padding: 2px 3px 3px 3px;
+    .bottom-icons {
+        // background-color: pink;  
+        i{
+            color: #fff;
+            padding: 2px 3px 3px 3px;       
+        }
+    }   
+
+    .chat-page{
+        #chatPlaceholder{
+            display: flex;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            h2{
+                font-size: 10px;
+                font-weight: normal;
+                color:#555555;
+                text-align: center;
+            }
+            p{
+                font-weight: bold;
+                font-size: 8px;
+                text-align: center;
+            }
+        }
     }
-    .header-search {
-        color: black;
-        background-color: pink;
+    
+}
+
+@media screen and(min-width:650px) and (max-width:950px) {
+    .msg-header-img{
+        // border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        margin-left: 2%;
+        margin-top: 12px;
+        float: left;
+    }   
+    .active{
+        width: 120px;
+        float: left;
+        margin-top: 20px;
+    }
+    .active h4{
+        font-size: 15px;
+        margin-top: 10px;
+        margin-left: 5px;
+        color: #fff;
+        line-height: 1px;
+    }
+    .active h6{
+        font-size: 8px;
+        margin-left: 10px;
+        line-height:  1px;
+        color: #fff;
+    }
+    .chat-page{
+        #chatPlaceholder{
+            display: flex;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            h2{
+                font-size: 15px;
+                font-weight: normal;
+                color:#555555;
+                text-align: center;
+            }
+            p{
+                font-weight: bold;
+                font-size: 10px;
+                text-align: center;
+            }
+        }
     }
 }
+
 //1334-1140
 @media screen and(min-width:0px) and (max-width:1334px) {
     .bottom-icons{
@@ -351,22 +467,3 @@ img{
     }
 }
 
-// ================= CUSTOM SCROLLBAR==============
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
