@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sfyl-d556e": {
+      "hosting": {
+        "SFYL": [
+          "sfyl-d556e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sfyl-d556e"
+  }
+}
