@@ -4,8 +4,6 @@ import { DataService } from 'src/app/services/data.service';
 import { LoginGGService } from 'src/app/services/login-gg.service';
 import { HttpClientService } from './../../../services/http-client.service';
 import { environment } from '../../../../environments/environment';
-import { I } from '@angular/cdk/keycodes';
-import { doc } from 'firebase/firestore';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogMatchComponent } from 'src/app/components/dialog-match/dialog-match.component';
 @Component({
@@ -27,15 +25,15 @@ export class MatchComponent implements OnInit {
     public http: HttpClient,
     public login: LoginGGService
   ) {}
-  
-    openDialogMatch(){
-      this.dialog.open(DialogMatchComponent);
-    }
+  openDialogMatch() {
+    this.dialog.open(DialogMatchComponent);
+  }
   public friendList1: Array<any> = [];
 
   ngOnInit(): void {
     this.Distance();
     this.userData.getAllData();
+    this.httpSv.LikeService;
   }
   async getNextUser() {
     if (this.index > this.userData.userList.length) {

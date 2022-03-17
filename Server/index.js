@@ -24,7 +24,7 @@ server.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
 
-server.get("/user", async function (request, response) {
+server.get("/user", async function(request, response) {
     let body = request.body;
     try {
         let querySnapshot = (await firestore.collection(body.collectionName).get()).docs.map(value => {
@@ -39,7 +39,7 @@ server.get("/user", async function (request, response) {
     }
 });
 
-server.get("/user/:id", async function (request, response) {
+server.get("/user/:id", async function(request, response) {
     let params = request.params.id;
     try {
         let querySnapshot = await firestore.collection("User").doc(params);
@@ -56,7 +56,7 @@ server.get("/user/:id", async function (request, response) {
 });
 
 
-server.post("/user", async (request, response) => {
+server.post("/user", async(request, response) => {
     let body = request.body;
     let collectionName = body.collectionName;
     let docId = body.data.docId;
@@ -78,7 +78,7 @@ server.post("/user", async (request, response) => {
 
 });
 // user location
-server.post("/user/location", async (request, response) => {
+server.post("/user/location", async(request, response) => {
     let temp = request.body.data;
     try {
         let isExits = await firebase.firestore().collection(temp.collectionName).doc(temp.docId).get();
@@ -102,7 +102,7 @@ server.post("/user/location", async (request, response) => {
         console.log(err);
     }
 })
-server.put("/user/update", async (request, response) => {
+server.put("/user/update", async(request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     try {
@@ -121,58 +121,58 @@ server.put("/user/update", async (request, response) => {
 });
 
 ///likeList
-server.post("/user/likelist", async (request, response) => {
-    let collectionName = request.body.data.collectionName;
-    let docId = request.body.data.docId; ////nguoi dung
-    let docIDs = request.body.data.docIDs; ////nguoi dung duoc thich 
-    // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
-    try {
-        let tempWaiting = await firebase.firestore().collection(collectionName).doc(docId).get().then((data) => {
-            console.log(data.data().waiting);
-            return data.data().waiting
-        })
+server.post("/user/likelist", async(request, response) => {
+        let collectionName = request.body.data.collectionName;
+        let docId = request.body.data.docId; ////nguoi dung
+        let docIDs = request.body.data.docIDs; ////nguoi dung duoc thich 
+        // let isExits = await firebase.firestore().collection(collectionName).doc(docIDs).get();
+        try {
+            let tempWaiting = await firebase.firestore().collection(collectionName).doc(docId).get().then((data) => {
+                console.log(data.data().waiting);
+                return data.data().waiting
+            })
 
-        if (tempWaiting.length != 0) {
-            for (let i = 0; i < tempWaiting.length; i++) {
-                if (docIDs == tempWaiting[i]) {
-                    let tempIdCon = docId + docIDs;
-                    await firebase.firestore().collection('Conversations').doc(tempIdCon).set({
-                        messages: [],
-                        participants: [docId, docIDs],
-                    });
-                    await firebase.firestore().collection(collectionName).doc(docId).update({
-                        conversations: firebase.firestore.FieldValue.arrayUnion(tempIdCon)
-                    });
-                    await firebase.firestore().collection(collectionName).doc(docIDs).update({
-                        conversations: firebase.firestore.FieldValue.arrayUnion(tempIdCon)
-                    });
-                    await firebase.firestore().collection(collectionName).doc(docId).update({
-                        waiting: firebase.firestore.FieldValue.arrayRemove(docIDs)
-                    })
-                    return response.send({
-                        message: "Matched"
-                    });
+            if (tempWaiting.length != 0) {
+                for (let i = 0; i < tempWaiting.length; i++) {
+                    if (docIDs == tempWaiting[i]) {
+                        let tempIdCon = docId + docIDs;
+                        await firebase.firestore().collection('Conversations').doc(tempIdCon).set({
+                            messages: [],
+                            participants: [docId, docIDs],
+                        });
+                        await firebase.firestore().collection(collectionName).doc(docId).update({
+                            conversations: firebase.firestore.FieldValue.arrayUnion(tempIdCon)
+                        });
+                        await firebase.firestore().collection(collectionName).doc(docIDs).update({
+                            conversations: firebase.firestore.FieldValue.arrayUnion(tempIdCon)
+                        });
+                        await firebase.firestore().collection(collectionName).doc(docId).update({
+                            waiting: firebase.firestore.FieldValue.arrayRemove(docIDs)
+                        })
+                        return response.send({
+                            message: "Matched"
+                        });
+                    }
                 }
             }
-        }
-        await firebase.firestore().collection(collectionName).doc(docId).update({
-            like: firebase.firestore.FieldValue.arrayUnion(docIDs)
-        });
+            await firebase.firestore().collection(collectionName).doc(docId).update({
+                like: firebase.firestore.FieldValue.arrayUnion(docIDs)
+            });
 
-        await firebase.firestore().collection(collectionName).doc(docIDs).update({
-            waiting: firebase.firestore.FieldValue.arrayUnion(docId)
-        });
-        return response.send({
-            message: "Like"
-        });
-    } catch (error) {
-        return response.send({
-            message: "Can not like!!!!!!"
-        })
-    }
-})
-////////UnlikeList
-server.post("/user/unlikelist", async (request, response) => {
+            await firebase.firestore().collection(collectionName).doc(docIDs).update({
+                waiting: firebase.firestore.FieldValue.arrayUnion(docId)
+            });
+            return response.send({
+                // message: "Like"
+            });
+        } catch (error) {
+            return response.send({
+                message: "Can not like!!!!!!"
+            })
+        }
+    })
+    ////////UnlikeList
+server.post("/user/unlikelist", async(request, response) => {
     let collectionName = request.body.data.collectionName;
     let docId = request.body.data.docId;
     let docIDs = request.body.data.docIDs;
@@ -195,7 +195,7 @@ server.post("/user/unlikelist", async (request, response) => {
 })
 
 ///////get likeList
-server.get("/user/listlike", async (request, response) => {
+server.get("/user/listlike", async(request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     try {
@@ -211,7 +211,7 @@ server.get("/user/listlike", async (request, response) => {
 })
 
 /////get Unlistlike
-server.get("/user/listlike", async (request, response) => {
+server.get("/user/listlike", async(request, response) => {
     let collectionName = request.body.collectionName;
     let docId = request.body.docId;
     try {
@@ -239,7 +239,7 @@ server.get("/user/listlike", async (request, response) => {
 //====================================CHAT API ====================================//
 
 
-server.get("/user/conversation/:docId", async (request, response) => {
+server.get("/user/conversation/:docId", async(request, response) => {
     let docId = request.params.docId;
     let tempList = [];
     try {
@@ -263,7 +263,7 @@ server.get("/user/conversation/:docId", async (request, response) => {
     }
 });
 
-server.post("/user/conversation", async (req, res) => {
+server.post("/user/conversation", async(req, res) => {
     let converId = req.body.converId;
     let messData = req.body.messData;
     try {

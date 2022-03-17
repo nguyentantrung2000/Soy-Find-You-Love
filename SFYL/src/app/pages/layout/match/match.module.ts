@@ -6,16 +6,13 @@ import { MatchComponent } from './match.component';
 import { ShareModule } from 'src/app/share/share/share.module';
 // import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel } from '@ionic/angular';
 
-
 @NgModule({
-  declarations: [
-    MatchComponent
-  ],
+  declarations: [MatchComponent],
   imports: [
     CommonModule,
     MatchRoutingModule,
     ShareModule,
-    // IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel 
-  ]
+    // IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel
+  ],
 })
-export class MatchModule { }
+export class MatchModule {}
