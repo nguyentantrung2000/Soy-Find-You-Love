@@ -18,7 +18,7 @@
 
                     <div class="profile">
                         <div class="name" id="word2">{{this.login.user?.displayName}}</div>
-                        <!-- <div class="job" id="word">Sinh Viên <span id="word">20 Tuổi</span></div> -->
+                        <div class="job" id="word">Sinh Viên <span id="word">20 Tuổi</span></div>
                         <div class="date">
                             <mat-icon>date_range</mat-icon>
                             <span id="word">11/01/2001</span>
@@ -41,20 +41,60 @@
                 <div class="left-botton">
 
                     <span id="word2">Giới Thiệu</span>
-
-                    <div class="decription"><textarea rows="9" cols="70">
-                       26 Sơn La chào ae nhó!!!!!
-                      </textarea></div>
+                    <div class="sub-left-botton">
+                        <div class="decription">
+                            <textarea rows="9" cols="70">26 Sơn La chào ae nhó!!!!!</textarea>
+                        </div>
+                        <div class="btn">
+                            <button mat-raised-button>Lưu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="right">
                 <div class="right-body">
                     <div class="right-body-top">
-                        <span id="word2">Sở thích</span>
+                        <div class="hobby">
+                            <span>Sở thích</span>
+                            <div id="cancel" style="height: 40px;width: 40px;color: gray;opacity: 0.5;">
+                                <mat-icon [mat-dialog-close] style="font-size: 22px;cursor: pointer;font-size: 38px;">
+                                    highlight_off
+                                </mat-icon>
+                            </div>
+                        </div>
+
+                        <div class="list">
+                            <div class="list2">
+                                <p>Shopping</p>
+                            </div>
+                            <div class="list2">
+                                <p>Woman</p>
+                            </div>
+                            <div class="list2">
+                                <p>Xem phim</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="right-body-botton">
-                        <span id="word2">Phong cách sống</span>
+                        <span>Phong cách sống</span>
+                        <div class="list">
+                            <div class="list1">
+                                <p>Ma Kết</p>
+                            </div>
+                            <div class="list1">
+                                <p>Ăn chay</p>
+                            </div>
+                            <div class="list1">
+                                <p>Mèo</p>
+                            </div>
+                            <div class="list1">
+                                <p>Cử nhân</p>
+                            </div>
+                            <div class="list1">
+                                <p>Bóng đá</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
