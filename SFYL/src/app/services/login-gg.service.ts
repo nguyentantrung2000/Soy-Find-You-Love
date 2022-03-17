@@ -13,6 +13,9 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class LoginGGService {
+  public location: any = JSON.parse(
+    localStorage.getItem('dataSource') as string
+  );
   public user!: User | null;
   constructor(private auth: Auth, private router: Router) {
     authState(this.auth).subscribe((user: User | null) => {

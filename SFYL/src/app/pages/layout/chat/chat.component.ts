@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { UserCharService } from 'src/app/services/user-char.service';
-import { User_chat } from 'src/models/user_chat.models';
+import { Component, EventEmitter, OnInit,Output } from '@angular/core';
+
+import { UserChatService } from 'src/app/services/user-chat.service';
+import { User_chat } from 'src/models/user_chat.model';
 
 @Component({
   selector: 'app-chat',
@@ -8,12 +9,16 @@ import { User_chat } from 'src/models/user_chat.models';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
-  value1 = '';
+  // value1 = '';
+  public conversation !: any;
   public arr!: Array<User_chat>
-  constructor(
-    public userChatService:UserCharService
-  ) { }
- 
+  
+  constructor(public userChatService:UserChatService){}
+  
+  onConversationSelected(conversation: any){
+    this.conversation = conversation;
+  }
+
   ngOnInit(): void {
   }
 

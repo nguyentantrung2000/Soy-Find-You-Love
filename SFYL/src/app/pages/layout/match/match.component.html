@@ -1,14 +1,21 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<div class="main">
+<!-- <div *ngIf="!userData.userList">
+    <p style="margin: 200px;">
+        Loading....
+    </p>
+</div> -->
+<div class="loader" *ngIf="!userData.userList" style="margin-left: 50%; margin-top: 20%;"></div>
+<div *ngIf="userData.userList" class="main">
     <div class="content">
         <div class="card">
+            <!-- *ngFor="let avatar of avatars -->
             <div class="user">
-                <img class="user" src="../../../assets/images/791698c99d6b7cfd993f61100a7cde73.jpg">
+                <img class="user" [src]="this.userData.userList[this.index]?.photoURL">
                 <div class="profile">
-                    <div class="name">Anna <span>20</span></div>
+                    <div class="name">{{this.userData.userList[this.index]?.name}}<span>{{this.userData.userList[this.index]?.dob}}</span></div>
                     <div class="local">
                         <mat-icon>location_on</mat-icon>
-                        <span>Cách đây 1km</span>
+                        <span>Cách đây {{this.userData.userList[this.index]?.distance}}km</span>
                     </div>
                 </div>
             </div>
@@ -16,7 +23,7 @@
 
         <div class="buttons">
             <button class="no">
-                <mat-icon>close</mat-icon>
+                <mat-icon (click)="postUnLike(this.userData.userList[this.index]?.docId)"> close</mat-icon>
             </button>
 
             <button class="star">
@@ -24,19 +31,19 @@
             </button>
 
             <button class="heart">
-                <mat-icon >favorite</mat-icon>
+                <mat-icon (click)="postLike(this.userData.userList[this.index]?.docId)" >favorite</mat-icon>
             </button>
         </div>
 
         <div class="tutorial">
             <ul>
                 <li>
-                    <mat-icon style="color: gray;width: 25px;margin-top: 15px;height: 25px;border-style:solid;border-radius: 20px;">keyboard_arrow_left</mat-icon>
-                    <h4 style="margin-top: 28px;margin-left: 10px;color:gray ;"> TRÁI </h4>
+                    <mat-icon style="color: gray;width: 25px;margin-top: 15px;height: 25px;border-style:solid;border-radius: 20px;">close</mat-icon>
+                    <h4 style="margin-top: 28px;margin-left: 10px;color:gray ;"> UNLIKE </h4>
                 </li>
                 <li>
-                    <mat-icon style="color: gray;width: 25px;margin-top: 15px;height: 25px;border-style:solid;border-radius: 20px;">keyboard_arrow_right</mat-icon>
-                    <h4 style="margin-top: 28px;margin-left: 10px;color: gray;"> PHẢI </h4>
+                    <mat-icon style="color: gray;width: 25px;margin-top: 15px;height: 25px;border-style:solid;border-radius: 20px;">star</mat-icon>
+                    <h4 style="margin-top: 28px;margin-left: 10px;color: gray;"> LIKE </h4>
                 </li>
                 <li>
                     <mat-icon style="color: gray;width: 25px;margin-top: 15px;height: 25px;border-style:solid;border-radius: 20px;">keyboard_arrow_up</mat-icon>
@@ -46,9 +53,9 @@
                     <mat-icon style="color: gray;width: 25px;margin-top: 15px;height: 25px;border-style:solid;border-radius: 20px;">keyboard_arrow_down</mat-icon>
                     <h4 style="margin-top: 28px;margin-left: 10px;color: gray;"> ĐÓNG HỒ SƠ </h4>
                 </li>
-                <div class="space" style="background-color: gray;">
-                </div>
-                <h4 style="margin-top: 28px;margin-left: 10px;color: gray;">XEM ẢNH TIẾP THEO</h4>
+                <!-- <div class="space" style="background-color: gray;">
+                </div> -->
+                <!-- <h4 style="margin-top: 28px;margin-left: 10px;color: gray;">XEM ẢNH TIẾP THEO</h4> -->
 
             </ul>
 

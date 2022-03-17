@@ -1,5 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { User_chat } from 'src/models/user_chat.models';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { User_chat } from 'src/models/user_chat.model';
 @Component({
   selector: 'app-user-chat',
   templateUrl: './user-chat.component.html',
@@ -7,9 +7,9 @@ import { User_chat } from 'src/models/user_chat.models';
 })
 export class UserChatComponent implements OnInit {
   @Input() userChat !: User_chat;
-
+  @Output() conversationClicked: EventEmitter<any> = new EventEmitter();
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 

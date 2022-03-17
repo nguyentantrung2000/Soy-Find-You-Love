@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClientService } from 'src/app/services/http-client.service';
 
 export interface Hobby {
   name: string;
@@ -11,9 +13,33 @@ export interface Hobby {
   styleUrls: ['./setting-profile.component.scss'],
 })
 export class SettingProfileComponent implements OnInit {
-  constructor() {}
+  datas: string | undefined;
 
-  ngOnInit(): void {}
+  gioitinh: any;
+  noio: any;
+  ngaysinh: any;
+  Gender = [{ gen: 'Nam' }, { gen: 'Nữ' }];
+  public changeGender(event: any) {
+    console.log('gioitinh' + event);
+  }
+  // constructor(
+  //   public httpSv: HttpClientService,
+  //   public FormBuilder: FormBuilder
+  // ) { }
+  form!: FormGroup;
+   constructor(public httpSv: HttpClientService, public FormBuilder:FormBuilder) {
+    this.form = this.FormBuilder.group({
+      gioitinh: ['', Validators.required],
+      noio:['',Validators.required],
+      ngaysinh:['',Validators.required],
+      sothich:['', Validators.required],
+
+
+    });
+  }
+
+
+  ngOnInit(): void { }
 
   value = 'Clear all';
   value1 = 'Clear all';
@@ -46,5 +72,12 @@ export class SettingProfileComponent implements OnInit {
     if (index >= 0) {
       this.hobbies.splice(index, 1);
     }
+  }
+  // public gioitinh = '';
+  // public noisong = '';
+  // public ngaysinh = '';
+  // public sothich = '';
+  public async test(data: any) {
+    alert(this.Gender[data].gen);
   }
 }

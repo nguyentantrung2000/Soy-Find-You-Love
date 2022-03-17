@@ -13,6 +13,7 @@ export class SigninSuccessComponent implements OnInit {
   ngOnInit(): void {
   }
   public openDialog(){
+    this.dialog.closeAll();
     this.dialog.open(DialogLoginComponent);
   }
 

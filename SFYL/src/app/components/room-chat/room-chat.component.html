@@ -1,0 +1,120 @@
+<div class="msg-header">
+    <div class="msg-header-img">
+        <img src="../../../../assets/images/jisoo1.jpg">
+    </div>
+    <div class="active">
+        <h4>{{displayName}}</h4>
+        <h6>3 hours ago...</h6>
+    </div>
+    <div class="header-icons">
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-video"></i>
+        <i class="fa-solid fa-circle-info"></i>
+    </div>
+</div>
+<div class="chat-page">
+    <div class="msg-inbox" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+        <div class="chats">
+            <div class="msg-page" *ngFor="let message of conversation.messages">
+                <!-- {{message.body}}
+            </div> -->
+                <div *ngIf="message.id == '1'" class="received-chats">
+                    <div class="received-chats-img">
+                        <img src="../../../../assets/images/jisoo1.jpg">
+                    </div>
+                    <div class="received-msg">
+                        <div class="received-msg-inbox">
+                            <p>{{message.body}}</p>
+                            <span class="time">{{ date  | date: 'medium' }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="message.id == '2'" >
+
+                    <!-- <div class="outgoing-chats-img">
+                        <img src="../../../../assets/images/lisa.jpg">
+                    </div>
+
+                    <div class="outgoing-chats-msg">
+                        
+                        <p>{{message.body}}t</p>
+                        <span class="time">{{ date  | date: 'medium' }}</span>
+                    </div> -->
+                    <div class="my-msg">
+                        <div class="my-msg-content">
+                            <p>{{message.body}}</p>
+                            <img class="my-msg-img" src="../../../../assets/images/lisa.jpg">
+                        </div>
+                        <span class="time">{{ date  | date: 'medium' }}</span>
+                    </div>
+
+                </div>
+
+                <!-- <div class="received-chats">
+                    <div class="received-chats-img">
+                        <img src="../../../../assets/images/jisoo1.jpg">
+                    </div>
+                    <div class="received-msg">
+                        <div class="received-msg-inbox">
+                            <p>Đánh nhốt là đốt nhánh</p>
+                            <span class="time">{{ date  | date: 'medium' }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outgoing-chats">
+                    <div class="outgoing-chats-img">
+                        <img src="../../../../assets/images/lisa.jpg">
+                    </div>
+
+                    <div class="outgoing-chats-msg">
+                        <p>Đốt là thiêu, nhánh là cành</p>
+                        <span class="time">{{ date  | date: 'medium' }}</span>
+                    </div>
+                </div>
+
+                <div class="received-chats">
+                    <div class="received-chats-img">
+                        <img src="../../../../assets/images/jisoo1.jpg">
+                    </div>
+                    <div class="received-msg">
+                        <div class="received-msg-inbox">
+                            <p>Thiêu cành là thanh you</p>
+                            <span class="time">{{ date  | date: 'medium' }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outgoing-chats">
+                    <div class="outgoing-chats-img">
+                        <img src="../../../../assets/images/lisa.jpg">
+                    </div>
+
+                    <div class="outgoing-chats-msg">
+                        <p>Welcome everybody welcome to the party</p>
+                        <span class="time">{{ date  | date: 'medium' }}</span>
+                    </div>
+                </div> -->
+
+           </div>
+        </div>
+    </div>
+</div>
+
+<div class="msg-bottom">
+    <div class="bottom-icons">
+        <!-- <i class="fa-solid fa-plus-circle"></i>
+        <i class="fa-solid fa-camera"></i>
+        <i class="fa-solid fa-microphone"></i> -->
+        <i class="fa-solid fa-face-smile"></i>
+    </div>
+    <div class="input-group">
+        <input #msg type="text" class="form-control" [(ngModel)]="message" placeholder="Aa" (keyup.enter)="onEnter(msg.value)">
+        <button class="input-group-append" (click)="onSubmit()">
+            <span class="input-group-text">
+                <i class="fa-solid fa-paper-plane"></i>
+            </span>
+        </button>
+    </div>
+</div>

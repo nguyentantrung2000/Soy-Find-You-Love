@@ -1,4 +1,6 @@
-<div class ="conversation">
+<div class ="conversation" (click)="conversationClicked.emit(userChat)">
+    
+    
     <div class="picture">
         <img [src] = 'userChat.photoURL'>
     </div>
@@ -10,7 +12,7 @@
         <div class="message">
             <img *ngIf="!userChat.messageRead" src="../../../assets/images/doubletick.png">
             <img *ngIf="userChat.messageRead" src="../../../assets/images/doubletick_blue.png">
-            {{userChat.mess}}
+            <!-- {{userChat.latestMess}} -->
         </div>
     </div>
 </div>

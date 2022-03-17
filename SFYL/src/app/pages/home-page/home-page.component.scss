@@ -22,7 +22,7 @@
 }
 
 #nav {
-  padding-left: 50px;
+  padding-left: 0px;
   display: inline-block;
 }
 
@@ -194,29 +194,34 @@ button:hover:not(.active) {
   padding-left: 20px;
   padding-right: 20px;
 }
+#footer .sub-foot .foot-head h3 {
+  font-weight: bolder;
+}
 
 // .sub-foot .foot-text {
 //   margin-top: 20px;
 // }
 
-// @media (min-width: 444px) and(max-width: 740px)
-@media screen and(max-width:740px) {
+@media screen and(max-width:900px) {
   // #body .body-text {
   //   bottom: 769px;
   // }
 
-  #nav li a {
-    color: white;
-    text-decoration: none;
-    line-height: 86px;
-    padding: 0 15px;
-    display: inline-block;
-  }
+  // #nav li a {
+  //   color: white;
+  //   text-decoration: none;
+  //   line-height: 86px;
+  //   padding: 0 15px;
+  //   display: inline-block;
+  // }
 
   #nav-bar .login {
     // position: fixed;
     float: right;
     padding: 0 11px 5px 0;
+  }
+  #nav {
+    padding-left: 0px;
   }
 
   #content .sub-content {
@@ -298,7 +303,7 @@ button:hover:not(.active) {
   #nav li a {
     color: yellow;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 0 10px;
     display: inline-block;
   }
 
