@@ -54,7 +54,7 @@
 .active h4{
     cursor: pointer;
     font-size: 16px;
-    margin-left: 10px;
+    margin-left: 0px;
     color: #fff;
     font-weight: bold;
     line-height: 1px;
@@ -363,13 +363,12 @@ button{
         cursor: pointer;
         margin: 13px 0px 0px 5px;
     }
-    .input-group .fa-solid{
-        color: #fff;
-    }
+    // .input-group .fa-solid{
+    //     color: #fff;
+    // }
     .my-msg-content p{
         margin: 0 10px 0 0;
-        // background: pink none repeat scroll 0 0;
-    
+        // background: pink none repeat scroll 0 0;  
     }
     .bottom-icons {
         // background-color: pink;  
