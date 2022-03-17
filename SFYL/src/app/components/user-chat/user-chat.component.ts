@@ -92,6 +92,7 @@ export class UserChatComponent implements OnInit, OnChanges {
 
   public async getParticipantInfo() {
     let participants = this.conversation.conDetail.participants;
+    console.log(participants)
     let participant_Info;
     participants[0] != this.login.user?.uid
       ? (participant_Info = participants[0])
