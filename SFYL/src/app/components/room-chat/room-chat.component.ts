@@ -7,8 +7,9 @@ import {
   AfterViewChecked,
   ViewChild,
   ElementRef,
+  ChangeDetectorRef,
 } from '@angular/core';
-import { doc, docData, Firestore, onSnapshot } from '@angular/fire/firestore';
+import { doc, Firestore, onSnapshot } from '@angular/fire/firestore';
 import { ChatService } from 'src/app/services/chat.service';
 import { LoginGGService } from 'src/app/services/login-gg.service';
 import { Participant } from 'src/models/participant_chat.model';
@@ -18,7 +19,7 @@ import { Participant } from 'src/models/participant_chat.model';
   templateUrl: './room-chat.component.html',
   styleUrls: ['./room-chat.component.scss'],
 })
-export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
+export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked  {
   @ViewChild('scrollMe') private myScrollContainer!: ElementRef;
   @Input() conversation: any;
   @Input() otherUserInfo!: Participant;
@@ -30,7 +31,8 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
   constructor(
     public login: LoginGGService,
     public chat: ChatService,
-    public firestore: Firestore
+    public firestore: Firestore,
+    private cd: ChangeDetectorRef
   ) {}
 
   date = Date.now().toString();
@@ -61,12 +63,12 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
         this.listMessage = temp!['messages'];
       }
     );
+    // this.scrollToBottom();
   }
 
   ngAfterViewChecked() {
-    this.scrollToBottom();
+      this.scrollToBottom();
   }
-
   scrollToBottom(): void {
     try {
       this.myScrollContainer.nativeElement.scrollTop =
@@ -75,21 +77,25 @@ export class RoomChatComponent implements OnInit, OnChanges, AfterViewChecked {
   }
 
   onSubmit() {
-    var temp = {
-      id: this.login.user?.uid,
-      mess: this.message,
-      time: this.date,
-    };
-    let tempMess = this.chat.sendMess(this.conversation.conId, temp);
-    this.listMessage.push(temp);
-    this.message = '';
+    let tempMsg = this.message.trim();
+    if (this.message != '' && tempMsg != null) {
+      var temp = {
+        id: this.login.user?.uid,
+        mess: tempMsg,
+        time: this.date,
+      };
+      let tempMess = this.chat.sendMess(this.conversation.conId, temp);
+      this.listMessage.push(temp);
+      this.message = '';
+    }
   }
 
   onEnter(msg: string) {
-    if (msg != '') {
+    let tempMsg = msg.trim();
+    if (msg != '' && tempMsg != null) {
       var temp = {
         id: this.login.user?.uid,
-        mess: msg,
+        mess: tempMsg,
         time: this.date,
       };
       let tempMess = this.chat.sendMess(this.conversation.conId, temp);

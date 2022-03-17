@@ -1,0 +1,26 @@
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.main .navbar {
+    height: 15%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.main .body {
+    height: 82%;
+    width: 90%;
+    margin-left: 5%;
+    // background-color: aqua;
+}
+
+.main .navbar a {
+    text-decoration: none;
+}
+
+// .main .navbar a:hover {
+//     cursor: pointer;
+//     text-decoration: underline;
+// }

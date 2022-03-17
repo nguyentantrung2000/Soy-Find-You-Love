@@ -1,0 +1,60 @@
+.match{
+        height:50%;
+        width: 50%;
+        margin-left: 440px;
+
+}
+.body{
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+   background-color: pink;
+    width: 84%;
+    height: 80%;
+    border-radius: 8px;
+    // display: flex;
+    justify-content: center;
+    background-image: url("https://file.vfo.vn/hinh/2018/03/hinh-anh-hinh-nen-trai-tim-dep-trai-tim-tinh-yeu-de-thuong-48.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body .top{
+    display: flex;
+    margin-left: 128px;
+}
+.body img{
+    width: 108px;
+    height: 100px;
+    border-radius: 5px;
+}
+.body h1{
+    margin-left: 27.5px;
+}
+
+.user1{
+    margin-top: 10%;
+    
+}
+.user2{
+    margin-top: 10%;
+}
+mat-icon{
+    height: 50px;
+    width: 50px;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 18%;
+    font-size: 86px;
+    
+}
+
+.body .note{
+    margin-top: 10px;
+    margin-left: 31%;
+}
+
+.body .note h1{
+    font-size: xx-large;
+    margin-left: 48px;
+    color: green;
+    font-weight: bolder;
+    font-style: italic;
+}

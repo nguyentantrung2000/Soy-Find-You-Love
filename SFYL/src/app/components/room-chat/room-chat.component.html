@@ -1,10 +1,12 @@
 <div class="msg-header">
-    <div class="msg-header-img">
-        <img [src]="otherUserInfo.photoURL">
-    </div>
-    <div class="active">
-        <h4>{{displayName}}</h4>
-        <!-- <h6>3 hours ago...</h6> -->
+    <div class="header-info">
+        <div class="msg-header-img">
+            <img [src]="otherUserInfo.photoURL">
+        </div>
+        <div class="active">
+            <h4>{{displayName}}</h4>
+            <!-- <h6>3 hours ago...</h6> -->
+        </div>
     </div>
     <div class="header-icons">
         <i class="fa-solid fa-phone"></i>
@@ -42,7 +44,7 @@
                     <div class="my-msg">
                         <div class="my-msg-content">
                             <p>{{message.mess}}</p>
-                            <img class="my-msg-img" src="../../../../assets/images/lisa.jpg">
+                            <img class="my-msg-img" [src]="otherUserInfo.photoURL">
                         </div>
                         <span class="time">{{ date  | date: 'medium' }}</span>
                     </div>

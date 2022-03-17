@@ -28,6 +28,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { DialogMatchComponent } from '../../components/dialog-match/dialog-match.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     DialogLogoutComponent,
     RecoverAccountComponent,
     UserChatComponent,
-    RoomChatComponent
+    RoomChatComponent,
+    DialogMatchComponent,
   ],
   imports: [
     CommonModule,
@@ -61,6 +64,7 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     MatNativeDateModule,
     MatChipsModule,
     PickerModule,
+    MatAutocompleteModule,
   ],
   exports: [
     UserChatComponent,
@@ -73,6 +77,7 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     DialogDeleteAccComponent,
     DialogLogoutComponent,
     RecoverAccountComponent,
+    DialogMatchComponent,
     MatIconModule,
     MatTooltipModule,
     MatButtonModule,
@@ -87,6 +92,7 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     MatNativeDateModule,
     MatChipsModule,
     RoomChatComponent,
+    MatAutocompleteModule,
   ],
 })
 export class ShareModule {}

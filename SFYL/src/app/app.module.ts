@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './share/share/share.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
