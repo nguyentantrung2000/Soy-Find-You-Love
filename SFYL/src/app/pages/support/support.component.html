@@ -1,0 +1,21 @@
+<div class="main">
+    <div style="background-color: white;">
+        <div class="navbar">
+            <img (click)="back()" style="width:100px; height:100%; padding: 0;margin: 0; vertical-align: middle;" src="../../../assets/images/icon.png" />
+            <a style="font-size: 30px">SFYL</a>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="hero-mobile-greeting"> Xin chào. Chúng tôi giúp gì được cho bạn? </div>
+        <form class="example-form">
+            <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>Tìm kiếm</mat-label>
+                <input matInput type="text" [(ngModel)]="value">
+                <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </form>
+    </div>
+</div>
