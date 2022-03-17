@@ -7,9 +7,10 @@
     // left: 10rem;
     // margin-top: 90px;
     // margin-left: 10rem;
-    margin: 0 10em;
+    margin: 0 5.5em;
     background-color: aquamarine;
-    height: 39rem;
+    height: 38rem;
+    width: 90%;
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -19,11 +20,25 @@
     
 }
 
+//=========================left========================
 .left-item {
     height: 100%;
     width: 30%;
-    background-color: burlywood;
+    background-color: white;
     border-right: solid; 
+}
+
+.header-search {
+    height: 10%;
+    width: 100%;
+    // background-color: cadetblue;
+    background-color: rgb(255, 153, 0);
+    color: white;
+    // border-bottom: solid;
+    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
+}
+.header-search h2{
+    margin: 0;
 }
 
 .input-group{
@@ -58,20 +73,25 @@
 .input-group input{
     outline: none;
 }
-
-.header-search {
-    height: 10%;
+#not-chat-yet{
+    height: 90%;
     width: 100%;
-    // background-color: cadetblue;
-    background-color: rgb(255, 153, 0);
-    color: white;
-    // border-bottom: solid;
-    // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
-}
-.header-search h2{
-    margin: 0;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
+    h2{
+        font-size: 25px;
+        font-weight: normal;
+        color:#555555;
+        text-align: center;
+    }
+    p{
+        font-size: medium;
+        text-align: center;
+    }
+}
 .old-converstation {
     height: 90%;
     width: 100%;
@@ -82,6 +102,8 @@
     // background-image: linear-gradient(to right top, #e64966, #e85365, #ea5c65, #eb6564, #ec6d65, #ed7564, #ee7c64, #ef8464, #f08d63, #f09664, #f09f65, #f0a867);
     // background-color: aliceblue;
 }
+
+///=================right=============================
 .right-item {
     height: 100%;
     width: 70%;
@@ -102,10 +124,20 @@
             text-align: center;
         }
         p{
+            font-size: medium;
             text-align: center;
         }
     }
 }
+
+@media screen and(min-width:0px) and (max-width:850px) {
+    .container{
+        margin: 0 1em;
+    }
+}
+   
+
+
 
 // ================= CUSTOM SCROLLBAR==============
 ::-webkit-scrollbar {
@@ -127,15 +159,15 @@
     background: #555; 
   }
 
-@media screen and(min-width:0px) and (max-width:545px) {
-    .header-search {
-        background-color: pink;
-    }
-    .old-converstation{
-        background-color: white;
-    }
+// @media screen and(min-width:0px) and (max-width:545px) {
+//     .header-search {
+//         background-color: pink;
+//     }
+//     .old-converstation{
+//         background-color: white;
+//     }
 
-}
+// }
 // @media screen and(min-width:687px) and (max-width:1141px) {
 //     .msg-bottom{
 //         background-color: green;
